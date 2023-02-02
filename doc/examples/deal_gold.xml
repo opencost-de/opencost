@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<opencost:publication xmlns:opencost="https://opencost.de">
+  <opencost:amounts_paid>
+    <opencost:item>
+      <opencost:amount_invoice currency="EUR">1681.82</opencost:amount_invoice>
+      <opencost:amounts_paid>
+        <opencost:amount_paid currency="EUR" type="apc">1681.82</opencost:amount_paid>
+      </opencost:amounts_paid>
+      <opencost:date_paid>2022-05-31</opencost:date_paid>
+      <opencost:publisher>Macmillan Publishers Limited, part of Springer Nature</opencost:publisher>
+      <opencost:invoice_number/>
+    </opencost:item>
+  </opencost:amounts_paid>
+  <opencost:doi>10.1038/s41598-022-13507-4</opencost:doi>
+  <opencost:identifiers>
+    <opencost:id type="local">PUBDB-2022-00039</opencost:id>
+    <opencost:id type="oai">oai:bib-pubdb1.desy.de:473418</opencost:id>
+    <opencost:id type="doi">10.1038/s41598-022-13507-4</opencost:id>
+    <opencost:id type="doi">10.3204/PUBDB-2022-00039</opencost:id>
+    <opencost:id type="pmid">35689001</opencost:id>
+  </opencost:identifiers>
+  <opencost:oa_status>open</opencost:oa_status>
+  <opencost:type>journal article</opencost:type>
+  <opencost:institutions>
+    <opencost:institution>desy</opencost:institution>
+    <opencost:institution type="ror">https://ror.org/01js2sh04</opencost:institution>
+  </opencost:institutions>
+</opencost:publication>

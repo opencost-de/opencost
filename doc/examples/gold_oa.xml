@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<opencost:publication xmlns:opencost="https://opencost.de">
+  <opencost:amounts_paid>
+    <opencost:item>
+      <opencost:amount_invoice currency="GBP">1234.56</opencost:amount_invoice>
+      <opencost:amounts_paid>
+        <opencost:amount_paid currency="EUR" type="apc">1500.00</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="vat">14.25</opencost:amount_paid>
+      </opencost:amounts_paid>
+      <opencost:date_paid>2022-12-06</opencost:date_paid>
+      <opencost:publisher>Oxford Univ. Press</opencost:publisher>
+      <opencost:invoice_number/>
+    </opencost:item>
+  </opencost:amounts_paid>
+  <opencost:doi>10.1093/mnras/stac1601</opencost:doi>
+  <opencost:identifiers>
+    <opencost:id type="local">PUBDB-2022-05054</opencost:id>
+    <opencost:id type="oai">oai:bib-pubdb1.desy.de:482982</opencost:id>
+    <opencost:id type="doi">10.1093/mnras/stac1601</opencost:id>
+    <opencost:id type="arxiv">2201.00069</opencost:id>
+    <opencost:id type="doi">10.3204/PUBDB-2022-05054</opencost:id>
+  </opencost:identifiers>
+  <opencost:oa_status>open</opencost:oa_status>
+  <opencost:type>journal article</opencost:type>
+  <opencost:institutions>
+    <opencost:institution>desy</opencost:institution>
+    <opencost:institution type="ror">https://ror.org/01js2sh04</opencost:institution>
+  </opencost:institutions>
+</opencost:publication>

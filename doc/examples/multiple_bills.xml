@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<opencost:publication xmlns:opencost="https://opencost.de">
+  <opencost:amounts_paid>
+    <opencost:item>
+      <opencost:amount_invoice currency="EUR">30.72</opencost:amount_invoice>
+      <opencost:amounts_paid>
+        <opencost:amount_paid currency="EUR" type="other">30.72</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="vat">0.29</opencost:amount_paid>
+      </opencost:amounts_paid>
+      <opencost:date_paid>2022-07-06</opencost:date_paid>
+      <opencost:publisher>OSA</opencost:publisher>
+      <opencost:invoice_number/>
+    </opencost:item>
+    <opencost:item>
+      <opencost:amount_invoice currency="USD">2173.0</opencost:amount_invoice>
+      <opencost:amounts_paid>
+        <opencost:amount_paid currency="EUR" type="apc">1501.58</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="vat">14.27</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="page charges">546.68</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="vat">5.19</opencost:amount_paid>
+      </opencost:amounts_paid>
+      <opencost:date_paid>2022-06-09</opencost:date_paid>
+      <opencost:publisher>OSA</opencost:publisher>
+      <opencost:invoice_number>1699976</opencost:invoice_number>
+    </opencost:item>
+  </opencost:amounts_paid>
+  <opencost:doi>10.1364/OME.460445</opencost:doi>
+  <opencost:identifiers>
+    <opencost:id type="local">PUBDB-2022-02875</opencost:id>
+    <opencost:id type="oai">oai:bib-pubdb1.desy.de:479017</opencost:id>
+    <opencost:id type="doi">10.1364/OME.460445</opencost:id>
+    <opencost:id type="doi">10.3204/PUBDB-2022-02875</opencost:id>
+  </opencost:identifiers>
+  <opencost:oa_status>open</opencost:oa_status>
+  <opencost:type>journal article</opencost:type>
+  <opencost:institutions>
+    <opencost:institution>desy</opencost:institution>
+    <opencost:institution type="ror">https://ror.org/01js2sh04</opencost:institution>
+  </opencost:institutions>
+</opencost:publication>
