@@ -8,7 +8,7 @@ The aim of the project openCost is to create a technical infrastructure that
 makes publication costs freely accessible and interchangeable via standardized
 interfaces and formats.
 
-In a first step, the openCost team is developping a metadata schema in
+In a first step, the openCost team is developing a metadata schema in
 collaboration with (inter)national experts for which it proposes an
 xml-representation that is particularly suitable for exchange via OAI-PMH. The
 metadata schema attempts to consider all costs related to publication („total
