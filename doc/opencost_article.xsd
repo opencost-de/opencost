@@ -15,7 +15,21 @@ elementFormDefault="qualified">
               <xs:complexType>
                 <xs:simpleContent>
                   <xs:extension base="xs:string">
-                    <xs:attribute name="type" type="xs:string" />
+                    <xs:attribute name="type"  use="required">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="doi" />
+                          <xs:enumeration value="handle" />
+                          <xs:enumeration value="urn" />
+                          <xs:enumeration value="isbn" />
+                          <xs:enumeration value="pmid" />
+                          <xs:enumeration value="pmc" />
+                          <xs:enumeration value="arxiv" />
+                          <xs:enumeration value="oai" />
+                          <xs:enumeration value="local" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:attribute>
                   </xs:extension>
                 </xs:simpleContent>
               </xs:complexType>
