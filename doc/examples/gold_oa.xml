@@ -23,7 +23,9 @@
   <opencost:oa_status>open</opencost:oa_status>
   <opencost:type>journal article</opencost:type>
   <opencost:institutions>
-    <opencost:institution>desy</opencost:institution>
+    <opencost:institution type="short_name">desy</opencost:institution>
+    <opencost:institution type="full_name">Deutsches Elektronen-Synchrotron DESY</opencost:institution>
+    <opencost:institution type="isni">0000 0004 0492 0453</opencost:institution>
     <opencost:institution type="ror">https://ror.org/01js2sh04</opencost:institution>
   </opencost:institutions>
 </opencost:publication>

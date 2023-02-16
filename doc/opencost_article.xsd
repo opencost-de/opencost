@@ -44,7 +44,17 @@ elementFormDefault="qualified">
               <xs:complexType>
                 <xs:simpleContent>
                   <xs:extension base="xs:string">
-                    <xs:attribute name="type" type="xs:string" />
+                    <xs:attribute name="type"  use="required">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="full_name" />
+                          <xs:enumeration value="short_name" />
+                          <xs:enumeration value="ror" />
+                          <xs:enumeration value="isni" />
+                          <xs:enumeration value="ringold" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:attribute>
                   </xs:extension>
                 </xs:simpleContent>
               </xs:complexType>
