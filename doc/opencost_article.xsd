@@ -8,7 +8,15 @@ elementFormDefault="qualified">
 <xs:element name="publication">
   <xs:complexType>
     <xs:all>
-      <xs:element name="identifiers">
+      <xs:element name="primary_identifier">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="doi" type="xs:string" />
+            <xs:element name="bibliographic_information" type="bibliographic_information" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="secondary_identifiers">
         <xs:complexType>
           <xs:sequence>
             <xs:element name="id" minOccurs="1" maxOccurs="unbounded" type="id" />
@@ -23,7 +31,7 @@ elementFormDefault="qualified">
         </xs:complexType>
       </xs:element>
       <xs:element name="type" type="coar_publication_type" />
-      <xs:element name="doi" type="xs:string" />
+      <xs:element name="doi" type="xs:string" minOccurs="0" />
       <xs:element name="oa_status" type="oa_status" />
       <xs:element name="part_of_contract" minOccurs="0">
         <xs:complexType>
@@ -61,6 +69,7 @@ elementFormDefault="qualified">
   </xs:complexType>
 </xs:element>
 
+
 <xs:complexType name="id">
   <xs:simpleContent>
     <xs:extension base="xs:string">
@@ -81,6 +90,14 @@ elementFormDefault="qualified">
       </xs:attribute>
     </xs:extension>
   </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="bibliographic_information">
+  <xs:all>
+    <xs:element name="Title" type="xs:string" minOccurs="1" />
+    <xs:element name="Publisher" type="xs:string" minOccurs="1" />
+    <xs:element name="isPartOf" type="xs:string" minOccurs="1" />
+  </xs:all>
 </xs:complexType>
 
 <xs:complexType name="institution">
