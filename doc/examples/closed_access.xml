@@ -11,13 +11,15 @@
       <opencost:invoice_number>INV_008530</opencost:invoice_number>
     </opencost:item>
   </opencost:amounts_paid>
-  <opencost:doi>10.1039/D0CP04104A</opencost:doi>
-  <opencost:identifiers>
+  <opencost:primary_identifier>
+    <opencost:doi>10.1039/D0CP04104A</opencost:doi>
+  </opencost:primary_identifier>
+  <opencost:secondary_identifiers>
     <opencost:id type="local">PUBDB-2020-04988</opencost:id>
     <opencost:id type="oai">oai:bib-pubdb1.desy.de:453035</opencost:id>
     <opencost:id type="doi">10.1039/D0CP04104A</opencost:id>
     <opencost:id type="doi">10.3204/PUBDB-2020-04988</opencost:id>
-  </opencost:identifiers>
+  </opencost:secondary_identifiers>
   <opencost:oa_status>closed</opencost:oa_status>
   <opencost:type>journal article</opencost:type>
   <opencost:institutions>

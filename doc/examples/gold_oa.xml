@@ -12,14 +12,16 @@
       <opencost:invoice_number/>
     </opencost:item>
   </opencost:amounts_paid>
-  <opencost:doi>10.1093/mnras/stac1601</opencost:doi>
-  <opencost:identifiers>
+  <opencost:primary_identifier>
+    <opencost:doi>10.1093/mnras/stac1601</opencost:doi>
+  </opencost:primary_identifier>
+  <opencost:secondary_identifiers>
     <opencost:id type="local">PUBDB-2022-05054</opencost:id>
     <opencost:id type="oai">oai:bib-pubdb1.desy.de:482982</opencost:id>
     <opencost:id type="doi">10.1093/mnras/stac1601</opencost:id>
     <opencost:id type="arxiv">2201.00069</opencost:id>
     <opencost:id type="doi">10.3204/PUBDB-2022-05054</opencost:id>
-  </opencost:identifiers>
+  </opencost:secondary_identifiers>
   <opencost:oa_status>open</opencost:oa_status>
   <opencost:type>journal article</opencost:type>
   <opencost:institutions>

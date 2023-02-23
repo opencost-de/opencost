@@ -24,13 +24,15 @@
       <opencost:invoice_number>1699976</opencost:invoice_number>
     </opencost:item>
   </opencost:amounts_paid>
-  <opencost:doi>10.1364/OME.460445</opencost:doi>
-  <opencost:identifiers>
+  <opencost:primary_identifier>
+    <opencost:doi>10.1364/OME.460445</opencost:doi>
+  </opencost:primary_identifier>
+  <opencost:secondary_identifiers>
     <opencost:id type="local">PUBDB-2022-02875</opencost:id>
     <opencost:id type="oai">oai:bib-pubdb1.desy.de:479017</opencost:id>
     <opencost:id type="doi">10.1364/OME.460445</opencost:id>
     <opencost:id type="doi">10.3204/PUBDB-2022-02875</opencost:id>
-  </opencost:identifiers>
+  </opencost:secondary_identifiers>
   <opencost:oa_status>open</opencost:oa_status>
   <opencost:type>journal article</opencost:type>
   <opencost:institutions>
