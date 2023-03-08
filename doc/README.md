@@ -7,7 +7,7 @@ Existing frameworks focus on
 - legal aspects including access rights
 - technical metadata like size of files etc.
 
-However, up to know - at least to our knowledge - there exists no metadata
+However, up to now - at least to our knowledge - there exists no metadata
 schema to describe _financial_ aspects of publications. On the other hand
 _transparency_ for costs is imperative for the transformation of scholarly
 publishing to Open Access (OA) if one wants to avoid ever increasing costs.
