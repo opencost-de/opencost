@@ -20,13 +20,13 @@ the standardized, machine-readable format enables easy exchange of cost data
 worldwide.
 
 This repository tracks the evolution of the relevant schemas including their
-documentation.
+[documentation](https://github.com/opencost-de/opencost/tree/main/doc).
 
 Since we want to involve the community in our work as early as possible, we have
 decided to publish our project results successively and to make a first draft
 available as a request for comment now.
 
-This first step proposes a metadata schema for _fee-based, individual articles_.
+This first step proposes a [metadata schema for _fee-based, individual articles_](https://github.com/opencost-de/opencost/blob/main/doc/opencost_article.xsd).
 A common use case would be articles in Gold Open Access journals funded by APCs.
 However, this schema already includes the coverage of cost items beyond Open
 Access fees.
@@ -35,11 +35,11 @@ Next steps will tackle transformative agreements and memberships.
 
 The openCost team invites you to participate in the development of the metadata
 schema and is looking forward to a constructive discussion! Please feel free to
-open issues in this repository so we can address your suggestions easily and
-nothing gets lost. Alternatively, comment on our web site or send us feedback by
-email. We will then convert them to issues for you.
+open [issues](https://github.com/opencost-de/opencost/issues) in this repository so we can address your suggestions easily and
+nothing gets lost. Alternatively, comment on our [web site](https://www.opencost.de/) or send us feedback by
+[email](mailto:opencost.info@mailman.uni-regensburg.de). We will then convert them to issues for you.
 
-More information about our project you will find on our website www.opencost.de.
+More information about our project you will find on our website [www.opencost.de](https://www.opencost.de).
 
 <!-- vim: spell spelllang=en_gb bomb
 -->
