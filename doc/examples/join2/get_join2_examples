@@ -1,0 +1,32 @@
+#!/bin/bash
+
+host="http://l00lnxwagner.desy.de/record/"
+format="?of=ocost"
+schema="../../opencost_article.xsd"
+validate="xmllint --noout --schema $schema"
+
+for recid in 453035 473418 301439 479017; do
+    curl -s $host/$recid$format -o $recid.xml
+    $validate $recid.xml
+done
+
+# validate closed_access.xml
+xmllint --format 453035.xml > closed_access.xml
+
+# validate deal_gold.xml
+xmllint --format 473418.xml > deal_gold.xml
+
+# validate gold_oa.xml
+xmllint --format 301439.xml > gold_oa.xml
+
+# validate multiple_bills.xml
+xmllint --format 479017.xml > multiple_bills.xml
+
+
+# # validate deal_hybrid.xml
+# xmllint --schema $schema --format 436013.xml > deal_hybrid.xml
+
+for recid in 453035 473418 301439 479017
+do
+	rm $recid.xml
+done
