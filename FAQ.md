@@ -13,3 +13,9 @@
       </opencost:amounts_paid>
    ```
    [#7](https://github.com/opencost-de/opencost/issues/7)
+   
+1. **How do we address transformative agreements or memberships?**
+
+   The initially proposed format does not yet handle transformative agreements like DEAL, but assumes article based fees only. This is a restriction made to enable as early as    possible involvement with the community. In the future this information will be indicated in the field `part_of_contract`.
+   
+   [#11](https://github.com/opencost-de/opencost/issues/11)
