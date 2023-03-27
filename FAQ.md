@@ -19,3 +19,11 @@
    The initially proposed format does not yet handle transformative agreements like DEAL, but assumes article based fees only. This is a restriction made to enable as early as    possible involvement with the community. In the future this information will be indicated in the field `part_of_contract`.
    
    [#11](https://github.com/opencost-de/opencost/issues/11)
+
+1. **Is it intended to additionally generate a JSON representation of the data?**
+
+   We are first developing the XML schema. Background is the OAI interface and the fact that the project partners use repositories, which in connection with OAI-PMH have
+   mostly established xml as exchange format. On the other hand, we do not want to complicate the discussion by putting two schemas up for disposition. In a further step, we
+   want to convert the XML into a JSON format.
+   
+   [#41](https://github.com/opencost-de/opencost/issues/41)
