@@ -22,7 +22,6 @@
     <opencost:id type="local">PUBDB-2022-00039</opencost:id>
     <opencost:id type="oai">oai:bib-pubdb1.desy.de:473418</opencost:id>
   </opencost:secondary_identifiers>
-  <opencost:oa_status>open</opencost:oa_status>
   <opencost:type>journal article</opencost:type>
   <opencost:institutions>
     <opencost:institution type="short_name">desy</opencost:institution>

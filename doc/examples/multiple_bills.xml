@@ -33,7 +33,6 @@
     <opencost:id type="doi">10.1364/OME.460445</opencost:id>
     <opencost:id type="doi">10.3204/PUBDB-2022-02875</opencost:id>
   </opencost:secondary_identifiers>
-  <opencost:oa_status>open</opencost:oa_status>
   <opencost:type>journal article</opencost:type>
   <opencost:institutions>
     <opencost:institution type="short_name">desy</opencost:institution>
