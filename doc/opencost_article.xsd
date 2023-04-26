@@ -143,13 +143,13 @@ elementFormDefault="qualified">
           <xs:restriction base="xs:string">
           <xs:enumeration value="apc" />
           <xs:enumeration value="vat" />
-          <xs:enumeration value="colour charges" />
+          <xs:enumeration value="colour charge" />
           <xs:enumeration value="cover" />
           <xs:enumeration value="hybrid-oa" />
           <xs:enumeration value="other" />
-          <xs:enumeration value="page charges" />
+          <xs:enumeration value="page charge" />
           <xs:enumeration value="permission" />
-          <xs:enumeration value="publication charges" />
+          <xs:enumeration value="publication charge" />
           <xs:enumeration value="reprint" />
           <xs:enumeration value="submission fee" />
           </xs:restriction>

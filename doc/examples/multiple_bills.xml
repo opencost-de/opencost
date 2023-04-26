@@ -16,7 +16,7 @@
       <opencost:amounts_paid>
         <opencost:amount_paid currency="EUR" type="apc">1501.58</opencost:amount_paid>
         <opencost:amount_paid currency="EUR" type="vat">14.27</opencost:amount_paid>
-        <opencost:amount_paid currency="EUR" type="page charges">546.68</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="page charge">546.68</opencost:amount_paid>
         <opencost:amount_paid currency="EUR" type="vat">5.19</opencost:amount_paid>
       </opencost:amounts_paid>
       <opencost:date_paid>2022-06-09</opencost:date_paid>
