@@ -45,7 +45,7 @@ elementFormDefault="qualified">
       <xs:element name="amounts_paid">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="item" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="invoice" minOccurs="1" maxOccurs="unbounded">
               <xs:complexType>
                 <xs:all>
                   <xs:element name="amount_invoice" minOccurs="0" type="amount_invoice" />

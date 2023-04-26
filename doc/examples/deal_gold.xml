@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <opencost:publication xmlns:opencost="https://opencost.de">
   <opencost:amounts_paid>
-    <opencost:item>
+    <opencost:invoice>
       <opencost:amount_invoice currency="EUR">1681.82</opencost:amount_invoice>
       <opencost:amounts_paid>
         <opencost:amount_paid currency="EUR" type="apc">1681.82</opencost:amount_paid>
@@ -9,7 +9,7 @@
       <opencost:date_paid>2022-05-31</opencost:date_paid>
       <opencost:publisher>Macmillan Publishers Limited, part of Springer Nature</opencost:publisher>
       <opencost:invoice_number/>
-    </opencost:item>
+    </opencost:invoice>
   </opencost:amounts_paid>
   <opencost:primary_identifier>
     <opencost:doi>10.1038/s41598-022-13507-4</opencost:doi>
