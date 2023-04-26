@@ -143,6 +143,7 @@ elementFormDefault="qualified">
           <xs:enumeration value="publication charge" />
           <xs:enumeration value="reprint" />
           <xs:enumeration value="submission fee" />
+          <xs:enumeration value="payment fee" />
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
