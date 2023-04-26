@@ -14,7 +14,7 @@
     <opencost:invoice>
       <opencost:amount_invoice currency="USD">2173.0</opencost:amount_invoice>
       <opencost:amounts_paid>
-        <opencost:amount_paid currency="EUR" type="apc">1501.58</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="gold-oa">1501.58</opencost:amount_paid>
         <opencost:amount_paid currency="EUR" type="vat">14.27</opencost:amount_paid>
         <opencost:amount_paid currency="EUR" type="page charge">546.68</opencost:amount_paid>
         <opencost:amount_paid currency="EUR" type="vat">5.19</opencost:amount_paid>

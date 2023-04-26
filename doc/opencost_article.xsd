@@ -132,7 +132,7 @@ elementFormDefault="qualified">
       <xs:attribute name="type"  use="required">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-          <xs:enumeration value="apc" />
+          <xs:enumeration value="gold-oa" />
           <xs:enumeration value="vat" />
           <xs:enumeration value="colour charge" />
           <xs:enumeration value="cover charge" />

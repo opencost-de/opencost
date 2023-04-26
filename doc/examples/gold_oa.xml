@@ -4,7 +4,7 @@
     <opencost:invoice>
       <opencost:amount_invoice currency="GBP">1234.56</opencost:amount_invoice>
       <opencost:amounts_paid>
-        <opencost:amount_paid currency="EUR" type="apc">1500.00</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="gold-oa">1500.00</opencost:amount_paid>
         <opencost:amount_paid currency="EUR" type="vat">14.25</opencost:amount_paid>
       </opencost:amounts_paid>
       <opencost:date_paid>2022-12-06</opencost:date_paid>
