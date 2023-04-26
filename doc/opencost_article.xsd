@@ -56,7 +56,7 @@ elementFormDefault="qualified">
                       </xs:sequence>
                     </xs:complexType>
                   </xs:element>
-                  <xs:element name="date_paid" type="date_paid" />
+                  <xs:element name="dates" type="dates"/>
                   <xs:element name="publisher" type="xs:string" minOccurs="0"/>
                 </xs:all>
               </xs:complexType>
@@ -157,7 +157,19 @@ elementFormDefault="qualified">
   </xs:restriction>
 </xs:simpleType>
 
-<xs:simpleType name="date_paid">
+<xs:complexType name="dates">
+  <xs:choice>
+    <xs:sequence>
+     <xs:element name="date_invoice" type="date_format" minOccurs="1"/>
+     <xs:element name="date_paid" type="date_format" minOccurs="0"/>
+    </xs:sequence>
+    <xs:sequence>
+     <xs:element name="date_paid" type="date_format" minOccurs="1"/>
+    </xs:sequence>
+  </xs:choice>
+</xs:complexType>
+
+<xs:simpleType name="date_format">
   <xs:restriction base="xs:string">
     <xs:pattern value="[0-9]{4}|[0-9]{4}-[0-9]{2}|[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
   </xs:restriction>

@@ -7,7 +7,9 @@
         <opencost:amount_paid currency="EUR" type="gold-oa">1500.00</opencost:amount_paid>
         <opencost:amount_paid currency="EUR" type="vat">14.25</opencost:amount_paid>
       </opencost:amounts_paid>
-      <opencost:date_paid>2022-12-06</opencost:date_paid>
+      <opencost:dates>
+        <opencost:date_paid>2022-12-06</opencost:date_paid>
+      </opencost:dates>
       <opencost:publisher>Oxford Univ. Press</opencost:publisher>
       <opencost:invoice_number/>
     </opencost:invoice>

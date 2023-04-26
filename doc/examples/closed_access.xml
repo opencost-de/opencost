@@ -6,7 +6,9 @@
       <opencost:amounts_paid>
         <opencost:amount_paid currency="EUR" type="cover charge">559.69</opencost:amount_paid>
       </opencost:amounts_paid>
-      <opencost:date_paid>2020-12-15</opencost:date_paid>
+      <opencost:dates>
+        <opencost:date_paid>2020-12-15</opencost:date_paid>
+      </opencost:dates>
       <opencost:publisher>RSC Publ.</opencost:publisher>
       <opencost:invoice_number>INV_008530</opencost:invoice_number>
     </opencost:invoice>

@@ -7,7 +7,9 @@
         <opencost:amount_paid currency="EUR" type="other">30.72</opencost:amount_paid>
         <opencost:amount_paid currency="EUR" type="vat">0.29</opencost:amount_paid>
       </opencost:amounts_paid>
-      <opencost:date_paid>2022-07-06</opencost:date_paid>
+      <opencost:dates>
+        <opencost:date_paid>2022-07-06</opencost:date_paid>
+      </opencost:dates>
       <opencost:publisher>OSA</opencost:publisher>
       <opencost:invoice_number/>
     </opencost:invoice>
@@ -19,7 +21,9 @@
         <opencost:amount_paid currency="EUR" type="page charge">546.68</opencost:amount_paid>
         <opencost:amount_paid currency="EUR" type="vat">5.19</opencost:amount_paid>
       </opencost:amounts_paid>
-      <opencost:date_paid>2022-06-09</opencost:date_paid>
+      <opencost:dates>
+        <opencost:date_paid>2022-06-09</opencost:date_paid>
+      </opencost:dates>
       <opencost:publisher>OSA</opencost:publisher>
       <opencost:invoice_number>1699976</opencost:invoice_number>
     </opencost:invoice>
