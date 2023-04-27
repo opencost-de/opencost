@@ -16,7 +16,7 @@ elementFormDefault="qualified">
           </xs:choice>
         </xs:complexType>
       </xs:element>
-      <xs:element name="secondary_identifiers">
+      <xs:element name="secondary_identifiers" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
             <xs:element name="id" minOccurs="1" maxOccurs="unbounded" type="id" />
@@ -41,7 +41,7 @@ elementFormDefault="qualified">
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
-      <xs:element name="amounts_paid">
+      <xs:element name="cost_data">
         <xs:complexType>
           <xs:sequence>
             <xs:element name="invoice" minOccurs="1" maxOccurs="unbounded">

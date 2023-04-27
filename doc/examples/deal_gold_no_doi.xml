@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <opencost:publication xmlns:opencost="https://opencost.de">
-  <opencost:amounts_paid>
+  <opencost:cost_data>
     <opencost:invoice>
       <opencost:amount_invoice currency="EUR">1681.82</opencost:amount_invoice>
       <opencost:amounts_paid>
@@ -12,7 +12,7 @@
       <opencost:publisher>Macmillan Publishers Limited, part of Springer Nature</opencost:publisher>
       <opencost:invoice_number/>
     </opencost:invoice>
-  </opencost:amounts_paid>
+  </opencost:cost_data>
   <opencost:primary_identifier>
     <opencost:bibliographic_information>
       <opencost:Title>Pressure-induced high-spin/low-spin disproportionated state in the Mott insulator FeBO3</opencost:Title>

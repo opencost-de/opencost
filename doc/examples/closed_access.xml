@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <opencost:publication xmlns:opencost="https://opencost.de">
-  <opencost:amounts_paid>
+  <opencost:cost_data>
     <opencost:invoice>
       <opencost:amount_invoice currency="GBP">500.0</opencost:amount_invoice>
       <opencost:amounts_paid>
@@ -12,7 +12,7 @@
       <opencost:publisher>RSC Publ.</opencost:publisher>
       <opencost:invoice_number>INV_008530</opencost:invoice_number>
     </opencost:invoice>
-  </opencost:amounts_paid>
+  </opencost:cost_data>
   <opencost:primary_identifier>
     <opencost:doi>10.1039/D0CP04104A</opencost:doi>
   </opencost:primary_identifier>
