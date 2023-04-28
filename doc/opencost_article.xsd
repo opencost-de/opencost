@@ -57,7 +57,7 @@ elementFormDefault="qualified">
                     </xs:complexType>
                   </xs:element>
                   <xs:element name="dates" type="dates"/>
-                  <xs:element name="publisher" type="xs:string" minOccurs="0"/>
+                  <xs:element name="creditor" type="xs:string" minOccurs="0"/>
                 </xs:all>
               </xs:complexType>
             </xs:element>

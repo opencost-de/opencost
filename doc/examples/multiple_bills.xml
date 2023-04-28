@@ -10,7 +10,7 @@
       <opencost:dates>
         <opencost:date_paid>2022-07-06</opencost:date_paid>
       </opencost:dates>
-      <opencost:publisher>OSA</opencost:publisher>
+      <opencost:creditor>OSA</opencost:creditor>
       <opencost:invoice_number/>
     </opencost:invoice>
     <opencost:invoice>
@@ -24,7 +24,7 @@
       <opencost:dates>
         <opencost:date_paid>2022-06-09</opencost:date_paid>
       </opencost:dates>
-      <opencost:publisher>OSA</opencost:publisher>
+      <opencost:creditor>OSA</opencost:creditor>
       <opencost:invoice_number>1699976</opencost:invoice_number>
     </opencost:invoice>
   </opencost:cost_data>

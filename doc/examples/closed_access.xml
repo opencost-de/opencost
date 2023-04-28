@@ -9,7 +9,7 @@
       <opencost:dates>
         <opencost:date_paid>2020-12-15</opencost:date_paid>
       </opencost:dates>
-      <opencost:publisher>RSC Publ.</opencost:publisher>
+      <opencost:creditor>RSC Publ.</opencost:creditor>
       <opencost:invoice_number>INV_008530</opencost:invoice_number>
     </opencost:invoice>
   </opencost:cost_data>
