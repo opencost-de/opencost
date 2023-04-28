@@ -31,7 +31,6 @@ elementFormDefault="qualified">
         </xs:complexType>
       </xs:element>
       <xs:element name="type" type="coar_publication_type" />
-      <xs:element name="doi" type="xs:string" minOccurs="0" />
       <xs:element name="part_of_contract" minOccurs="0">
         <xs:complexType>
           <xs:simpleContent>
