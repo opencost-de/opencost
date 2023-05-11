@@ -164,6 +164,7 @@ elementFormDefault="qualified">
     </xs:sequence>
     <xs:sequence>
      <xs:element name="date_paid" type="date_format" minOccurs="1"/>
+     <xs:element name="date_invoice" type="date_format" minOccurs="0"/>
     </xs:sequence>
   </xs:choice>
 </xs:complexType>
