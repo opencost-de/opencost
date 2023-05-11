@@ -4,8 +4,10 @@ host="http://l00lnxwagner.desy.de/record/"
 format="?of=ocost"
 schema="../../opencost_article.xsd"
 validate="xmllint --noout --schema $schema"
+recs2fetch="453035 473418 301439 479017 491414"
 
-for recid in 453035 473418 301439 479017; do
+for recid in $recs2fetch
+do
     curl -s $host/$recid$format -o $recid.xml
     $validate $recid.xml
 done
@@ -26,7 +28,7 @@ xmllint --format 479017.xml > multiple_bills.xml
 # # validate deal_hybrid.xml
 # xmllint --schema $schema --format 436013.xml > deal_hybrid.xml
 
-for recid in 453035 473418 301439 479017
-do
-	rm $recid.xml
-done
+# for recid in $recs2fetch
+# do
+# 	rm $recid.xml
+# done

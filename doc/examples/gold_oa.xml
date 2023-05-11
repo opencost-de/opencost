@@ -1,34 +1,32 @@
 <?xml version="1.0"?>
 <opencost:publication xmlns:opencost="https://opencost.de">
-  <opencost:cost_data>
-    <opencost:invoice>
-      <opencost:amount_invoice currency="GBP">1234.56</opencost:amount_invoice>
-      <opencost:amounts_paid>
-        <opencost:amount_paid currency="EUR" type="gold-oa">1500.00</opencost:amount_paid>
-        <opencost:amount_paid currency="EUR" type="vat">14.25</opencost:amount_paid>
-      </opencost:amounts_paid>
-      <opencost:dates>
-        <opencost:date_paid>2022-12-06</opencost:date_paid>
-      </opencost:dates>
-      <opencost:creditor>Oxford Univ. Press</opencost:creditor>
-      <opencost:invoice_number/>
-    </opencost:invoice>
-  </opencost:cost_data>
-  <opencost:primary_identifier>
-    <opencost:doi>10.1093/mnras/stac1601</opencost:doi>
-  </opencost:primary_identifier>
-  <opencost:secondary_identifiers>
-    <opencost:id type="local">PUBDB-2022-05054</opencost:id>
-    <opencost:id type="oai">oai:bib-pubdb1.desy.de:482982</opencost:id>
-    <opencost:id type="doi">10.1093/mnras/stac1601</opencost:id>
-    <opencost:id type="arxiv">2201.00069</opencost:id>
-    <opencost:id type="doi">10.3204/PUBDB-2022-05054</opencost:id>
-  </opencost:secondary_identifiers>
-  <opencost:type>journal article</opencost:type>
   <opencost:institutions>
     <opencost:institution type="short_name">desy</opencost:institution>
-    <opencost:institution type="full_name">Deutsches Elektronen-Synchrotron DESY</opencost:institution>
-    <opencost:institution type="isni">0000 0004 0492 0453</opencost:institution>
     <opencost:institution type="ror">https://ror.org/01js2sh04</opencost:institution>
   </opencost:institutions>
+  <opencost:primary_identifier>
+    <opencost:doi>10.1038/s41467-022-35110-x</opencost:doi>
+  </opencost:primary_identifier>
+  <opencost:secondary_identifiers>
+    <opencost:id type="local">PUBDB-2022-07070</opencost:id>
+    <opencost:id type="oai">oai:bib-pubdb1.desy.de:486070</opencost:id>
+    <opencost:id type="doi">10.1038/s41467-022-35110-x</opencost:id>
+    <opencost:id type="doi">10.3204/PUBDB-2022-07070</opencost:id>
+    <opencost:id type="pmid">36473837</opencost:id>
+  </opencost:secondary_identifiers>
+  <opencost:type>journal article</opencost:type>
+  <opencost:cost_data>
+    <opencost:invoice>
+      <opencost:amount_invoice currency="EUR">4890.0</opencost:amount_invoice>
+      <opencost:amounts_paid>
+        <opencost:amount_paid currency="EUR" type="gold-oa">4890.00</opencost:amount_paid>
+      </opencost:amounts_paid>
+      <opencost:creditor>Nature Publishing Group UK</opencost:creditor>
+      <opencost:dates>
+        <opencost:date_paid>2023-01-03</opencost:date_paid>
+        <opencost:date_invoice>2022-12-09</opencost:date_invoice>
+      </opencost:dates>
+      <opencost:invoice_number>2938775416</opencost:invoice_number>
+    </opencost:invoice>
+  </opencost:cost_data>
 </opencost:publication>
