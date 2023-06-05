@@ -23,13 +23,7 @@ elementFormDefault="qualified">
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:element name="institutions">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="institution" minOccurs="1" maxOccurs="unbounded" type="institution" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
+      <xs:element name="institution" type="institution" />
       <xs:element name="type" type="coar_publication_type" />
       <xs:element name="part_of_contract" minOccurs="0">
         <xs:complexType>
@@ -98,14 +92,27 @@ elementFormDefault="qualified">
   </xs:all>
 </xs:complexType>
 
-<xs:complexType name="institution">
+<xs:complexType name="institution_name">
   <xs:simpleContent>
     <xs:extension base="xs:string">
       <xs:attribute name="type"  use="required">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:enumeration value="full_name" />
-            <xs:enumeration value="short_name" />
+            <xs:enumeration value="full" />
+            <xs:enumeration value="short" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="institution_id">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="type"  use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
             <xs:enumeration value="ror" />
             <xs:enumeration value="isni" />
             <xs:enumeration value="ringold" />
@@ -114,6 +121,19 @@ elementFormDefault="qualified">
       </xs:attribute>
     </xs:extension>
   </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="institution">
+  <xs:choice>
+    <xs:sequence>
+     <xs:element name="institution_name" type="institution_name" minOccurs="1"/>
+     <xs:element name="institution_id" type="institution_id" minOccurs="0"/>
+    </xs:sequence>
+    <xs:sequence>
+     <xs:element name="institution_id" type="institution_id" minOccurs="1"/>
+     <xs:element name="institution_name" type="institution_name" minOccurs="0"/>
+    </xs:sequence>
+  </xs:choice>
 </xs:complexType>
 
 <xs:complexType name="amount_invoice">

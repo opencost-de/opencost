@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <opencost:publication xmlns:opencost="https://opencost.de">
-  <opencost:institutions>
-    <opencost:institution type="short_name">desy</opencost:institution>
-    <opencost:institution type="ror">https://ror.org/01js2sh04</opencost:institution>
-  </opencost:institutions>
+  <opencost:institution>
+    <opencost:institution_name type="short">desy</opencost:institution_name>
+    <opencost:institution_id type="ror">https://ror.org/01js2sh04</opencost:institution_id>
+  </opencost:institution>
   <opencost:primary_identifier>
     <opencost:doi>10.1364/OME.460445</opencost:doi>
   </opencost:primary_identifier>

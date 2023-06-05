@@ -25,8 +25,8 @@
     <opencost:id type="oai">oai:bib-pubdb1.desy.de:473418</opencost:id>
   </opencost:secondary_identifiers>
   <opencost:type>journal article</opencost:type>
-  <opencost:institutions>
-    <opencost:institution type="short_name">desy</opencost:institution>
-    <opencost:institution type="ror">https://ror.org/01js2sh04</opencost:institution>
-  </opencost:institutions>
+  <opencost:institution>
+    <opencost:institution_name type="short">desy</opencost:institution_name>
+    <opencost:institution_id type="ror">https://ror.org/01js2sh04</opencost:institution_id>
+  </opencost:institution>
 </opencost:publication>
