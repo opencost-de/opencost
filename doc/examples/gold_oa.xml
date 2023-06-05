@@ -15,6 +15,7 @@
     <opencost:id type="pmid">36473837</opencost:id>
   </opencost:secondary_identifiers>
   <opencost:type>journal article</opencost:type>
+  <opencost:external_costsplitting>false</opencost:external_costsplitting>
   <opencost:cost_data>
     <opencost:invoice>
       <opencost:amount_invoice currency="EUR">4890.0</opencost:amount_invoice>

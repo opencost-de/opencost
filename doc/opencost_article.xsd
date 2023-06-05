@@ -25,6 +25,7 @@ elementFormDefault="qualified">
       </xs:element>
       <xs:element name="institution" type="institution" />
       <xs:element name="type" type="coar_publication_type" />
+      <xs:element name="external_costsplitting" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="part_of_contract" minOccurs="0">
         <xs:complexType>
           <xs:simpleContent>
