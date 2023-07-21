@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<opencost:contract xmlns:opencost="https://opencost.de">
+  <opencost:contract_name>DEAL-Wiley</opencost:contract_name>
+  <opencost:institution_join_date>2019-07-01</opencost:institution_join_date>
+  <opencost:institution_exit_date>2021-12-31</opencost:institution_exit_date>
+  <opencost:relevant_publication_date>acceptance</opencost:relevant_publication_date>
+  <opencost:institution>
+    <opencost:institution_id type="ror">https://ror.org/01eezs655</opencost:institution_id>
+    <opencost:institution_name type="short">UBR</opencost:institution_name>
+  </opencost:institution>
+  <opencost:primary_identifier type="ESAC">wiley2019deal</opencost:primary_identifier>
+  <opencost:secondary_identifiers>
+    <opencost:id type="oai"></opencost:id>
+    <opencost:id type="ezb">EZB-WIDEA-1707</opencost:id>
+  </opencost:secondary_identifiers>
+  <opencost:cost_data>
+    <opencost:invoice id="2020 | invoice number">
+      <opencost:amount_invoice currency="EUR">64040.47</opencost:amount_invoice>
+      <opencost:amounts_paid>
+        <opencost:amount_paid currency="EUR" type="publishing">64040.47</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="vat" >12167.69</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="read">128185.58</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="vat">6409.28</opencost:amount_paid>        
+      </opencost:amounts_paid>
+      <opencost:creditor>MPDL Services GmbH</opencost:creditor>
+      <opencost:invoice_period>
+        <opencost:from>2020-01-01</opencost:from>
+        <opencost:to>2020-06-31</opencost:to>
+      </opencost:invoice_period>      
+      <opencost:dates>
+        <opencost:date_paid>2020-12-01</opencost:date_paid>
+        <opencost:date_invoice>2020-11-01</opencost:date_invoice>
+      </opencost:dates>
+      <opencost:invoice_number></opencost:invoice_number>
+    </opencost:invoice>
+    <opencost:invoice id="2021 | invoice number">
+      <opencost:amount_invoice currency="EUR">64040.47</opencost:amount_invoice>
+      <opencost:amounts_paid>
+        <opencost:amount_paid currency="EUR" type="publishing">69377.17</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="vat">11100.35</opencost:amount_paid>    
+      </opencost:amounts_paid>
+      <opencost:creditor>MPDL Services GmbH</opencost:creditor>
+      <opencost:invoice_period>
+        <opencost:from>2021-01-01</opencost:from>
+        <opencost:to>2021-12-31</opencost:to>
+      </opencost:invoice_period>      
+      <opencost:dates>
+        <opencost:date_paid>2021-12-01</opencost:date_paid>
+        <opencost:date_invoice>2021-12-01</opencost:date_invoice>
+      </opencost:dates>
+      <opencost:invoice_number></opencost:invoice_number>
+    </opencost:invoice>
+  </opencost:cost_data>
+</opencost:contract>
