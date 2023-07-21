@@ -8,56 +8,12 @@ elementFormDefault="qualified">
 <xs:element name="publication">
   <xs:complexType>
     <xs:all>
-      <xs:element name="primary_identifier">
-        <xs:complexType>
-          <xs:choice>
-            <xs:element name="doi" type="xs:string" />
-            <xs:element name="bibliographic_information" type="bibliographic_information" />
-          </xs:choice>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="secondary_identifiers" minOccurs="0">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="id" minOccurs="1" maxOccurs="unbounded" type="publication_secondary_id_type" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="institution" type="institution" />
+      <xs:element name="primary_identifier" type="publication_primary_identifier" />
+      <xs:element name="secondary_identifiers" type="publication_secondary_identifiers" minOccurs="0" />
+      <xs:element name="institution" type="institution_type" />
       <xs:element name="type" type="coar_publication_type" />
-      <xs:element name="external_costsplitting" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="part_of_contract" minOccurs="0">
-        <xs:complexType>
-          <xs:simpleContent>
-            <xs:extension base="xs:string">
-              <xs:attribute name="type" type="xs:string" />
-            </xs:extension>
-          </xs:simpleContent>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="cost_data">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="invoice" minOccurs="1" maxOccurs="unbounded">
-              <xs:complexType>
-                <xs:all>
-                  <xs:element name="amount_invoice" minOccurs="0" type="amount_invoice" />
-                  <xs:element name="invoice_number" type="xs:string" minOccurs="0"/>
-                  <xs:element name="amounts_paid">
-                    <xs:complexType>
-                      <xs:sequence>
-                        <xs:element name="amount_paid" minOccurs="1" maxOccurs="unbounded" type="publication_amount_paid_type" />
-                      </xs:sequence>
-                    </xs:complexType>
-                  </xs:element>
-                  <xs:element name="dates" type="dates"/>
-                  <xs:element name="creditor" type="xs:string" minOccurs="0"/>
-                </xs:all>
-              </xs:complexType>
-            </xs:element>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element> 
+      <xs:element name="external_costsplitting" type="xs:boolean" minOccurs="0" />
+      <xs:element name="cost_data" type="publication_cost_data_type" />
     </xs:all>
   </xs:complexType>
 </xs:element>
@@ -69,7 +25,7 @@ elementFormDefault="qualified">
       <xs:element name="institution_join_date" type="date_format" />
       <xs:element name="institution_exit_date" type="date_format" />
       <xs:element name="relevant_publication_date" type="relevant_publication_date_type" />
-      <xs:element name="institution" type="institution" />
+      <xs:element name="institution" type="institution_type" />
       <xs:element name="primary_identifier" type="contract_primary_identifier_type" />
       <xs:element name="secondary_identifiers" type="contract_secondary_identifiers_type" minOccurs="0" />
       <xs:element name="cost_data" type="contract_cost_data_type"/>
@@ -99,6 +55,56 @@ elementFormDefault="qualified">
     </xs:element>
   </xs:all>
   <xs:attribute name="id" type="xs:string" use="required" />
+</xs:complexType>
+
+<xs:complexType name="part_of_contract_type">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="type" type="xs:string" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="publication_cost_data_type">
+  <xs:choice>
+    <xs:sequence>
+      <xs:element name="invoice" type="publication_invoice_type" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="part_of_contract" type="part_of_contract_type" minOccurs="0" />
+    </xs:sequence>
+    <xs:sequence>
+      <xs:element name="part_of_contract" type="part_of_contract_type" minOccurs="1" />
+      <xs:element name="invoice" type="publication_invoice_type" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="publication_invoice_type">
+  <xs:all>
+    <xs:element name="amount_invoice" minOccurs="0" type="amount_invoice" />
+    <xs:element name="invoice_number" type="xs:string" minOccurs="0"/>
+    <xs:element name="amounts_paid">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="amount_paid" minOccurs="1" maxOccurs="unbounded" type="publication_amount_paid_type" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    <xs:element name="dates" type="dates"/>
+    <xs:element name="creditor" type="xs:string" minOccurs="0"/>
+  </xs:all>
+</xs:complexType>
+
+<xs:complexType name="publication_primary_identifier">
+  <xs:choice>
+    <xs:element name="doi" type="xs:string" />
+    <xs:element name="bibliographic_information" type="bibliographic_information" />
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="publication_secondary_identifiers">
+  <xs:sequence>
+    <xs:element name="id" minOccurs="1" maxOccurs="unbounded" type="publication_secondary_id_type" />
+  </xs:sequence>
 </xs:complexType>
 
 <xs:simpleType name="relevant_publication_date_type">
@@ -214,7 +220,7 @@ elementFormDefault="qualified">
   </xs:simpleContent>
 </xs:complexType>
 
-<xs:complexType name="institution">
+<xs:complexType name="institution_type">
   <xs:choice>
     <xs:sequence>
      <xs:element name="institution_name" type="institution_name" minOccurs="1"/>
