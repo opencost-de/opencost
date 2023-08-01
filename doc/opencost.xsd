@@ -7,10 +7,16 @@ elementFormDefault="qualified">
 
 <xs:element name="data">
   <xs:complexType>
-    <xs:all>
-      <xs:element name="publication" type="publication_type" minOccurs="0" />
-      <xs:element name="contract" type="contract_type" minOccurs="0" />
-    </xs:all>
+    <xs:choice>
+      <xs:sequence>
+        <xs:element name="publication" type="publication_type" minOccurs="1" maxOccurs="unbounded" />
+        <xs:element name="contract" type="contract_type" minOccurs="0" />
+      </xs:sequence>
+      <xs:sequence>
+        <xs:element name="contract" type="contract_type" minOccurs="1" />
+        <xs:element name="publication" type="publication_type" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:choice>
   </xs:complexType>
 </xs:element>
 
