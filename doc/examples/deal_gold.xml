@@ -1,33 +1,35 @@
 <?xml version="1.0"?>
-<opencost:publication xmlns:opencost="https://opencost.de">
-  <opencost:institution>
-    <opencost:institution_name type="short">desy</opencost:institution_name>
-    <opencost:institution_id type="ror">https://ror.org/01js2sh04</opencost:institution_id>
-  </opencost:institution>
-  <opencost:primary_identifier>
-    <opencost:doi>10.1038/s41598-022-13507-4</opencost:doi>
-  </opencost:primary_identifier>
-  <opencost:secondary_identifiers>
-    <opencost:id type="local">PUBDB-2022-00039</opencost:id>
-    <opencost:id type="oai">oai:bib-pubdb1.desy.de:473418</opencost:id>
-    <opencost:id type="doi">10.1038/s41598-022-13507-4</opencost:id>
-    <opencost:id type="doi">10.3204/PUBDB-2022-00039</opencost:id>
-    <opencost:id type="pmid">35689001</opencost:id>
-  </opencost:secondary_identifiers>
-  <opencost:type>journal article</opencost:type>
-  <opencost:cost_data>
-    <opencost:invoice>
-      <opencost:amount_invoice currency="EUR">1681.82</opencost:amount_invoice>
-      <opencost:amounts_paid>
-        <opencost:amount_paid currency="EUR" type="gold-oa">1681.82</opencost:amount_paid>
-        <opencost:amount_paid currency="EUR" type="vat">15.83</opencost:amount_paid>
-      </opencost:amounts_paid>
-      <opencost:creditor>Macmillan Publishers Limited, part of Springer Nature</opencost:creditor>
-      <opencost:dates>
-        <opencost:date_paid>2022-05-31</opencost:date_paid>
-        <opencost:date_invoice>2022-10-07</opencost:date_invoice>
-      </opencost:dates>
-      <opencost:invoice_number>SN-2022-00398-b</opencost:invoice_number>
-    </opencost:invoice>
-  </opencost:cost_data>
-</opencost:publication>
+<opencost:data xmlns:opencost="https://opencost.de">
+  <opencost:publication>
+    <opencost:institution>
+      <opencost:institution_name type="short">desy</opencost:institution_name>
+      <opencost:institution_id type="ror">https://ror.org/01js2sh04</opencost:institution_id>
+    </opencost:institution>
+    <opencost:primary_identifier>
+      <opencost:doi>10.1038/s41598-022-13507-4</opencost:doi>
+    </opencost:primary_identifier>
+    <opencost:secondary_identifiers>
+      <opencost:id type="local">PUBDB-2022-00039</opencost:id>
+      <opencost:id type="oai">oai:bib-pubdb1.desy.de:473418</opencost:id>
+      <opencost:id type="doi">10.1038/s41598-022-13507-4</opencost:id>
+      <opencost:id type="doi">10.3204/PUBDB-2022-00039</opencost:id>
+      <opencost:id type="pmid">35689001</opencost:id>
+    </opencost:secondary_identifiers>
+    <opencost:type>journal article</opencost:type>
+    <opencost:cost_data>
+      <opencost:invoice>
+        <opencost:amount_invoice currency="EUR">1681.82</opencost:amount_invoice>
+        <opencost:amounts_paid>
+          <opencost:amount_paid currency="EUR" type="gold-oa">1681.82</opencost:amount_paid>
+          <opencost:amount_paid currency="EUR" type="vat">15.83</opencost:amount_paid>
+        </opencost:amounts_paid>
+        <opencost:creditor>Macmillan Publishers Limited, part of Springer Nature</opencost:creditor>
+        <opencost:dates>
+          <opencost:date_paid>2022-05-31</opencost:date_paid>
+          <opencost:date_invoice>2022-10-07</opencost:date_invoice>
+        </opencost:dates>
+        <opencost:invoice_number>SN-2022-00398-b</opencost:invoice_number>
+      </opencost:invoice>
+    </opencost:cost_data>
+  </opencost:publication>
+</opencost:data>

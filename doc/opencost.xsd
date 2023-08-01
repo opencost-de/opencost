@@ -5,33 +5,38 @@ targetNamespace="https://opencost.de"
 xmlns="https://opencost.de"
 elementFormDefault="qualified">
 
-<xs:element name="publication">
+<xs:element name="data">
   <xs:complexType>
     <xs:all>
-      <xs:element name="primary_identifier" type="publication_primary_identifier" />
-      <xs:element name="secondary_identifiers" type="publication_secondary_identifiers" minOccurs="0" />
-      <xs:element name="institution" type="institution_type" />
-      <xs:element name="type" type="coar_publication_type" />
-      <xs:element name="external_costsplitting" type="xs:boolean" minOccurs="0" />
-      <xs:element name="cost_data" type="publication_cost_data_type" />
+      <xs:element name="publication" type="publication_type" minOccurs="0" />
+      <xs:element name="contract" type="contract_type" minOccurs="0" />
     </xs:all>
   </xs:complexType>
 </xs:element>
 
-<xs:element name="contract">
-  <xs:complexType>
-    <xs:all>
-      <xs:element name="contract_name" type="xs:string" />
-      <xs:element name="institution_join_date" type="date_format" />
-      <xs:element name="institution_exit_date" type="date_format" />
-      <xs:element name="relevant_publication_date" type="relevant_publication_date_type" />
-      <xs:element name="institution" type="institution_type" />
-      <xs:element name="primary_identifier" type="contract_primary_identifier_type" />
-      <xs:element name="secondary_identifiers" type="contract_secondary_identifiers_type" minOccurs="0" />
-      <xs:element name="cost_data" type="contract_cost_data_type"/>
-    </xs:all>
-  </xs:complexType>
-</xs:element>
+<xs:complexType name="publication_type">
+  <xs:all>
+    <xs:element name="primary_identifier" type="publication_primary_identifier" />
+    <xs:element name="secondary_identifiers" type="publication_secondary_identifiers" minOccurs="0" />
+    <xs:element name="institution" type="institution_type" />
+    <xs:element name="type" type="coar_publication_type" />
+    <xs:element name="external_costsplitting" type="xs:boolean" minOccurs="0" />
+    <xs:element name="cost_data" type="publication_cost_data_type" />
+  </xs:all>
+</xs:complexType>
+
+<xs:complexType name="contract_type">
+  <xs:all>
+    <xs:element name="contract_name" type="xs:string" />
+    <xs:element name="institution_join_date" type="date_format" />
+    <xs:element name="institution_exit_date" type="date_format" />
+    <xs:element name="relevant_publication_date" type="relevant_publication_date_type" />
+    <xs:element name="institution" type="institution_type" />
+    <xs:element name="primary_identifier" type="contract_primary_identifier_type" />
+    <xs:element name="secondary_identifiers" type="contract_secondary_identifiers_type" minOccurs="0" />
+    <xs:element name="cost_data" type="contract_cost_data_type"/>
+  </xs:all>
+</xs:complexType>
 
 <xs:complexType name="contract_cost_data_type">
   <xs:sequence>
