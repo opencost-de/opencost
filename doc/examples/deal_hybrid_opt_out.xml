@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<opencost:data xmlns:opencost="https://opencost.de">
+  <opencost:publication>
+    <opencost:institution>
+      <opencost:institution_name type="short">UBR</opencost:institution_name>
+      <opencost:institution_id type="ror">https://ror.org/01eezs655</opencost:institution_id>
+    </opencost:institution>
+    <opencost:primary_identifier>
+      <opencost:doi>10.1002/ece3.4791</opencost:doi>
+    </opencost:primary_identifier>
+    <opencost:secondary_identifiers>
+      <opencost:id type="doi">10.1002/ece3.4791</opencost:id>
+      <opencost:id type="pmid">35689023</opencost:id>
+    </opencost:secondary_identifiers>
+    <opencost:type>journal article</opencost:type>
+    <opencost:cost_data>
+	  <opencost:part_of_contract>wiley2019deal</opencost:part_of_contract>
+      <opencost:invoice>
+        <opencost:amount_invoice currency="EUR">0</opencost:amount_invoice>
+        <opencost:amounts_paid>
+          <opencost:amount_paid currency="EUR" type="publication charge">0</opencost:amount_paid>
+        </opencost:amounts_paid>
+        <opencost:creditor>MPDL Services GmbH</opencost:creditor>
+        <opencost:dates>
+          <opencost:date_paid>2021-12-01</opencost:date_paid>
+          <opencost:date_invoice>2021-12-01</opencost:date_invoice>
+        </opencost:dates>
+      </opencost:invoice>
+    </opencost:cost_data>
+  </opencost:publication>
+</opencost:data>
