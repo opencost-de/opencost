@@ -13,6 +13,7 @@
     <opencost:secondary_identifiers>
       <opencost:id type="oai"></opencost:id>
       <opencost:id type="ezb">EZB-WIDEA-1707</opencost:id>
+      <opencost:id type="local"></opencost:id>
     </opencost:secondary_identifiers>
     <opencost:cost_data>
       <opencost:invoice id="2020 | invoice number">
