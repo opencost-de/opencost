@@ -163,6 +163,7 @@ elementFormDefault="qualified">
           <xs:restriction base="xs:string">
             <xs:enumeration value="oai" />
             <xs:enumeration value="ezb" />
+            <xs:enumeration value="local" />
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
