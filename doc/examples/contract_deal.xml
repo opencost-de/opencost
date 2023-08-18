@@ -16,7 +16,8 @@
       <opencost:id type="local"></opencost:id>
     </opencost:secondary_identifiers>
     <opencost:cost_data>
-      <opencost:invoice id="2020 | invoice number">
+      <opencost:invoice>
+        <opencost:invoice_id>01eezs655_wiley2019deal_2020</opencost:invoice_id>
         <opencost:amount_invoice currency="EUR">64040.47</opencost:amount_invoice>
         <opencost:amounts_paid>
           <opencost:amount_paid currency="EUR" type="publishing">64040.47</opencost:amount_paid>
@@ -35,7 +36,8 @@
         </opencost:dates>
         <opencost:invoice_number></opencost:invoice_number>
       </opencost:invoice>
-      <opencost:invoice id="2021 | invoice number">
+      <opencost:invoice>
+        <opencost:invoice_id>01eezs655_wiley2019deal_2021</opencost:invoice_id>
         <opencost:amount_invoice currency="EUR">64040.47</opencost:amount_invoice>
         <opencost:amounts_paid>
           <opencost:amount_paid currency="EUR" type="publishing">69377.17</opencost:amount_paid>

@@ -17,6 +17,9 @@
     </opencost:secondary_identifiers>
     <opencost:type>journal article</opencost:type>
     <opencost:cost_data>
+      <opencost:part_of_contract>
+        <opencost:primary_identifier type="ESAC">wiley2019deal</opencost:primary_identifier>
+      </opencost:part_of_contract>
       <opencost:invoice>
         <opencost:amount_invoice currency="EUR">1681.82</opencost:amount_invoice>
         <opencost:amounts_paid>
