@@ -52,6 +52,7 @@ elementFormDefault="qualified">
 
 <xs:complexType name="contract_invoice_type">
   <xs:all>
+    <xs:element name="invoice_id" type="xs:string" />
     <xs:element name="amount_invoice" type="amount_invoice" minOccurs="0" />
     <xs:element name="invoice_number" type="xs:string" minOccurs="0" />
     <xs:element name="creditor" type="xs:string" minOccurs="0" />
@@ -65,15 +66,13 @@ elementFormDefault="qualified">
       </xs:complexType>
     </xs:element>
   </xs:all>
-  <xs:attribute name="id" type="xs:string" use="required" />
 </xs:complexType>
 
 <xs:complexType name="part_of_contract_type">
-  <xs:simpleContent>
-    <xs:extension base="xs:string">
-      <xs:attribute name="type" type="xs:string" />
-    </xs:extension>
-  </xs:simpleContent>
+  <xs:all>
+    <xs:element name="invoice_id" type="xs:string" minOccurs="0" />
+    <xs:element name="primary_identifier" type="contract_primary_identifier_type" />
+  </xs:all>
 </xs:complexType>
 
 <xs:complexType name="publication_cost_data_type">
