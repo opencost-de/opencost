@@ -2,12 +2,15 @@
 <opencost:data xmlns:opencost="https://opencost.de">
   <opencost:contract>
     <opencost:contract_name>DEAL-Wiley</opencost:contract_name>
-    <opencost:institution_join_date>2019-07-01</opencost:institution_join_date>
-    <opencost:institution_exit_date>2021-12-31</opencost:institution_exit_date>
-    <opencost:relevant_publication_date>acceptance</opencost:relevant_publication_date>
     <opencost:institution>
-      <opencost:institution_id type="ror">https://ror.org/01eezs655</opencost:institution_id>
-      <opencost:institution_name type="short">UBR</opencost:institution_name>
+      <opencost:identity>
+        <opencost:institution_id type="ror">https://ror.org/01eezs655</opencost:institution_id>
+        <opencost:institution_name type="short">UBR</opencost:institution_name>
+      </opencost:identity>
+      <opencost:participation>
+        <opencost:date_join>2019-07-01</opencost:date_join>
+        <opencost:date_exit>2021-12-31</opencost:date_exit>
+      </opencost:participation>
     </opencost:institution>
     <opencost:primary_identifier type="ESAC">wiley2019deal</opencost:primary_identifier>
     <opencost:secondary_identifiers>

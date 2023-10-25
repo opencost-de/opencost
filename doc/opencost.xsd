@@ -34,13 +34,24 @@ elementFormDefault="qualified">
 <xs:complexType name="contract_type">
   <xs:all>
     <xs:element name="contract_name" type="xs:string" />
-    <xs:element name="institution_join_date" type="date_format" />
-    <xs:element name="institution_exit_date" type="date_format" />
-    <xs:element name="relevant_publication_date" type="relevant_publication_date_type" />
-    <xs:element name="institution" type="institution_type" />
+    <xs:element name="institution" type="contract_institution_type" />
     <xs:element name="primary_identifier" type="contract_primary_identifier_type" />
     <xs:element name="secondary_identifiers" type="contract_secondary_identifiers_type" minOccurs="0" />
     <xs:element name="cost_data" type="contract_cost_data_type"/>
+  </xs:all>
+</xs:complexType>
+
+<xs:complexType name="contract_institution_type">
+  <xs:all>
+    <xs:element name="identity" type="institution_type" />
+    <xs:element name="participation" type="participation_type" />
+  </xs:all>
+</xs:complexType>
+
+<xs:complexType name="participation_type">
+  <xs:all>
+    <xs:element name="date_exit" type="date_format" />
+    <xs:element name="date_join" type="date_format" />
   </xs:all>
 </xs:complexType>
 
