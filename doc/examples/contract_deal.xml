@@ -4,29 +4,66 @@
     <opencost:contract_name>DEAL-Wiley</opencost:contract_name>
     <opencost:institution>
       <opencost:identity>
-        <opencost:institution_id type="ror">https://ror.org/01eezs655</opencost:institution_id>
-        <opencost:institution_name type="short">UBR</opencost:institution_name>
+        <opencost:id>
+          <opencost:type>ror</opencost:type>
+          <opencost:value>https://ror.org/01eezs655</opencost:value>
+        </opencost:id>
+        <opencost:name>
+           <opencost:type>short</opencost:type>
+          <opencost:value>UBR</opencost:value>
+        </opencost:name>
       </opencost:identity>
       <opencost:participation>
         <opencost:date_join>2019-07-01</opencost:date_join>
         <opencost:date_exit>2021-12-31</opencost:date_exit>
       </opencost:participation>
     </opencost:institution>
-    <opencost:primary_identifier type="ESAC">wiley2019deal</opencost:primary_identifier>
+    <opencost:primary_identifier>
+      <opencost:type>ESAC</opencost:type>
+      <opencost:value>wiley2019deal</opencost:value>
+    </opencost:primary_identifier>
     <opencost:secondary_identifiers>
-      <opencost:id type="oai"></opencost:id>
-      <opencost:id type="ezb">EZB-WIDEA-1707</opencost:id>
-      <opencost:id type="local"></opencost:id>
+      <opencost:id>
+        <opencost:type>oai</opencost:type>
+        <opencost:value></opencost:value>
+      </opencost:id>
+      <opencost:id>
+        <opencost:type>ezb</opencost:type>
+        <opencost:value>EZB-WIDEA-1707</opencost:value>
+      </opencost:id>
+      <opencost:id>
+        <opencost:type>local</opencost:type>
+        <opencost:value></opencost:value>
+      </opencost:id>
     </opencost:secondary_identifiers>
     <opencost:cost_data>
       <opencost:invoice>
         <opencost:invoice_id>01eezs655_wiley2019deal_2020</opencost:invoice_id>
-        <opencost:amount_invoice currency="EUR">64040.47</opencost:amount_invoice>
+        <opencost:amount_invoice>
+          <opencost:currency>EUR</opencost:currency>
+          <opencost:amount>64040.47</opencost:amount>
+        </opencost:amount_invoice>
         <opencost:amounts_paid>
-          <opencost:amount_paid currency="EUR" type="publishing">64040.47</opencost:amount_paid>
-          <opencost:amount_paid currency="EUR" type="vat" >12167.69</opencost:amount_paid>
-          <opencost:amount_paid currency="EUR" type="read">128185.58</opencost:amount_paid>
-          <opencost:amount_paid currency="EUR" type="vat">6409.28</opencost:amount_paid>        
+          <opencost:amount_paid>
+            <opencost:currency>EUR</opencost:currency>
+            <opencost:amount>64040.47</opencost:amount>
+            <opencost:cost_type>publishing</opencost:cost_type>
+          </opencost:amount_paid>
+          <opencost:amount_paid>
+            <opencost:currency>EUR</opencost:currency>
+            <opencost:amount>12167.69</opencost:amount>
+            <opencost:cost_type>vat</opencost:cost_type>
+          </opencost:amount_paid>
+          <opencost:amount_paid>
+            <opencost:currency>EUR</opencost:currency>
+            <opencost:amount>128185.58</opencost:amount>
+            <opencost:cost_type>read</opencost:cost_type>
+          </opencost:amount_paid>
+          <opencost:amount_paid>
+            <opencost:currency>EUR</opencost:currency>
+            <opencost:amount>6409.28</opencost:amount>
+            <opencost:cost_type>vat</opencost:cost_type>
+          </opencost:amount_paid>
         </opencost:amounts_paid>
         <opencost:creditor>MPDL Services GmbH</opencost:creditor>
         <opencost:invoice_period>
@@ -41,10 +78,21 @@
       </opencost:invoice>
       <opencost:invoice>
         <opencost:invoice_id>01eezs655_wiley2019deal_2021</opencost:invoice_id>
-        <opencost:amount_invoice currency="EUR">64040.47</opencost:amount_invoice>
+        <opencost:amount_invoice>
+          <opencost:currency>EUR</opencost:currency>
+          <opencost:amount>64040.47</opencost:amount>
+        </opencost:amount_invoice>
         <opencost:amounts_paid>
-          <opencost:amount_paid currency="EUR" type="publishing">69377.17</opencost:amount_paid>
-          <opencost:amount_paid currency="EUR" type="vat">11100.35</opencost:amount_paid>    
+          <opencost:amount_paid>
+            <opencost:currency>EUR</opencost:currency>
+            <opencost:amount>69377.17</opencost:amount>
+            <opencost:cost_type>publishing</opencost:cost_type>
+          </opencost:amount_paid>
+          <opencost:amount_paid>
+            <opencost:currency>EUR</opencost:currency>
+            <opencost:amount>11100.35</opencost:amount>
+            <opencost:cost_type>vat</opencost:cost_type>
+          </opencost:amount_paid>
         </opencost:amounts_paid>
         <opencost:creditor>MPDL Services GmbH</opencost:creditor>
         <opencost:invoice_period>

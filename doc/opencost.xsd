@@ -146,17 +146,16 @@ elementFormDefault="qualified">
 </xs:complexType>
 
 <xs:complexType name="contract_primary_identifier_type">
-  <xs:simpleContent>
-    <xs:extension base="xs:string">
-      <xs:attribute name="type"  use="required">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="ESAC" />
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:attribute>
-    </xs:extension>
-  </xs:simpleContent>
+  <xs:all>
+    <xs:element name="value" type="xs:string" />
+    <xs:element name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ESAC" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+  </xs:all>
 </xs:complexType>
 
 <xs:complexType name="contract_secondary_identifiers_type">
@@ -166,41 +165,39 @@ elementFormDefault="qualified">
 </xs:complexType>
 
 <xs:complexType name="contract_secondary_id_type">
-  <xs:simpleContent>
-    <xs:extension base="xs:string">
-      <xs:attribute name="type"  use="required">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="oai" />
-            <xs:enumeration value="ezb" />
-            <xs:enumeration value="local" />
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:attribute>
-    </xs:extension>
-  </xs:simpleContent>
+  <xs:all>
+    <xs:element name="value" type="xs:string" />
+    <xs:element name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="oai" />
+          <xs:enumeration value="ezb" />
+          <xs:enumeration value="local" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+  </xs:all>
 </xs:complexType>
 
 <xs:complexType name="publication_secondary_id_type">
-  <xs:simpleContent>
-    <xs:extension base="xs:string">
-      <xs:attribute name="type"  use="required">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="doi" />
-            <xs:enumeration value="handle" />
-            <xs:enumeration value="urn" />
-            <xs:enumeration value="isbn" />
-            <xs:enumeration value="pmid" />
-            <xs:enumeration value="pmc" />
-            <xs:enumeration value="arxiv" />
-            <xs:enumeration value="oai" />
-            <xs:enumeration value="local" />
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:attribute>
-    </xs:extension>
-  </xs:simpleContent>
+  <xs:all>
+    <xs:element name="value" type="xs:string" />
+    <xs:element name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="doi" />
+          <xs:enumeration value="handle" />
+          <xs:enumeration value="urn" />
+          <xs:enumeration value="isbn" />
+          <xs:enumeration value="pmid" />
+          <xs:enumeration value="pmc" />
+          <xs:enumeration value="arxiv" />
+          <xs:enumeration value="oai" />
+          <xs:enumeration value="local" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+  </xs:all>
 </xs:complexType>
 
 <xs:complexType name="bibliographic_information">
@@ -212,98 +209,93 @@ elementFormDefault="qualified">
 </xs:complexType>
 
 <xs:complexType name="institution_name">
-  <xs:simpleContent>
-    <xs:extension base="xs:string">
-      <xs:attribute name="type"  use="required">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="full" />
-            <xs:enumeration value="short" />
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:attribute>
-    </xs:extension>
-  </xs:simpleContent>
+  <xs:all>
+    <xs:element name="value" type="xs:string" />
+    <xs:element name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="full" />
+          <xs:enumeration value="short" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+  </xs:all>
 </xs:complexType>
 
 <xs:complexType name="institution_id">
-  <xs:simpleContent>
-    <xs:extension base="xs:string">
-      <xs:attribute name="type"  use="required">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="ror" />
-            <xs:enumeration value="isni" />
-            <xs:enumeration value="ringold" />
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:attribute>
-    </xs:extension>
-  </xs:simpleContent>
+  <xs:all>
+    <xs:element name="value" type="xs:string" />
+    <xs:element name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ror" />
+          <xs:enumeration value="isni" />
+          <xs:enumeration value="ringold" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+  </xs:all>
 </xs:complexType>
 
 <xs:complexType name="institution_type">
   <xs:choice>
     <xs:sequence>
-     <xs:element name="institution_name" type="institution_name" minOccurs="1"/>
-     <xs:element name="institution_id" type="institution_id" minOccurs="0"/>
+     <xs:element name="name" type="institution_name" minOccurs="1"/>
+     <xs:element name="id" type="institution_id" minOccurs="0"/>
     </xs:sequence>
     <xs:sequence>
-     <xs:element name="institution_id" type="institution_id" minOccurs="1"/>
-     <xs:element name="institution_name" type="institution_name" minOccurs="0"/>
+     <xs:element name="id" type="institution_id" minOccurs="1"/>
+     <xs:element name="name" type="institution_name" minOccurs="0"/>
     </xs:sequence>
   </xs:choice>
 </xs:complexType>
 
 <xs:complexType name="amount_invoice">
-  <xs:simpleContent>
-    <xs:extension base="xs:decimal">
-      <xs:attribute name="currency" use="required" type="currency" />
-    </xs:extension>
-  </xs:simpleContent>
+  <xs:all>
+    <xs:element name="currency" type="currency" />
+    <xs:element name="amount" type="xs:decimal" />
+  </xs:all>
 </xs:complexType>
+
+<xs:simpleType name="publication_cost_type">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="gold-oa" />
+    <xs:enumeration value="vat" />
+    <xs:enumeration value="colour charge" />
+    <xs:enumeration value="cover charge" />
+    <xs:enumeration value="hybrid-oa" />
+    <xs:enumeration value="other" />
+    <xs:enumeration value="page charge" />
+    <xs:enumeration value="permission" />
+    <xs:enumeration value="publication charge" />
+    <xs:enumeration value="reprint" />
+    <xs:enumeration value="submission fee" />
+    <xs:enumeration value="payment fee" />
+  </xs:restriction>
+</xs:simpleType>
 
 <xs:complexType name="publication_amount_paid_type">
-  <xs:simpleContent>
-    <xs:extension base="xs:decimal">
-      <xs:attribute name="currency" use="required" type="currency" />
-      <xs:attribute name="type"  use="required">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-          <xs:enumeration value="gold-oa" />
-          <xs:enumeration value="vat" />
-          <xs:enumeration value="colour charge" />
-          <xs:enumeration value="cover charge" />
-          <xs:enumeration value="hybrid-oa" />
-          <xs:enumeration value="other" />
-          <xs:enumeration value="page charge" />
-          <xs:enumeration value="permission" />
-          <xs:enumeration value="publication charge" />
-          <xs:enumeration value="reprint" />
-          <xs:enumeration value="submission fee" />
-          <xs:enumeration value="payment fee" />
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:attribute>
-    </xs:extension>
-  </xs:simpleContent>
+  <xs:all>
+    <xs:element name="currency" type="currency" />
+    <xs:element name="amount" type="xs:decimal" />
+    <xs:element name="cost_type" type="publication_cost_type" />
+  </xs:all>
 </xs:complexType>
 
+<xs:simpleType name="contract_cost_type">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="publishing" />
+    <xs:enumeration value="read" />
+    <xs:enumeration value="vat" />
+  </xs:restriction>
+</xs:simpleType>
+
 <xs:complexType name="contract_amount_paid_type">
-  <xs:simpleContent>
-    <xs:extension base="xs:decimal">
-      <xs:attribute name="currency" use="required" type="currency" />
-      <xs:attribute name="type"  use="required">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="publishing" />
-            <xs:enumeration value="read" />
-            <xs:enumeration value="vat" />
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:attribute>
-    </xs:extension>
-  </xs:simpleContent>
+  <xs:all>
+    <xs:element name="currency" type="currency" />
+    <xs:element name="amount" type="xs:decimal" />
+    <xs:element name="cost_type" type="contract_cost_type" />
+  </xs:all>
 </xs:complexType>
 
 <xs:simpleType name="currency">
