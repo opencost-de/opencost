@@ -16,7 +16,7 @@
    
 1. **How do we address transformative agreements or memberships?**
 
-   The initially proposed format does not yet handle transformative agreements like DEAL, but assumes article based fees only. This is a restriction made to enable as early as    possible involvement with the community. In the future this information will be indicated in the field `part_of_contract`.
+   By stating `part_of_contract` in the metadata of the publication concretely concerned you can link your publication to the specific agreement. `part_of_contract` then contains a mandatory primary identifier referring to the global contract, currently represented by an ESAC-ID. ESAC is an existing registry for transformative agreements. Additionally, it is possible to include `invoice_id` at this point to reference a particular invoice that occurred under this contract and includes a specific contract period. For detailed information please read the metadata documentation for contracts: https://github.com/opencost-de/opencost/tree/main/doc.
    
    [#11](https://github.com/opencost-de/opencost/issues/11)
 
