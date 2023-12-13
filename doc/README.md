@@ -90,13 +90,12 @@ publication
     |     |--- invoice
     |     |    |
     |     |    |--- creditor
+    |     |    |--- invoice_number
     |     |    |
     |     |    |--- dates
     |     |    |    |
     |     |    |    |--- paid
     |     |    |    |--- invoice
-    |     |    |
-    |     |    |--- invoice_number
     |     |    |
     |     |    |--- amount_invoice
     |     |    |    |
@@ -167,45 +166,74 @@ These elements hold text data.
 contract
     |
     |--- contract_name
-    |--- institution_join_date
-    |--- institution_exit_date
-    |--- relevant_publication_date
-    |
     |--- institution
-    |       |
-    |       |--- institution_id type=ror
-    |       |--- institution_name type=short
+    |    |
+    |    |--- identity
+    |    |    |
+    |    |    |--- id
+    |    |    |    |
+    |    |    |    |--- type
+    |    |    |    |--- value
+    |    |    |
+    |    |    |--- name
+    |    |         |
+    |    |         |--- type
+    |    |         |--- value
+    |    |
+    |    |--- participation
+    |    |    |
+    |    |    |--- date_join
+    |    |    |--- date_exit
     |
     |--- primary_identifier
+    |    |
+    |    |--- type
+    |    |--- value
+    |
     |--- secondary_identifiers
-    |       |
-    |       |--- id
+    |    |
+    |    |--- id
+    |    |    |
+    |    |    |--- type
+    |    |    |--- value
+    |    |--- id
+    |    |    |--- [...]
     |
     |--- cost_data
-    |     |
-    |     |--- invoice
-    |     |      |
-    |     |      |--- invoice_id
-    |     |      |--- amount_invoice
-    |     |      |--- dates
-    |     |      |      |
-    |     |      |      |--- date_paid
-    |     |      |      |--- date_invoice
-    |     |      |
-    |     |      |--- invoice_period
-    |     |      |      |
-    |     |      |      |--- from
-    |     |      |      |--- to
-    |     |      |
-    |     |      |--- creditor
-    |     |      |--- invoice_number
-    |     |      |--- amounts_paid
-    |     |             |
-    |     |             |--- amount_paid
-    |     |             |--- amount_paid
-    |     |
-    |     |--- invoice
-    |
+    |    |
+    |    |--- invoice
+    |    |    |
+    |    |    |--- creditor
+    |    |    |--- invoice_id
+    |    |    |
+    |    |    |--- invoice_period
+    |    |    |    |
+    |    |    |    |--- from
+    |    |    |    |--- to
+    |    |    |
+    |    |    |--- dates
+    |    |    |    |
+    |    |    |    |--- invoice
+    |    |    |    |--- paid
+    |    |    |
+    |    |    |--- amount_invoice
+    |    |    |    |
+    |    |    |    |--- amount
+    |    |    |    |--- currency
+    |    |    |
+    |    |    |--- amounts_paid
+    |    |    |    |
+    |    |    |    |--- amount_paid
+    |    |    |    |    |
+    |    |    |    |    |--- amount
+    |    |    |    |    |--- cost_type
+    |    |    |    |    |--- currency
+    |    |    |    |
+    |    |    |    |--- amount_paid
+    |    |    |    |    |--- [...]
+    |    |
+    |    |--- invoice
+    |    |    |--- [...]
 ```
 
 ### Container elements
