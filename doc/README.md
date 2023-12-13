@@ -49,45 +49,72 @@ The overall tree structure looks like this:
 ```
 publication
     |
+    |--- institution
+    |    |
+    |    |--- id
+    |    |    |
+    |    |    |--- type
+    |    |    |--- value
+    |    |
+    |    |--- name
+    |    |    |
+    |    |    |--- type
+    |    |    |--- value
+    |
     |--- primary_identifier
-    |        |
-    |        |--- doi  _OR_  bibliographic_information
+    |    |
+    |    |--- doi  _OR_  bibliographic_information
     |
     |--- secondary_identifiers
-    |        |
-    |        |--- id type=doi
-    |        |--- id type=local
-    |        |--- id type=oai
-    |
-    |--- institution
-    |       |
-    |       |--- institution_id type=ror
-    |       |--- institution_name type=short
+    |    |
+    |    |--- id
+    |    |    |
+    |    |    |--- type
+    |    |    |--- value
+    |    |
+    |    |--- id
+    |    |    |--- [...]
     |
     |--- type
     |--- external_costsplitting
+    |
     |--- cost_data
     |     |
     |     |--- part_of_contract
-    |     |      |
-    |     |      |--- invoice_id
-    |     |      |--- primary_identifier
+    |     |    |
+    |     |    |--- primary_identifier
+    |     |         |
+    |     |         |--- type
+    |     |         |--- value
     |     |
     |     |--- invoice
-    |     |      |
-    |     |      |--- amount_invoice
-    |     |      |--- dates
-    |     |      |      |
-    |     |      |      |--- date_paid
-    |     |      |      |--- date_invoice
-    |     |      |--- creditor
-    |     |      |--- invoice_number
-    |     |      |--- amounts_paid
-    |     |             |
-    |     |             |--- amount_paid
-    |     |             |--- amount_paid
+    |     |    |
+    |     |    |--- creditor
+    |     |    |
+    |     |    |--- dates
+    |     |    |    |
+    |     |    |    |--- paid
+    |     |    |    |--- invoice
+    |     |    |
+    |     |    |--- invoice_number
+    |     |    |
+    |     |    |--- amount_invoice
+    |     |    |    |
+    |     |    |    |--- currency
+    |     |    |    |--- amount
+    |     |    |
+    |     |    |--- amounts_paid
+    |     |         |
+    |     |         |--- amount_paid
+    |     |         |    |--- currency
+    |     |         |    |--- amount
+    |     |         |    |--- cost_type
+    |     |         |
+    |     |         |--- amount_paid
+    |     |         |    |--- [...]
     |     |
     |     |--- invoice
+    |     |      |--- [...]
     |
 ```
 
