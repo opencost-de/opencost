@@ -1,4 +1,5 @@
-**General questions**
+## General questions
+
 1. **How can I contribute to the discussion?**
 
 As we want to involve the community in our work as early as possible, we have decided to publish our project results successively in this GitHub repository and regularly obtain feedback. We therefore invite all interested parties to participate in the development of the metadata schema and look forward to a constructive discussion. You can open an GitHub issue at any time and contribute to the discussion with questions, comments or make suggestions for improving our scheme. You are also welcome to leave a comment or remark under other issues and thus participate in the discussion.
@@ -12,7 +13,7 @@ mostly established xml as exchange format. On the other hand, we do not want to 
 See issue [#41](https://github.com/opencost-de/opencost/issues/41).  
 
 
-**Schema for individual articles**
+## Schema for individual articles
 
 1. **How to deal with collective invoice for framework agreement with OA publishers?**
 
