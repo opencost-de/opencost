@@ -14,8 +14,8 @@ See issue [#41](https://github.com/opencost-de/opencost/issues/41).
 
 3. **What are the requirements for implementing openCost in my institution?**
 
-1. publication cost reporting in own internal format
-2. technically: OAI server & set definitions for automatic provision
+-> publication cost reporting in own internal format
+-> technically: OAI server & set definitions for automatic provision
 There must be an institution-specific system in which the publication costs are documented. This can be a repository or a library system, for example. Such an institution's own cost reporting system can be oriented on the concepts of openCost, but operates independently as an internal format. A technical format conversion would then take place between the internal format and the openCost exchange format. The second precondition for the automated exchange of cost data is the availability of an OAI server (with provisioning function, while harvesting is not necessary).
 
 ## Schema for individual articles
