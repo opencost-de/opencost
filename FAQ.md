@@ -23,6 +23,11 @@ There must be an institution-specific system in which the publication costs are 
 For all urls given in the metadata schema the use of the https:// protocol prefix is necessary.  
 See issue [#13](https://github.com/opencost-de/opencost/issues/13).  
 
+5. **How does openCost relate to other formats?**
+
+The openCost format is designed in a way that, in general, it can be used independently of other formats. As an exchange format for cost data that relies on the use of identifiers such as the DOI and tries to work as far as possible without bibliographic data, the openCost format is intended to be minimally redundant, so that it could also be easily integrated into other formats.  
+See issue [#14](https://github.com/opencost-de/opencost/issues/14) 
+
 ## Schema for individual articles
 
 1. **How to deal with collective invoice for framework agreement with OA publishers?**
