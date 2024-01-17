@@ -33,13 +33,13 @@ For all urls given in the metadata schema the use of the https:// protocol prefi
 
 See issue [#13](https://github.com/opencost-de/opencost/issues/13).  
 
-6. **Is there a standard by which the values of currencies are defined in the openCost scheme?**
+6. **Is there a standard by which the values of currencies are defined in the openCost schema?**
 
 For consistency and clear identification, currencies must be represented according to ISO 4217 (3-letter currency code, e.g. EUR, USD, etc.).
 
 See issue [30](https://github.com/opencost-de/opencost/issues/30).  
 
-## Schema for individual articles
+## Schema for individual articles (`opencost:publication`)  
 
 7. **How to deal with collective invoice for framework agreement with OA publishers?**
 
@@ -52,13 +52,24 @@ See issue [#38](https://github.com/opencost-de/opencost/issues/38).
 All prices are net prices, the vat can be added as `type="vat"`:
    ```xml
      <opencost:amounts_paid>
-        <opencost:amount_paid currency="EUR" type="apc">1500.00</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="gold-oa">1500.00</opencost:amount_paid>
         <opencost:amount_paid currency="EUR" type="vat">14.25</opencost:amount_paid>
       </opencost:amounts_paid>
    ```
-See issue [#7](https://github.com/opencost-de/opencost/issues/7).
-   
-9. **How do we address transformative agreements or memberships?**
+See issue [#7](https://github.com/opencost-de/opencost/issues/7).  
+
+9. **Is it possible to display zero or negative values for the `amounts_paid` in the schema?**
+
+Yes, negative or zero values are valid, for example, to indicate reimbursements, vouchers or Diamond OA models. Just set the price to 0 or a negative value, the costtype would then be `gold-oa`:
+   ```xml
+     <opencost:amounts_paid>
+        <opencost:amount_paid currency="EUR" type="gold-oa">0</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="vat">0</opencost:amount_paid>
+      </opencost:amounts_paid>
+   ```  
+See issue [#35](https://github.com/opencost-de/opencost/issues/35).  
+  
+11. **How do we address transformative agreements or memberships?**
 
 By stating `part_of_contract` in the metadata of the publication concretely concerned you can link your publication to the specific agreement. `part_of_contract` then contains a mandatory primary identifier referring to the global contract, currently represented by an ESAC-ID. ESAC is an existing registry for transformative agreements. Additionally, it is possible to include `invoice_id` at this point to reference a particular invoice that occurred under this contract and includes a specific contract period. For detailed information please read the metadata documentation for contracts: https://github.com/opencost-de/opencost/tree/main/doc.
    
