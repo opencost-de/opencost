@@ -33,7 +33,7 @@ For all urls given in the metadata schema the use of the https:// protocol prefi
 
 See issue [#13](https://github.com/opencost-de/opencost/issues/13).  
 
-6. Is there a standard by which the values of currencies are defined in the openCost scheme?
+6. **Is there a standard by which the values of currencies are defined in the openCost scheme?**  
 For consistency and clear identification, currencies must be represented according to ISO 4217 (3-letter currency code, e.g. EUR, USD, etc.).
 
 See issue [30](https://github.com/opencost-de/opencost/issues/30).  
