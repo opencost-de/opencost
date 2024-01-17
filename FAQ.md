@@ -60,7 +60,7 @@ See issue [#7](https://github.com/opencost-de/opencost/issues/7).
 
 9. **Is it possible to display zero or negative values for the `amounts_paid` in the schema?**
 
-Yes, negative or zero values are valid, for example, to indicate reimbursements, vouchers or Diamond OA models. Just set the price to 0 or a negative value, the costtype would then be `gold-oa`:
+Yes, negative or zero values, e.g. for reimbursements, vouchers or Diamond OA models, can be specified for the `amount_paid` element (see documentation). Just set the price to 0 or a negative value, the costtype would be `gold-oa`:
    ```xml
      <opencost:amounts_paid>
         <opencost:amount_paid currency="EUR" type="gold-oa">0</opencost:amount_paid>
