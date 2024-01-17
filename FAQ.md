@@ -15,6 +15,7 @@ There must be an institution-specific system in which the publication costs are 
 3. **How does openCost relate to other formats?**
 
 The openCost format is designed in a way that, in general, it can be used independently of other formats. As an exchange format for cost data that relies on the use of identifiers such as the DOI and tries to work as far as possible without bibliographic data, the openCost format is intended to be minimally redundant, so that it could also be easily integrated into other formats.  
+
 See issue [#14](https://github.com/opencost-de/opencost/issues/14).   
 
 ## General questions about the openCost metadata schema
@@ -23,22 +24,29 @@ See issue [#14](https://github.com/opencost-de/opencost/issues/14).
 
 We are first developing the XML schema. Background is the OAI interface and the fact that the project partners use repositories, which in connection with OAI-PMH have
 mostly established xml as exchange format. On the other hand, we do not want to complicate the discussion by putting two schemas up for disposition. In a further step, we want to convert the XML into a JSON format.  
+
 See issue [#41](https://github.com/opencost-de/opencost/issues/41).  
 
 5. **How should URLs be specified in the metadata schema (e.g. DOI)?**
 
 For all urls given in the metadata schema the use of the https:// protocol prefix is necessary.  
+
 See issue [#13](https://github.com/opencost-de/opencost/issues/13).  
+
+6. Is there a standard by which the values of currencies are defined in the openCost scheme?
+For consistency and clear identification, currencies must be represented according to ISO 4217 (3-letter currency code, e.g. EUR, USD, etc.).
+
+See issue [30](https://github.com/opencost-de/opencost/issues/30).  
 
 ## Schema for individual articles
 
-6. **How to deal with collective invoice for framework agreement with OA publishers?**
+7. **How to deal with collective invoice for framework agreement with OA publishers?**
 
 As long as the individual articles have a specific amount, this is not problematic, since an invoice number can be specified multiple times.
 
 See issue [#38](https://github.com/opencost-de/opencost/issues/38).
    
-7. **Can the `amount_invoice` be indicated in net and in gross; (possibly with reference to the corresponding amount of VAT)?**
+8. **Can the `amount_invoice` be indicated in net and in gross; (possibly with reference to the corresponding amount of VAT)?**
 
 All prices are net prices, the vat can be added as `type="vat"`:
    ```xml
@@ -49,7 +57,7 @@ All prices are net prices, the vat can be added as `type="vat"`:
    ```
 See issue [#7](https://github.com/opencost-de/opencost/issues/7).
    
-8. **How do we address transformative agreements or memberships?**
+9. **How do we address transformative agreements or memberships?**
 
 By stating `part_of_contract` in the metadata of the publication concretely concerned you can link your publication to the specific agreement. `part_of_contract` then contains a mandatory primary identifier referring to the global contract, currently represented by an ESAC-ID. ESAC is an existing registry for transformative agreements. Additionally, it is possible to include `invoice_id` at this point to reference a particular invoice that occurred under this contract and includes a specific contract period. For detailed information please read the metadata documentation for contracts: https://github.com/opencost-de/opencost/tree/main/doc.
    
