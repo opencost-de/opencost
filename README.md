@@ -26,12 +26,13 @@ Since we want to involve the community in our work as early as possible, we have
 decided to publish our project results successively and to make a first draft
 available as a request for comment now.
 
-This first step proposes a [metadata schema for _fee-based, individual articles_](https://github.com/opencost-de/opencost/blob/main/doc/opencost_article.xsd).
+In a first step we developed a [metadata schema for _fee-based, individual articles_](https://github.com/opencost-de/opencost/blob/main/doc/opencost_article.xsd) (`opencost:publication`).
 A common use case would be articles in Gold Open Access journals funded by APCs.
 However, this schema already includes the coverage of cost items beyond Open
-Access fees.
-
-Next steps will tackle transformative agreements and memberships.
+Access fees. In a second step, we developed a schema that includes costs from
+so-called transformative agreements (`opencost:contract`). Special payment modalities, such as DEAL,
+were abstracted and mapped accordingly. Both schemes are applicable for open access,
+transformative agreements and subscription fees.
 
 The openCost team invites you to participate in the development of the metadata
 schema and is looking forward to a constructive discussion! Please feel free to
