@@ -47,13 +47,13 @@ See issue [#25](https://github.com/opencost-de/opencost/issues/25).
 
 ## Schema for individual articles (`opencost:publication`)  
 
-7. **How to deal with collective invoice for framework agreement with OA publishers?**
+8. **How to deal with collective invoice for framework agreement with OA publishers?**
 
 As long as the individual articles have a specific amount, this is not problematic, since an invoice number can be specified multiple times.
 
 See issue [#38](https://github.com/opencost-de/opencost/issues/38).
    
-8. **Can the `amount_invoice` be indicated in net and in gross; (possibly with reference to the corresponding amount of VAT)?**
+9. **Can the `amount_invoice` be indicated in net and in gross; (possibly with reference to the corresponding amount of VAT)?**
 
 All prices are net prices, the vat can be added as `type="vat"`:
    ```xml
@@ -64,7 +64,7 @@ All prices are net prices, the vat can be added as `type="vat"`:
    ```
 See issue [#7](https://github.com/opencost-de/opencost/issues/7).  
 
-9. **Is it possible to display zero or negative values for the `amounts_paid` in the schema?**
+10. **Is it possible to display zero or negative values for the `amounts_paid` in the schema?**
 
 Yes, negative or zero values, e.g. for reimbursements, vouchers or Diamond OA models, can be specified for the `amount_paid` element (see documentation). Just set the price to 0 or a negative value, the costtype would be `gold-oa`:
    ```xml
