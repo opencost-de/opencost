@@ -37,7 +37,13 @@ See issue [#13](https://github.com/opencost-de/opencost/issues/13).
 
 For consistency and clear identification, currencies must be represented according to ISO 4217 (3-letter currency code, e.g. EUR, USD, etc.).
 
-See issue [30](https://github.com/opencost-de/opencost/issues/30).  
+See issue [#30](https://github.com/opencost-de/opencost/issues/30).  
+
+7. **Does the openCost scheme currently cover all costs of a scientific publication in terms of the total cost of publishing?**
+
+openCost is designed as an exchange format, which is why data is recorded as sparingly as possible and as extensively as necessary. Therefore, in terms of the total cost of publishing currently not all costs are covered (such as staff, premises, hardware, software, etc.).  
+
+See issue [#25](https://github.com/opencost-de/opencost/issues/25).  
 
 ## Schema for individual articles (`opencost:publication`)  
 
