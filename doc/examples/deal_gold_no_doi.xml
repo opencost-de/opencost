@@ -3,9 +3,16 @@
   <opencost:publication>
     <opencost:cost_data>
       <opencost:invoice>
-        <opencost:amount_invoice currency="EUR">1681.82</opencost:amount_invoice>
+        <opencost:amount_invoice>
+          <opencost:currency>EUR</opencost:currency>
+          <opencost:amount>1681.82</opencost:amount>
+        </opencost:amount_invoice>
         <opencost:amounts_paid>
-          <opencost:amount_paid currency="EUR" type="gold-oa">1681.82</opencost:amount_paid>
+          <opencost:amount_paid>
+            <opencost:currency>EUR</opencost:currency>
+            <opencost:amount>1681.82</opencost:amount>
+            <opencost:cost_type>gold-oa</opencost:cost_type>
+          </opencost:amount_paid>
         </opencost:amounts_paid>
         <opencost:dates>
           <opencost:date_paid>2022-05-31</opencost:date_paid>
@@ -22,13 +29,25 @@
       </opencost:bibliographic_information>
     </opencost:primary_identifier>
     <opencost:secondary_identifiers>
-      <opencost:id type="local">PUBDB-2022-00039</opencost:id>
-      <opencost:id type="oai">oai:bib-pubdb1.desy.de:473418</opencost:id>
+      <opencost:id>
+        <opencost:type>local</opencost:type>
+        <opencost:value>PUBDB-2022-00039</opencost:value>
+      </opencost:id>
+      <opencost:id>
+        <opencost:type>oai</opencost:type>
+        <opencost:value>oai:bib-pubdb1.desy.de:473418</opencost:value>
+      </opencost:id>
     </opencost:secondary_identifiers>
     <opencost:type>journal article</opencost:type>
     <opencost:institution>
-      <opencost:institution_name type="short">desy</opencost:institution_name>
-      <opencost:institution_id type="ror">https://ror.org/01js2sh04</opencost:institution_id>
+      <opencost:name>
+        <opencost:value>desy</opencost:value>
+        <opencost:type>short</opencost:type>
+      </opencost:name>
+      <opencost:id>
+        <opencost:value>https://ror.org/01js2sh04</opencost:value>
+        <opencost:type>ror</opencost:type>
+      </opencost:id>
     </opencost:institution>
   </opencost:publication>
 </opencost:data>

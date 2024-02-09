@@ -2,23 +2,47 @@
 <opencost:data xmlns:opencost="https://opencost.de">
   <opencost:publication>
     <opencost:institution>
-      <opencost:institution_name type="short">desy</opencost:institution_name>
-      <opencost:institution_id type="ror">https://ror.org/01js2sh04</opencost:institution_id>
+      <opencost:name>
+        <opencost:value>desy</opencost:value>
+        <opencost:type>short</opencost:type>
+      </opencost:name>
+      <opencost:id>
+        <opencost:value>https://ror.org/01js2sh04</opencost:value>
+        <opencost:type>ror</opencost:type>
+      </opencost:id>
     </opencost:institution>
     <opencost:primary_identifier>
       <opencost:doi>10.1038/s41598-022-13507-4</opencost:doi>
     </opencost:primary_identifier>
     <opencost:secondary_identifiers>
-      <opencost:id type="local">PUBDB-2022-00039</opencost:id>
-      <opencost:id type="oai">oai:bib-pubdb1.desy.de:473418</opencost:id>
-      <opencost:id type="doi">10.1038/s41598-022-13507-4</opencost:id>
-      <opencost:id type="doi">10.3204/PUBDB-2022-00039</opencost:id>
-      <opencost:id type="pmid">35689001</opencost:id>
+      <opencost:id>
+        <opencost:type>local</opencost:type>
+        <opencost:value>PUBDB-2022-00039</opencost:value>
+      </opencost:id>
+      <opencost:id>
+        <opencost:type>oai</opencost:type>
+        <opencost:value>oai:bib-pubdb1.desy.de:473418</opencost:value>
+      </opencost:id>
+      <opencost:id>
+        <opencost:type>doi</opencost:type>
+        <opencost:value>10.1038/s41598-022-13507-4</opencost:value>
+      </opencost:id>
+      <opencost:id>
+        <opencost:type>doi</opencost:type>
+        <opencost:value>10.3204/PUBDB-2022-00039</opencost:value>
+      </opencost:id>
+      <opencost:id>
+        <opencost:type>pmid</opencost:type>
+        <opencost:value>35689001</opencost:value>
+      </opencost:id>
     </opencost:secondary_identifiers>
     <opencost:type>journal article</opencost:type>
     <opencost:cost_data>
       <opencost:part_of_contract>
-        <opencost:primary_identifier type="ESAC">wiley2019deal</opencost:primary_identifier>
+        <opencost:primary_identifier>
+          <opencost:type>ESAC</opencost:type>
+          <opencost:value>wiley2019deal</opencost:value>
+        </opencost:primary_identifier>
         <opencost:invoice_id>01js2sh04_wiley2019deal_2021</opencost:invoice_id>
       </opencost:part_of_contract>
     </opencost:cost_data>

@@ -2,26 +2,54 @@
 <opencost:data xmlns:opencost="https://opencost.de">
   <opencost:publication>
     <opencost:institution>
-      <opencost:institution_name type="short">desy</opencost:institution_name>
-      <opencost:institution_id type="ror">https://ror.org/01js2sh04</opencost:institution_id>
+      <opencost:name>
+        <opencost:type>short</opencost:type>
+        <opencost:value>desy</opencost:value>
+      </opencost:name>
+      <opencost:id>
+        <opencost:type>ror</opencost:type>
+        <opencost:value>https://ror.org/01js2sh04</opencost:value>
+      </opencost:id>
     </opencost:institution>
     <opencost:primary_identifier>
       <opencost:doi>10.1038/s41467-022-35110-x</opencost:doi>
     </opencost:primary_identifier>
     <opencost:secondary_identifiers>
-      <opencost:id type="local">PUBDB-2022-07070</opencost:id>
-      <opencost:id type="oai">oai:bib-pubdb1.desy.de:486070</opencost:id>
-      <opencost:id type="doi">10.1038/s41467-022-35110-x</opencost:id>
-      <opencost:id type="doi">10.3204/PUBDB-2022-07070</opencost:id>
-      <opencost:id type="pmid">36473837</opencost:id>
+      <opencost:id>
+        <opencost:type>local</opencost:type>
+        <opencost:value>PUBDB-2022-07070</opencost:value>
+      </opencost:id>
+      <opencost:id>
+        <opencost:type>oai</opencost:type>
+        <opencost:value>oai:bib-pubdb1.desy.de:486070</opencost:value>
+      </opencost:id>
+      <opencost:id>
+        <opencost:type>doi</opencost:type>
+        <opencost:value>10.1038/s41467-022-35110-x</opencost:value>
+      </opencost:id>
+      <opencost:id>
+        <opencost:type>doi</opencost:type>
+        <opencost:value>10.3204/PUBDB-2022-07070</opencost:value>
+      </opencost:id>
+      <opencost:id>
+        <opencost:type>pmid</opencost:type>
+        <opencost:value>36473837</opencost:value>
+      </opencost:id>
     </opencost:secondary_identifiers>
     <opencost:type>journal article</opencost:type>
     <opencost:external_costsplitting>false</opencost:external_costsplitting>
     <opencost:cost_data>
       <opencost:invoice>
-        <opencost:amount_invoice currency="EUR">4890.0</opencost:amount_invoice>
+        <opencost:amount_invoice>
+          <opencost:currency>EUR</opencost:currency>
+          <opencost:amount>4890.0</opencost:amount>
+        </opencost:amount_invoice>
         <opencost:amounts_paid>
-          <opencost:amount_paid currency="EUR" type="gold-oa">4890.00</opencost:amount_paid>
+          <opencost:amount_paid>
+            <opencost:currency>EUR</opencost:currency>
+            <opencost:amount>4890.00</opencost:amount>
+            <opencost:cost_type>gold-oa</opencost:cost_type>
+          </opencost:amount_paid>
         </opencost:amounts_paid>
         <opencost:creditor>Nature Publishing Group UK</opencost:creditor>
         <opencost:dates>
