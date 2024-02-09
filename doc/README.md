@@ -212,9 +212,6 @@ contract
     |     |--- invoice_group
     |     |     |
     |     |     |--- group_id 
-    |     |     |     |    
-    |     |     |     |--- type = UUID
-    |     |     |     |--- value
     |     |     |    
     |     |     |--- invoices_period
     |     |     |     |
