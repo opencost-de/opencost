@@ -49,71 +49,79 @@ The overall tree structure looks like this:
 ```
 publication
     |
-    |--- institution
-    |    |
-    |    |--- id
-    |    |    |
-    |    |    |--- type
-    |    |    |--- value
-    |    |
-    |    |--- name
-    |    |    |
-    |    |    |--- type
-    |    |    |--- value
-    |
     |--- primary_identifier
-    |    |
-    |    |--- doi  _OR_  bibliographic_information
+    |     |
+    |     |--- type = doi _OR_ bibliographic_information                
+    |     |--- value 
     |
-    |--- secondary_identifiers
-    |    |
-    |    |--- id
-    |    |    |
-    |    |    |--- type
-    |    |    |--- value
-    |    |
-    |    |--- id
-    |    |    |--- [...]
-    |
-    |--- type
-    |--- external_costsplitting
-    |
+    |--- secondary_identifiers                                            
+    |     |
+    |     |--- id                                                       
+    |     |     |
+    |     |     |--- type = doi / handle / urn / isbn / pmid / pmc / arxiv / oai / local  
+    |     |     |--- value 
+    |     |
+    |     |--- id                                                      
+    |           |
+    |           |--- [...]         
+    |           
+    |--- institution
+    |     |
+    |     |--- id                                                         
+    |     |     |
+    |     |     |--- type = ror / isni / ringold               
+    |     |     |--- value 
+    |     |      
+    |     |--- name
+    |           |
+    |           |--- type = full / short
+    |           |--- value
+    |       
+    |--- publication_type = COAR controlled vocabulary                   
+    |  
+    |--- external_costsplitting = true _OR_ 1 / false _OR_ 0                   
+    |  
     |--- cost_data
     |     |
     |     |--- part_of_contract
-    |     |    |
-    |     |    |--- primary_identifier
-    |     |         |
-    |     |         |--- type
-    |     |         |--- value
+    |     |     |
+    |     |     |--- primary_identifier
+    |     |     |     |
+    |     |     |     |--- type = ESAC
+    |     |     |     |--- value
+    |     |     |
+    |     |     |---	group_id                                            
     |     |
     |     |--- invoice
-    |     |    |
-    |     |    |--- creditor
-    |     |    |--- invoice_number
-    |     |    |
-    |     |    |--- dates
-    |     |    |    |
-    |     |    |    |--- paid
-    |     |    |    |--- invoice
-    |     |    |
-    |     |    |--- amount_invoice
-    |     |    |    |
-    |     |    |    |--- currency
-    |     |    |    |--- amount
-    |     |    |
-    |     |    |--- amounts_paid
-    |     |         |
-    |     |         |--- amount_paid
-    |     |         |    |--- currency
-    |     |         |    |--- amount
-    |     |         |    |--- cost_type
-    |     |         |
-    |     |         |--- amount_paid
-    |     |         |    |--- [...]
+    |     |     |
+    |     |     |--- invoice_number                                        
+    |     |     |--- creditor
+    |     |     |
+    |     |     |--- dates                                                 
+    |     |     |     |
+    |     |     |     |--- invoice
+    |     |     |     |--- paid
+    |     |     |
+    |     |     |--- amount_invoice                                        
+    |     |     |     |
+    |     |     |     |--- amount
+    |     |     |     |--- currency
+    |     |     |
+    |     |     |--- amounts_paid                                         
+    |     |           |
+    |     |           |--- amount_paid
+    |     |           |
+    |     |           |     |--- amount
+    |     |           |     |--- currency
+    |     |           |     |--- cost_type
+    |     |           |
+    |     |           |--- amount_paid
+    |     |                 |
+    |     |                 |--- [...]
     |     |
     |     |--- invoice
-    |     |      |--- [...]
+    |           |
+    |           |--- [...]
     |
 ```
 
@@ -166,74 +174,88 @@ These elements hold text data.
 contract
     |
     |--- contract_name
+    |
     |--- institution
-    |    |
-    |    |--- identity
-    |    |    |
-    |    |    |--- id
-    |    |    |    |
-    |    |    |    |--- type
-    |    |    |    |--- value
-    |    |    |
-    |    |    |--- name
-    |    |         |
-    |    |         |--- type
-    |    |         |--- value
-    |    |
-    |    |--- participation
-    |    |    |
-    |    |    |--- date_join
-    |    |    |--- date_exit
+    |     |
+    |     |--- id                                                         
+    |     |     |
+    |     |     |--- type = ror / isni / ringold               
+    |     |     |--- value 
+    |     |      
+    |     |--- name
+    |           |
+    |           |--- type = full / short
+    |           |--- value
+    |       
+    |--- participation
+    |     |
+    |     |--- from
+    |     |--- to                                                  
     |
     |--- primary_identifier
-    |    |
-    |    |--- type
-    |    |--- value
+    |     |
+    |     |--- type = ESAC
+    |     |--- value
     |
     |--- secondary_identifiers
-    |    |
-    |    |--- id
-    |    |    |
-    |    |    |--- type
-    |    |    |--- value
-    |    |--- id
-    |    |    |--- [...]
+    |     |
+    |     |--- id
+    |     |     |
+    |     |     |--- type = oai, ezb, local
+    |     |     |--- value
+    |     |
+    |     |--- id
+    |     |     |--- [...]
     |
     |--- cost_data
-    |    |
-    |    |--- invoice
-    |    |    |
-    |    |    |--- creditor
-    |    |    |--- invoice_id
-    |    |    |
-    |    |    |--- invoice_period
-    |    |    |    |
-    |    |    |    |--- from
-    |    |    |    |--- to
-    |    |    |
-    |    |    |--- dates
-    |    |    |    |
-    |    |    |    |--- invoice
-    |    |    |    |--- paid
-    |    |    |
-    |    |    |--- amount_invoice
-    |    |    |    |
-    |    |    |    |--- amount
-    |    |    |    |--- currency
-    |    |    |
-    |    |    |--- amounts_paid
-    |    |    |    |
-    |    |    |    |--- amount_paid
-    |    |    |    |    |
-    |    |    |    |    |--- amount
-    |    |    |    |    |--- cost_type
-    |    |    |    |    |--- currency
-    |    |    |    |
-    |    |    |    |--- amount_paid
-    |    |    |    |    |--- [...]
-    |    |
-    |    |--- invoice
-    |    |    |--- [...]
+    |     |
+    |     |--- invoice_group
+    |     |     |
+    |     |     |--- group_id 
+    |     |     |     |    
+    |     |     |     |--- type = UUID
+    |     |     |     |--- value
+    |     |     |    
+    |     |     |--- invoices_period
+    |     |     |     |
+    |     |     |     |--- from
+    |     |     |     |--- to
+    |     |     |
+    |     |     |--- invoice
+    |     |     |     |
+    |     |     |     |--- invoice_number                                    
+    |     |     |     |--- creditor
+    |     |     |     |
+    |     |     |     |--- dates
+    |     |     |     |     |
+    |     |     |     |     |--- invoice
+    |     |     |     |     |--- paid                                         
+    |     |     |     |
+    |     |     |     |--- amount_invoice
+    |     |     |     |     |
+    |     |     |     |     |--- amount
+    |     |     |     |     |--- currency
+    |     |     |     |
+    |     |     |     |--- amounts_paid
+    |     |     |     |     |
+    |     |     |     |     |--- amount_paid
+    |     |     |     |     |     |
+    |     |     |     |     |     |--- amount
+    |     |     |     |     |     |--- currency
+    |     |     |     |     |     |--- cost_type
+    |     |     |     |     |
+    |     |     |     |     |--- amount_paid
+    |     |     |     |     |     |
+    |     |     |     |     |     |--- [...]
+    |     |     |
+    |     |     |--- invoice
+    |     |     |     |
+    |     |     |     |--- [...]
+    |     |
+    |     |--- invoice_group
+    |     |     |
+    |     |     |--- [...]
+    |
 ```
 
 ### Container elements
