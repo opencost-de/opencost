@@ -65,10 +65,10 @@ elementFormDefault="qualified">
   <xs:choice>
     <xs:sequence>
       <xs:element name="invoice" type="contract_invoice_type" minOccurs="1" maxOccurs="unbounded" />
-      <xs:element name="invoice_group_id" type="xs:string" />
+      <xs:element name="group_id" type="xs:string" />
     </xs:sequence>
     <xs:sequence>
-      <xs:element name="invoice_group_id" type="xs:string" />
+      <xs:element name="group_id" type="xs:string" />
       <xs:element name="invoice" type="contract_invoice_type" minOccurs="1" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:choice>

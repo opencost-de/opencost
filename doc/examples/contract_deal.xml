@@ -38,7 +38,7 @@
     </opencost:secondary_identifiers>
     <opencost:cost_data>
       <opencost:invoice_group>
-        <opencost:invoice_group_id>01eezs655_wiley2019deal_2020</opencost:invoice_group_id>
+        <opencost:group_id>01eezs655_wiley2019deal_2020</opencost:group_id>
         <opencost:invoice>
           <opencost:amount_invoice>
             <opencost:currency>EUR</opencost:currency>
@@ -79,7 +79,7 @@
         </opencost:invoice>
       </opencost:invoice_group>
       <opencost:invoice_group>
-        <opencost:invoice_group_id>01eezs655_wiley2019deal_2021</opencost:invoice_group_id>
+        <opencost:group_id>01eezs655_wiley2019deal_2021</opencost:group_id>
         <opencost:invoice>
           <opencost:amount_invoice>
             <opencost:currency>EUR</opencost:currency>
