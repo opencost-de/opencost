@@ -37,74 +37,78 @@
       </opencost:id>
     </opencost:secondary_identifiers>
     <opencost:cost_data>
-      <opencost:invoice>
-        <opencost:invoice_id>01eezs655_wiley2019deal_2020</opencost:invoice_id>
-        <opencost:amount_invoice>
-          <opencost:currency>EUR</opencost:currency>
-          <opencost:amount>64040.47</opencost:amount>
-        </opencost:amount_invoice>
-        <opencost:amounts_paid>
-          <opencost:amount_paid>
+      <opencost:invoice_group>
+        <opencost:invoice_group_id>01eezs655_wiley2019deal_2020</opencost:invoice_group_id>
+        <opencost:invoice>
+          <opencost:amount_invoice>
             <opencost:currency>EUR</opencost:currency>
             <opencost:amount>64040.47</opencost:amount>
-            <opencost:cost_type>publishing</opencost:cost_type>
-          </opencost:amount_paid>
-          <opencost:amount_paid>
+          </opencost:amount_invoice>
+          <opencost:amounts_paid>
+            <opencost:amount_paid>
+              <opencost:currency>EUR</opencost:currency>
+              <opencost:amount>64040.47</opencost:amount>
+              <opencost:cost_type>publishing</opencost:cost_type>
+            </opencost:amount_paid>
+            <opencost:amount_paid>
+              <opencost:currency>EUR</opencost:currency>
+              <opencost:amount>12167.69</opencost:amount>
+              <opencost:cost_type>vat</opencost:cost_type>
+            </opencost:amount_paid>
+            <opencost:amount_paid>
+              <opencost:currency>EUR</opencost:currency>
+              <opencost:amount>128185.58</opencost:amount>
+              <opencost:cost_type>read</opencost:cost_type>
+            </opencost:amount_paid>
+            <opencost:amount_paid>
+              <opencost:currency>EUR</opencost:currency>
+              <opencost:amount>6409.28</opencost:amount>
+              <opencost:cost_type>vat</opencost:cost_type>
+            </opencost:amount_paid>
+          </opencost:amounts_paid>
+          <opencost:creditor>MPDL Services GmbH</opencost:creditor>
+          <opencost:invoice_period>
+            <opencost:from>2020-01-01</opencost:from>
+            <opencost:to>2020-06-31</opencost:to>
+          </opencost:invoice_period>
+          <opencost:dates>
+            <opencost:date_paid>2020-12-01</opencost:date_paid>
+            <opencost:date_invoice>2020-11-01</opencost:date_invoice>
+          </opencost:dates>
+          <opencost:invoice_number></opencost:invoice_number>
+        </opencost:invoice>
+      </opencost:invoice_group>
+      <opencost:invoice_group>
+        <opencost:invoice_group_id>01eezs655_wiley2019deal_2021</opencost:invoice_group_id>
+        <opencost:invoice>
+          <opencost:amount_invoice>
             <opencost:currency>EUR</opencost:currency>
-            <opencost:amount>12167.69</opencost:amount>
-            <opencost:cost_type>vat</opencost:cost_type>
-          </opencost:amount_paid>
-          <opencost:amount_paid>
-            <opencost:currency>EUR</opencost:currency>
-            <opencost:amount>128185.58</opencost:amount>
-            <opencost:cost_type>read</opencost:cost_type>
-          </opencost:amount_paid>
-          <opencost:amount_paid>
-            <opencost:currency>EUR</opencost:currency>
-            <opencost:amount>6409.28</opencost:amount>
-            <opencost:cost_type>vat</opencost:cost_type>
-          </opencost:amount_paid>
-        </opencost:amounts_paid>
-        <opencost:creditor>MPDL Services GmbH</opencost:creditor>
-        <opencost:invoice_period>
-          <opencost:from>2020-01-01</opencost:from>
-          <opencost:to>2020-06-31</opencost:to>
-        </opencost:invoice_period>      
-        <opencost:dates>
-          <opencost:date_paid>2020-12-01</opencost:date_paid>
-          <opencost:date_invoice>2020-11-01</opencost:date_invoice>
-        </opencost:dates>
-        <opencost:invoice_number></opencost:invoice_number>
-      </opencost:invoice>
-      <opencost:invoice>
-        <opencost:invoice_id>01eezs655_wiley2019deal_2021</opencost:invoice_id>
-        <opencost:amount_invoice>
-          <opencost:currency>EUR</opencost:currency>
-          <opencost:amount>64040.47</opencost:amount>
-        </opencost:amount_invoice>
-        <opencost:amounts_paid>
-          <opencost:amount_paid>
-            <opencost:currency>EUR</opencost:currency>
-            <opencost:amount>69377.17</opencost:amount>
-            <opencost:cost_type>publishing</opencost:cost_type>
-          </opencost:amount_paid>
-          <opencost:amount_paid>
-            <opencost:currency>EUR</opencost:currency>
-            <opencost:amount>11100.35</opencost:amount>
-            <opencost:cost_type>vat</opencost:cost_type>
-          </opencost:amount_paid>
-        </opencost:amounts_paid>
-        <opencost:creditor>MPDL Services GmbH</opencost:creditor>
-        <opencost:invoice_period>
-          <opencost:from>2021-01-01</opencost:from>
-          <opencost:to>2021-12-31</opencost:to>
-        </opencost:invoice_period>      
-        <opencost:dates>
-          <opencost:date_paid>2021-12-01</opencost:date_paid>
-          <opencost:date_invoice>2021-12-01</opencost:date_invoice>
-        </opencost:dates>
-        <opencost:invoice_number></opencost:invoice_number>
-      </opencost:invoice>
+            <opencost:amount>64040.47</opencost:amount>
+          </opencost:amount_invoice>
+          <opencost:amounts_paid>
+            <opencost:amount_paid>
+              <opencost:currency>EUR</opencost:currency>
+              <opencost:amount>69377.17</opencost:amount>
+              <opencost:cost_type>publishing</opencost:cost_type>
+            </opencost:amount_paid>
+            <opencost:amount_paid>
+              <opencost:currency>EUR</opencost:currency>
+              <opencost:amount>11100.35</opencost:amount>
+              <opencost:cost_type>vat</opencost:cost_type>
+            </opencost:amount_paid>
+          </opencost:amounts_paid>
+          <opencost:creditor>MPDL Services GmbH</opencost:creditor>
+          <opencost:invoice_period>
+            <opencost:from>2021-01-01</opencost:from>
+            <opencost:to>2021-12-31</opencost:to>
+          </opencost:invoice_period>
+          <opencost:dates>
+            <opencost:date_paid>2021-12-01</opencost:date_paid>
+            <opencost:date_invoice>2021-12-01</opencost:date_invoice>
+          </opencost:dates>
+          <opencost:invoice_number></opencost:invoice_number>
+        </opencost:invoice>
+      </opencost:invoice_group>
     </opencost:cost_data>
   </opencost:contract>
 </opencost:data>
