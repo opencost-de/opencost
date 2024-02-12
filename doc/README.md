@@ -94,7 +94,8 @@ publication
     |     |
     |     |--- invoice
     |     |     |
-    |     |     |--- invoice_number                                        
+    |     |     |--- invoice_number
+    |     |     |                                        
     |     |     |--- creditor
     |     |     |
     |     |     |--- dates                                                 
@@ -220,7 +221,8 @@ contract
     |     |     |
     |     |     |--- invoice
     |     |     |     |
-    |     |     |     |--- invoice_number                                    
+    |     |     |     |--- invoice_number
+    |     |     |     |                              
     |     |     |     |--- creditor
     |     |     |     |
     |     |     |     |--- dates
