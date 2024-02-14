@@ -2,37 +2,38 @@
 <opencost:data xmlns:opencost="https://opencost.de">
   <opencost:publication>
     <opencost:institution>
-      <opencost:name>
-        <opencost:type>short</opencost:type>
-        <opencost:value>desy</opencost:value>
-      </opencost:name>
       <opencost:id>
-        <opencost:type>ror</opencost:type>
         <opencost:value>https://ror.org/01js2sh04</opencost:value>
+        <opencost:type>ror</opencost:type>
       </opencost:id>
+      <opencost:name>
+        <opencost:value>desy</opencost:value>
+        <opencost:type>short</opencost:type>
+      </opencost:name>
     </opencost:institution>
     <opencost:primary_identifier>
-      <opencost:doi>10.1364/OME.460445</opencost:doi>
+      <opencost:value>10.1364/OME.460445</opencost:value>
+      <opencost:type>doi</opencost:type>
     </opencost:primary_identifier>
+    <opencost:publication_type>journal article</opencost:publication_type>
     <opencost:secondary_identifiers>
       <opencost:id>
-        <opencost:type>local</opencost:type>
         <opencost:value>PUBDB-2022-02875</opencost:value>
+        <opencost:type>local</opencost:type>
       </opencost:id>
       <opencost:id>
-        <opencost:type>oai</opencost:type>
         <opencost:value>oai:bib-pubdb1.desy.de:479017</opencost:value>
+        <opencost:type>oai</opencost:type>
       </opencost:id>
       <opencost:id>
-        <opencost:type>doi</opencost:type>
         <opencost:value>10.1364/OME.460445</opencost:value>
+        <opencost:type>doi</opencost:type>
       </opencost:id>
       <opencost:id>
-        <opencost:type>doi</opencost:type>
         <opencost:value>10.3204/PUBDB-2022-02875</opencost:value>
+        <opencost:type>doi</opencost:type>
       </opencost:id>
     </opencost:secondary_identifiers>
-    <opencost:type>journal article</opencost:type>
     <opencost:cost_data>
       <opencost:invoice>
         <opencost:amount_invoice>
@@ -41,15 +42,15 @@
         </opencost:amount_invoice>
         <opencost:amounts_paid>
           <opencost:amount_paid>
-            <opencost:currency>EUR</opencost:currency>
             <opencost:amount>30.72</opencost:amount>
+            <opencost:currency>EUR</opencost:currency>
             <opencost:cost_type>other</opencost:cost_type>
           </opencost:amount_paid>
         </opencost:amounts_paid>
         <opencost:creditor>OSA</opencost:creditor>
         <opencost:dates>
-          <opencost:date_paid>2022-07-06</opencost:date_paid>
-          <opencost:date_invoice>2022-07-06</opencost:date_invoice>
+          <opencost:paid>2022-07-06</opencost:paid>
+          <opencost:invoice>2022-07-06</opencost:invoice>
         </opencost:dates>
         <opencost:invoice_number/>
       </opencost:invoice>
@@ -60,20 +61,20 @@
         </opencost:amount_invoice>
         <opencost:amounts_paid>
           <opencost:amount_paid>
-            <opencost:currency>EUR</opencost:currency>
             <opencost:amount>1501.58</opencost:amount>
+            <opencost:currency>EUR</opencost:currency>
             <opencost:cost_type>gold-oa</opencost:cost_type>
           </opencost:amount_paid>
           <opencost:amount_paid>
-            <opencost:currency>EUR</opencost:currency>
             <opencost:amount>546.68</opencost:amount>
+            <opencost:currency>EUR</opencost:currency>
             <opencost:cost_type>page charge</opencost:cost_type>
           </opencost:amount_paid>
         </opencost:amounts_paid>
         <opencost:creditor>OSA</opencost:creditor>
         <opencost:dates>
-          <opencost:date_paid>2022-06-09</opencost:date_paid>
-          <opencost:date_invoice>2022-06-09</opencost:date_invoice>
+          <opencost:paid>2022-06-09</opencost:paid>
+          <opencost:invoice>2022-06-09</opencost:invoice>
         </opencost:dates>
         <opencost:invoice_number>1699976</opencost:invoice_number>
       </opencost:invoice>

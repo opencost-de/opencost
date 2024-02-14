@@ -15,18 +15,22 @@
           </opencost:amount_paid>
         </opencost:amounts_paid>
         <opencost:dates>
-          <opencost:date_paid>2022-05-31</opencost:date_paid>
+          <opencost:paid>2022-05-31</opencost:paid>
         </opencost:dates>
         <opencost:creditor>Macmillan Publishers Limited, part of Springer Nature</opencost:creditor>
         <opencost:invoice_number/>
       </opencost:invoice>
     </opencost:cost_data>
     <opencost:primary_identifier>
+      <opencost:type>bibliographic_information</opencost:type>
+
+      <opencost:value></opencost:value>
       <opencost:bibliographic_information>
         <opencost:Title>Pressure-induced high-spin/low-spin disproportionated state in the Mott insulator FeBO3</opencost:Title>
         <opencost:Publisher>Macmillan Publishers Limited, part of Springer Nature</opencost:Publisher>
         <opencost:isPartOf>Scientific Reports</opencost:isPartOf>
       </opencost:bibliographic_information>
+
     </opencost:primary_identifier>
     <opencost:secondary_identifiers>
       <opencost:id>
@@ -38,7 +42,7 @@
         <opencost:value>oai:bib-pubdb1.desy.de:473418</opencost:value>
       </opencost:id>
     </opencost:secondary_identifiers>
-    <opencost:type>journal article</opencost:type>
+    <opencost:publication_type>journal article</opencost:publication_type>
     <opencost:institution>
       <opencost:name>
         <opencost:value>desy</opencost:value>

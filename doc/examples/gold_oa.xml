@@ -2,61 +2,57 @@
 <opencost:data xmlns:opencost="https://opencost.de">
   <opencost:publication>
     <opencost:institution>
-      <opencost:name>
-        <opencost:type>short</opencost:type>
-        <opencost:value>desy</opencost:value>
-      </opencost:name>
       <opencost:id>
-        <opencost:type>ror</opencost:type>
         <opencost:value>https://ror.org/01js2sh04</opencost:value>
+        <opencost:type>ror</opencost:type>
       </opencost:id>
+      <opencost:name>
+        <opencost:value>desy</opencost:value>
+        <opencost:type>short</opencost:type>
+      </opencost:name>
     </opencost:institution>
     <opencost:primary_identifier>
-      <opencost:doi>10.1038/s41467-022-35110-x</opencost:doi>
+      <opencost:value>10.1364/OPTICA.3.000816</opencost:value>
+      <opencost:type>doi</opencost:type>
     </opencost:primary_identifier>
+    <opencost:publication_type>journal article</opencost:publication_type>
     <opencost:secondary_identifiers>
       <opencost:id>
+        <opencost:value>PUBDB-2016-02671</opencost:value>
         <opencost:type>local</opencost:type>
-        <opencost:value>PUBDB-2022-07070</opencost:value>
       </opencost:id>
       <opencost:id>
+        <opencost:value>oai:bib-pubdb1.desy.de:301439</opencost:value>
         <opencost:type>oai</opencost:type>
-        <opencost:value>oai:bib-pubdb1.desy.de:486070</opencost:value>
       </opencost:id>
       <opencost:id>
+        <opencost:value>10.1364/OPTICA.3.000816</opencost:value>
         <opencost:type>doi</opencost:type>
-        <opencost:value>10.1038/s41467-022-35110-x</opencost:value>
       </opencost:id>
       <opencost:id>
+        <opencost:value>10.3204/PUBDB-2016-02671</opencost:value>
         <opencost:type>doi</opencost:type>
-        <opencost:value>10.3204/PUBDB-2022-07070</opencost:value>
-      </opencost:id>
-      <opencost:id>
-        <opencost:type>pmid</opencost:type>
-        <opencost:value>36473837</opencost:value>
       </opencost:id>
     </opencost:secondary_identifiers>
-    <opencost:type>journal article</opencost:type>
-    <opencost:external_costsplitting>false</opencost:external_costsplitting>
     <opencost:cost_data>
       <opencost:invoice>
         <opencost:amount_invoice>
-          <opencost:currency>EUR</opencost:currency>
-          <opencost:amount>4890.0</opencost:amount>
+          <opencost:currency>USD</opencost:currency>
+          <opencost:amount>1350.0</opencost:amount>
         </opencost:amount_invoice>
         <opencost:amounts_paid>
           <opencost:amount_paid>
+            <opencost:amount>1234.95</opencost:amount>
             <opencost:currency>EUR</opencost:currency>
-            <opencost:amount>4890.00</opencost:amount>
             <opencost:cost_type>gold-oa</opencost:cost_type>
           </opencost:amount_paid>
         </opencost:amounts_paid>
-        <opencost:creditor>Nature Publishing Group UK</opencost:creditor>
+        <opencost:creditor>OSA</opencost:creditor>
         <opencost:dates>
-          <opencost:date_paid>2023-01-03</opencost:date_paid>
-          <opencost:date_invoice>2022-12-09</opencost:date_invoice>
+          <opencost:paid>2017-01-16</opencost:paid>
+          <opencost:invoice>2016-07-13</opencost:invoice>
         </opencost:dates>
-        <opencost:invoice_number>2938775416</opencost:invoice_number>
+        <opencost:invoice_number>729761</opencost:invoice_number>
       </opencost:invoice>
     </opencost:cost_data>
   </opencost:publication>

@@ -12,7 +12,8 @@
       </opencost:id>
     </opencost:institution>
     <opencost:primary_identifier>
-      <opencost:doi>10.1038/s41598-022-13507-4</opencost:doi>
+      <opencost:type>doi</opencost:type> 
+      <opencost:value>10.1038/s41598-022-13507-4</opencost:value>
     </opencost:primary_identifier>
     <opencost:secondary_identifiers>
       <opencost:id>
@@ -36,7 +37,7 @@
         <opencost:value>35689001</opencost:value>
       </opencost:id>
     </opencost:secondary_identifiers>
-    <opencost:type>journal article</opencost:type>
+    <opencost:publication_type>journal article</opencost:publication_type>
     <opencost:cost_data>
       <opencost:part_of_contract>
         <opencost:primary_identifier>

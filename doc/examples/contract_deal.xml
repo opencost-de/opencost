@@ -3,7 +3,6 @@
   <opencost:contract>
     <opencost:contract_name>DEAL-Wiley</opencost:contract_name>
     <opencost:institution>
-      <opencost:identity>
         <opencost:id>
           <opencost:type>ror</opencost:type>
           <opencost:value>https://ror.org/01eezs655</opencost:value>
@@ -12,12 +11,11 @@
            <opencost:type>short</opencost:type>
           <opencost:value>UBR</opencost:value>
         </opencost:name>
-      </opencost:identity>
-      <opencost:participation>
-        <opencost:date_join>2019-07-01</opencost:date_join>
-        <opencost:date_exit>2021-12-31</opencost:date_exit>
-      </opencost:participation>
     </opencost:institution>
+    <opencost:participation>
+      <opencost:from>2019-07-01</opencost:from>
+      <opencost:to>2021-12-31</opencost:to>
+    </opencost:participation>
     <opencost:primary_identifier>
       <opencost:type>ESAC</opencost:type>
       <opencost:value>wiley2019deal</opencost:value>
@@ -39,6 +37,10 @@
     <opencost:cost_data>
       <opencost:invoice_group>
         <opencost:group_id>01eezs655_wiley2019deal_2020</opencost:group_id>
+        <opencost:invoices_period>
+          <opencost:from>2020-01-01</opencost:from>
+          <opencost:to>2020-06-31</opencost:to>
+        </opencost:invoices_period>
         <opencost:invoice>
           <opencost:amount_invoice>
             <opencost:currency>EUR</opencost:currency>
@@ -48,7 +50,7 @@
             <opencost:amount_paid>
               <opencost:currency>EUR</opencost:currency>
               <opencost:amount>64040.47</opencost:amount>
-              <opencost:cost_type>publishing</opencost:cost_type>
+              <opencost:cost_type>publish</opencost:cost_type>
             </opencost:amount_paid>
             <opencost:amount_paid>
               <opencost:currency>EUR</opencost:currency>
@@ -67,19 +69,19 @@
             </opencost:amount_paid>
           </opencost:amounts_paid>
           <opencost:creditor>MPDL Services GmbH</opencost:creditor>
-          <opencost:invoice_period>
-            <opencost:from>2020-01-01</opencost:from>
-            <opencost:to>2020-06-31</opencost:to>
-          </opencost:invoice_period>
           <opencost:dates>
-            <opencost:date_paid>2020-12-01</opencost:date_paid>
-            <opencost:date_invoice>2020-11-01</opencost:date_invoice>
+            <opencost:paid>2020-12-01</opencost:paid>
+            <opencost:invoice>2020-11-01</opencost:invoice>
           </opencost:dates>
           <opencost:invoice_number></opencost:invoice_number>
         </opencost:invoice>
       </opencost:invoice_group>
       <opencost:invoice_group>
         <opencost:group_id>01eezs655_wiley2019deal_2021</opencost:group_id>
+        <opencost:invoices_period>
+          <opencost:from>2021-01-01</opencost:from>
+          <opencost:to>2021-12-31</opencost:to>
+        </opencost:invoices_period>
         <opencost:invoice>
           <opencost:amount_invoice>
             <opencost:currency>EUR</opencost:currency>
@@ -89,7 +91,7 @@
             <opencost:amount_paid>
               <opencost:currency>EUR</opencost:currency>
               <opencost:amount>69377.17</opencost:amount>
-              <opencost:cost_type>publishing</opencost:cost_type>
+              <opencost:cost_type>publish</opencost:cost_type>
             </opencost:amount_paid>
             <opencost:amount_paid>
               <opencost:currency>EUR</opencost:currency>
@@ -98,13 +100,9 @@
             </opencost:amount_paid>
           </opencost:amounts_paid>
           <opencost:creditor>MPDL Services GmbH</opencost:creditor>
-          <opencost:invoice_period>
-            <opencost:from>2021-01-01</opencost:from>
-            <opencost:to>2021-12-31</opencost:to>
-          </opencost:invoice_period>
           <opencost:dates>
-            <opencost:date_paid>2021-12-01</opencost:date_paid>
-            <opencost:date_invoice>2021-12-01</opencost:date_invoice>
+            <opencost:paid>2021-12-01</opencost:paid>
+            <opencost:invoice>2021-12-01</opencost:invoice>
           </opencost:dates>
           <opencost:invoice_number></opencost:invoice_number>
         </opencost:invoice>

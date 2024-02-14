@@ -12,7 +12,8 @@
       </opencost:id>
     </opencost:institution>
     <opencost:primary_identifier>
-      <opencost:doi>10.1002/ehf2.12409</opencost:doi>
+      <opencost:type>doi</opencost:type>
+      <opencost:value>10.1002/ehf2.12409</opencost:value>
     </opencost:primary_identifier>
     <opencost:secondary_identifiers>
       <opencost:id>
@@ -24,7 +25,7 @@
         <opencost:type>pmid</opencost:type>
       </opencost:id>
     </opencost:secondary_identifiers>
-    <opencost:type>journal article</opencost:type>
+    <opencost:publication_type>journal article</opencost:publication_type>
     <opencost:cost_data>
       <opencost:part_of_contract>
         <opencost:primary_identifier>
@@ -52,8 +53,8 @@
         </opencost:amounts_paid>
         <opencost:creditor>MPDL Services GmbH</opencost:creditor>
         <opencost:dates>
-          <opencost:date_paid>2021-12-01</opencost:date_paid>
-          <opencost:date_invoice>2021-12-01</opencost:date_invoice>
+          <opencost:paid>2021-12-01</opencost:paid>
+          <opencost:invoice>2021-12-01</opencost:invoice>
         </opencost:dates>
       </opencost:invoice>
     </opencost:cost_data>

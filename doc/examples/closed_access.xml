@@ -2,37 +2,38 @@
 <opencost:data xmlns:opencost="https://opencost.de">
   <opencost:publication>
     <opencost:institution>
-      <opencost:name>
-        <opencost:value>desy</opencost:value>
-        <opencost:type>short</opencost:type>
-      </opencost:name>
       <opencost:id>
         <opencost:value>https://ror.org/01js2sh04</opencost:value>
         <opencost:type>ror</opencost:type>
       </opencost:id>
+      <opencost:name>
+        <opencost:value>desy</opencost:value>
+        <opencost:type>short</opencost:type>
+      </opencost:name>
     </opencost:institution>
     <opencost:primary_identifier>
-      <opencost:doi>10.1039/D0CP04104A</opencost:doi>
+      <opencost:value>10.1039/D0CP04104A</opencost:value>
+      <opencost:type>doi</opencost:type>
     </opencost:primary_identifier>
+    <opencost:publication_type>journal article</opencost:publication_type>
     <opencost:secondary_identifiers>
       <opencost:id>
-        <opencost:type>local</opencost:type>
         <opencost:value>PUBDB-2020-04988</opencost:value>
+        <opencost:type>local</opencost:type>
       </opencost:id>
       <opencost:id>
-        <opencost:type>oai</opencost:type>
         <opencost:value>oai:bib-pubdb1.desy.de:453035</opencost:value>
+        <opencost:type>oai</opencost:type>
       </opencost:id>
       <opencost:id>
-        <opencost:type>doi</opencost:type>
         <opencost:value>10.1039/D0CP04104A</opencost:value>
+        <opencost:type>doi</opencost:type>
       </opencost:id>
       <opencost:id>
-        <opencost:type>doi</opencost:type>
         <opencost:value>10.3204/PUBDB-2020-04988</opencost:value>
+        <opencost:type>doi</opencost:type>
       </opencost:id>
     </opencost:secondary_identifiers>
-    <opencost:type>journal article</opencost:type>
     <opencost:cost_data>
       <opencost:invoice>
         <opencost:amount_invoice>
@@ -41,15 +42,15 @@
         </opencost:amount_invoice>
         <opencost:amounts_paid>
           <opencost:amount_paid>
-            <opencost:currency>EUR</opencost:currency>
             <opencost:amount>559.69</opencost:amount>
+            <opencost:currency>EUR</opencost:currency>
             <opencost:cost_type>cover charge</opencost:cost_type>
           </opencost:amount_paid>
         </opencost:amounts_paid>
         <opencost:creditor>RSC Publ.</opencost:creditor>
         <opencost:dates>
-          <opencost:date_paid>2020-12-15</opencost:date_paid>
-          <opencost:date_invoice>2020-12-10</opencost:date_invoice>
+          <opencost:paid>2020-12-15</opencost:paid>
+          <opencost:invoice>2020-12-10</opencost:invoice>
         </opencost:dates>
         <opencost:invoice_number>INV_008530</opencost:invoice_number>
       </opencost:invoice>
