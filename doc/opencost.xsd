@@ -25,7 +25,7 @@ elementFormDefault="qualified">
     <xs:element name="primary_identifier" type="publication_primary_identifier" />
     <xs:element name="secondary_identifiers" type="publication_secondary_identifiers" minOccurs="0" />
     <xs:element name="institution" type="institution_type" />
-    <xs:element name="type" type="coar_publication_type" />
+    <xs:element name="publication_type" type="coar_publication_type" />
     <xs:element name="external_costsplitting" type="xs:boolean" minOccurs="0" />
     <xs:element name="cost_data" type="publication_cost_data_type" />
   </xs:all>
@@ -34,24 +34,18 @@ elementFormDefault="qualified">
 <xs:complexType name="contract_type">
   <xs:all>
     <xs:element name="contract_name" type="xs:string" />
-    <xs:element name="institution" type="contract_institution_type" />
+    <xs:element name="institution" type="institution_type" />
+    <xs:element name="participation" type="participation_type" />
     <xs:element name="primary_identifier" type="contract_primary_identifier_type" />
     <xs:element name="secondary_identifiers" type="contract_secondary_identifiers_type" minOccurs="0" />
     <xs:element name="cost_data" type="contract_cost_data_type"/>
   </xs:all>
 </xs:complexType>
 
-<xs:complexType name="contract_institution_type">
-  <xs:all>
-    <xs:element name="identity" type="institution_type" />
-    <xs:element name="participation" type="participation_type" />
-  </xs:all>
-</xs:complexType>
-
 <xs:complexType name="participation_type">
   <xs:all>
-    <xs:element name="date_exit" type="date_format" />
-    <xs:element name="date_join" type="date_format" />
+    <xs:element name="to" type="date_format" />
+    <xs:element name="from" type="date_format" />
   </xs:all>
 </xs:complexType>
 
@@ -62,16 +56,11 @@ elementFormDefault="qualified">
 </xs:complexType>
 
 <xs:complexType name="contract_invoice_group_type">
-  <xs:choice>
-    <xs:sequence>
-      <xs:element name="invoice" type="contract_invoice_type" minOccurs="1" maxOccurs="unbounded" />
-      <xs:element name="group_id" type="xs:string" />
-    </xs:sequence>
-    <xs:sequence>
-      <xs:element name="group_id" type="xs:string" />
-      <xs:element name="invoice" type="contract_invoice_type" minOccurs="1" maxOccurs="unbounded" />
-    </xs:sequence>
-  </xs:choice>
+  <xs:all>
+    <xs:element name="invoice" type="contract_invoice_type"/>
+    <xs:element name="group_id" type="xs:string" />
+    <xs:element name="invoices_period" type="contract_invoice_period_type" />
+  </xs:all>
 </xs:complexType>
 
 <xs:complexType name="contract_invoice_type">
@@ -79,7 +68,6 @@ elementFormDefault="qualified">
     <xs:element name="amount_invoice" type="amount_invoice" minOccurs="0" />
     <xs:element name="invoice_number" type="xs:string" minOccurs="0" />
     <xs:element name="creditor" type="xs:string" minOccurs="0" />
-    <xs:element name="invoice_period" type="contract_invoice_period_type" />
     <xs:element name="dates" type="dates" />
     <xs:element name="amounts_paid">
       <xs:complexType>
@@ -127,11 +115,36 @@ elementFormDefault="qualified">
   </xs:all>
 </xs:complexType>
 
+<!--
 <xs:complexType name="publication_primary_identifier">
-  <xs:choice>
-    <xs:element name="doi" type="xs:string" />
-    <xs:element name="bibliographic_information" type="bibliographic_information" />
-  </xs:choice>
+  <xs:all>
+    <xs:element name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="doi" />
+          <xs:enumeration value="bibliographic_information" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+    <xs:element name="value" type="xs:string" />
+  </xs:all>
+</xs:complexType>
+-->
+
+<xs:complexType name="publication_primary_identifier">
+  <xs:all>
+    <xs:element name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="doi" />
+          <xs:enumeration value="bibliographic_information" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+    <!-- TODO this is not yet ideal -->
+    <xs:element name="value" type="xs:string" />
+    <xs:element name="bibliographic_information" type="bibliographic_information" minOccurs="0" />
+  </xs:all>
 </xs:complexType>
 
 <xs:complexType name="publication_secondary_identifiers">
@@ -296,7 +309,7 @@ elementFormDefault="qualified">
 
 <xs:simpleType name="contract_cost_type">
   <xs:restriction base="xs:string">
-    <xs:enumeration value="publishing" />
+    <xs:enumeration value="publish" />
     <xs:enumeration value="read" />
     <xs:enumeration value="vat" />
   </xs:restriction>
@@ -319,12 +332,12 @@ elementFormDefault="qualified">
 <xs:complexType name="dates">
   <xs:choice>
     <xs:sequence>
-     <xs:element name="date_invoice" type="date_format" minOccurs="1"/>
-     <xs:element name="date_paid" type="date_format" minOccurs="0"/>
+     <xs:element name="invoice" type="date_format" minOccurs="1"/>
+     <xs:element name="paid" type="date_format" minOccurs="0"/>
     </xs:sequence>
     <xs:sequence>
-     <xs:element name="date_paid" type="date_format" minOccurs="1"/>
-     <xs:element name="date_invoice" type="date_format" minOccurs="0"/>
+     <xs:element name="paid" type="date_format" minOccurs="1"/>
+     <xs:element name="invoice" type="date_format" minOccurs="0"/>
     </xs:sequence>
   </xs:choice>
 </xs:complexType>
