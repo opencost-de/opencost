@@ -22,9 +22,6 @@
       </opencost:invoice>
     </opencost:cost_data>
     <opencost:primary_identifier>
-      <opencost:type>bibliographic_information</opencost:type>
-
-      <opencost:value></opencost:value>
       <opencost:bibliographic_information>
         <opencost:Title>Pressure-induced high-spin/low-spin disproportionated state in the Mott insulator FeBO3</opencost:Title>
         <opencost:Publisher>Macmillan Publishers Limited, part of Springer Nature</opencost:Publisher>

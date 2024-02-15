@@ -12,8 +12,7 @@
       </opencost:id>
     </opencost:institution>
     <opencost:primary_identifier>
-      <opencost:type>doi</opencost:type> 
-      <opencost:value>10.1038/s41598-022-13507-4</opencost:value>
+      <opencost:doi>10.1038/s41598-022-13507-4</opencost:doi>
     </opencost:primary_identifier>
     <opencost:secondary_identifiers>
       <opencost:id>
