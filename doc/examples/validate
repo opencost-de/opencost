@@ -1,0 +1,13 @@
+#!/bin/bash
+schema="../opencost.xsd"
+validate="xmllint --noout --schema $schema"
+
+for rec in *.xml;
+do
+    echo "$rec:"
+    $validate $rec
+    echo "---------- 8< ----------"
+done
+
+exit
+
