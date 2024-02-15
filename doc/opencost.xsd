@@ -115,36 +115,11 @@ elementFormDefault="qualified">
   </xs:all>
 </xs:complexType>
 
-<!--
 <xs:complexType name="publication_primary_identifier">
-  <xs:all>
-    <xs:element name="type">
-      <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="doi" />
-          <xs:enumeration value="bibliographic_information" />
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:element>
-    <xs:element name="value" type="xs:string" />
-  </xs:all>
-</xs:complexType>
--->
-
-<xs:complexType name="publication_primary_identifier">
-  <xs:all>
-    <xs:element name="type">
-      <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="doi" />
-          <xs:enumeration value="bibliographic_information" />
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:element>
-    <!-- TODO this is not yet ideal -->
-    <xs:element name="value" type="xs:string" />
-    <xs:element name="bibliographic_information" type="bibliographic_information" minOccurs="0" />
-  </xs:all>
+    <xs:choice>
+        <xs:element name="doi" type="xs:string" />
+        <xs:element name="bibliographic_information" type="bibliographic_information" />
+    </xs:choice>
 </xs:complexType>
 
 <xs:complexType name="publication_secondary_identifiers">
