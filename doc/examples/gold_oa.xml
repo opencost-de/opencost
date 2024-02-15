@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<opencost:data xmlns:opencost="https://opencost.de">
+<opencost:data xmlns:opencost="https://opencost.de" xmlns:datacite="https://schema.datacite.org/meta/kernel-4/metadata.xsd">
   <opencost:publication>
     <opencost:institution>
       <opencost:id>
@@ -12,8 +12,7 @@
       </opencost:name>
     </opencost:institution>
     <opencost:primary_identifier>
-      <opencost:value>10.1364/OPTICA.3.000816</opencost:value>
-      <opencost:type>doi</opencost:type>
+      <opencost:doi>10.1364/OPTICA.3.000816</opencost:doi>
     </opencost:primary_identifier>
     <opencost:publication_type>journal article</opencost:publication_type>
     <opencost:secondary_identifiers>
