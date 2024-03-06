@@ -33,7 +33,7 @@ elementFormDefault="qualified">
 
 <xs:complexType name="contract_type">
   <xs:all>
-    <xs:element name="contract_name" type="xs:string" />
+    <xs:element name="contract_name" type="non_empty_string" />
     <xs:element name="institution" type="institution_type" />
     <xs:element name="participation" type="participation_type" />
     <xs:element name="primary_identifier" type="contract_primary_identifier_type" />
@@ -58,7 +58,7 @@ elementFormDefault="qualified">
 <xs:complexType name="contract_invoice_group_type">
   <xs:all>
     <xs:element name="invoice" type="contract_invoice_type"/>
-    <xs:element name="group_id" type="xs:string" />
+    <xs:element name="group_id" type="non_empty_string" />
     <xs:element name="invoices_period" type="contract_invoice_period_type" />
   </xs:all>
 </xs:complexType>
@@ -66,8 +66,8 @@ elementFormDefault="qualified">
 <xs:complexType name="contract_invoice_type">
   <xs:all>
     <xs:element name="amount_invoice" type="amount_invoice" minOccurs="0" />
-    <xs:element name="invoice_number" type="xs:string" minOccurs="0" />
-    <xs:element name="creditor" type="xs:string" minOccurs="0" />
+    <xs:element name="invoice_number" type="non_empty_string" minOccurs="0" />
+    <xs:element name="creditor" type="non_empty_string" minOccurs="0" />
     <xs:element name="dates" type="dates" />
     <xs:element name="amounts_paid">
       <xs:complexType>
@@ -81,7 +81,7 @@ elementFormDefault="qualified">
 
 <xs:complexType name="part_of_contract_type">
   <xs:all>
-    <xs:element name="invoice_id" type="xs:string" minOccurs="0" />
+    <xs:element name="invoice_id" type="non_empty_string" minOccurs="0" />
     <xs:element name="primary_identifier" type="contract_primary_identifier_type" />
   </xs:all>
 </xs:complexType>
@@ -102,7 +102,7 @@ elementFormDefault="qualified">
 <xs:complexType name="publication_invoice_type">
   <xs:all>
     <xs:element name="amount_invoice" minOccurs="0" type="amount_invoice" />
-    <xs:element name="invoice_number" type="xs:string" minOccurs="0"/>
+    <xs:element name="invoice_number" type="non_empty_string" minOccurs="0"/>
     <xs:element name="amounts_paid">
       <xs:complexType>
         <xs:sequence>
@@ -111,13 +111,13 @@ elementFormDefault="qualified">
       </xs:complexType>
     </xs:element>
     <xs:element name="dates" type="dates"/>
-    <xs:element name="creditor" type="xs:string" minOccurs="0"/>
+    <xs:element name="creditor" type="non_empty_string" minOccurs="0"/>
   </xs:all>
 </xs:complexType>
 
 <xs:complexType name="publication_primary_identifier">
     <xs:choice>
-        <xs:element name="doi" type="xs:string" />
+        <xs:element name="doi" type="non_empty_string" />
         <xs:element name="bibliographic_information" type="bibliographic_information" />
     </xs:choice>
 </xs:complexType>
@@ -147,7 +147,7 @@ elementFormDefault="qualified">
 
 <xs:complexType name="contract_primary_identifier_type">
   <xs:all>
-    <xs:element name="value" type="xs:string" />
+    <xs:element name="value" type="non_empty_string" />
     <xs:element name="type">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -166,7 +166,7 @@ elementFormDefault="qualified">
 
 <xs:complexType name="contract_secondary_id_type">
   <xs:all>
-    <xs:element name="value" type="xs:string" />
+    <xs:element name="value" type="non_empty_string" />
     <xs:element name="type">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -181,7 +181,7 @@ elementFormDefault="qualified">
 
 <xs:complexType name="publication_secondary_id_type">
   <xs:all>
-    <xs:element name="value" type="xs:string" />
+    <xs:element name="value" type="non_empty_string" />
     <xs:element name="type">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -202,15 +202,15 @@ elementFormDefault="qualified">
 
 <xs:complexType name="bibliographic_information">
   <xs:all>
-    <xs:element name="Title" type="xs:string" minOccurs="1" />
-    <xs:element name="Publisher" type="xs:string" minOccurs="1" />
-    <xs:element name="isPartOf" type="xs:string" minOccurs="1" />
+    <xs:element name="Title" type="non_empty_string" minOccurs="1" />
+    <xs:element name="Publisher" type="non_empty_string" minOccurs="1" />
+    <xs:element name="isPartOf" type="non_empty_string" minOccurs="1" />
   </xs:all>
 </xs:complexType>
 
 <xs:complexType name="institution_name">
   <xs:all>
-    <xs:element name="value" type="xs:string" />
+    <xs:element name="value" type="non_empty_string" />
     <xs:element name="type">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -224,7 +224,7 @@ elementFormDefault="qualified">
 
 <xs:complexType name="institution_id">
   <xs:all>
-    <xs:element name="value" type="xs:string" />
+    <xs:element name="value" type="non_empty_string" />
     <xs:element name="type">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -320,6 +320,12 @@ elementFormDefault="qualified">
 <xs:simpleType name="date_format">
   <xs:restriction base="xs:string">
     <xs:pattern value="[0-9]{4}|[0-9]{4}-[0-9]{2}|[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="non_empty_string">
+  <xs:restriction base="xs:string">
+    <xs:minLength value="1"/>
   </xs:restriction>
 </xs:simpleType>
 
