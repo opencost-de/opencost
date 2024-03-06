@@ -51,7 +51,6 @@
           <opencost:paid>2022-07-06</opencost:paid>
           <opencost:invoice>2022-07-06</opencost:invoice>
         </opencost:dates>
-        <opencost:invoice_number/>
       </opencost:invoice>
       <opencost:invoice>
         <opencost:amount_invoice>

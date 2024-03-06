@@ -22,16 +22,8 @@
     </opencost:primary_identifier>
     <opencost:secondary_identifiers>
       <opencost:id>
-        <opencost:type>oai</opencost:type>
-        <opencost:value></opencost:value>
-      </opencost:id>
-      <opencost:id>
         <opencost:type>ezb</opencost:type>
         <opencost:value>EZB-WIDEA-1707</opencost:value>
-      </opencost:id>
-      <opencost:id>
-        <opencost:type>local</opencost:type>
-        <opencost:value></opencost:value>
       </opencost:id>
     </opencost:secondary_identifiers>
     <opencost:cost_data>
@@ -73,7 +65,6 @@
             <opencost:paid>2020-12-01</opencost:paid>
             <opencost:invoice>2020-11-01</opencost:invoice>
           </opencost:dates>
-          <opencost:invoice_number></opencost:invoice_number>
         </opencost:invoice>
       </opencost:invoice_group>
       <opencost:invoice_group>
@@ -104,7 +95,6 @@
             <opencost:paid>2021-12-01</opencost:paid>
             <opencost:invoice>2021-12-01</opencost:invoice>
           </opencost:dates>
-          <opencost:invoice_number></opencost:invoice_number>
         </opencost:invoice>
       </opencost:invoice_group>
     </opencost:cost_data>
