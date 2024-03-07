@@ -81,7 +81,7 @@ elementFormDefault="qualified">
 
 <xs:complexType name="part_of_contract_type">
   <xs:all>
-    <xs:element name="invoice_id" type="non_empty_string" minOccurs="0" />
+    <xs:element name="group_id" type="non_empty_string" minOccurs="0" />
     <xs:element name="primary_identifier" type="contract_primary_identifier_type" />
   </xs:all>
 </xs:complexType>
@@ -240,12 +240,12 @@ elementFormDefault="qualified">
 <xs:complexType name="institution_type">
   <xs:choice>
     <xs:sequence>
-     <xs:element name="name" type="institution_name" minOccurs="1"/>
-     <xs:element name="id" type="institution_id" minOccurs="0"/>
+     <xs:element name="name" type="institution_name" minOccurs="1" maxOccurs="unbounded" />
+     <xs:element name="id" type="institution_id" minOccurs="0"  maxOccurs="unbounded" />
     </xs:sequence>
     <xs:sequence>
-     <xs:element name="id" type="institution_id" minOccurs="1"/>
-     <xs:element name="name" type="institution_name" minOccurs="0"/>
+     <xs:element name="id" type="institution_id" minOccurs="1" maxOccurs="unbounded" />
+     <xs:element name="name" type="institution_name" minOccurs="0"  maxOccurs="unbounded" />
     </xs:sequence>
   </xs:choice>
 </xs:complexType>

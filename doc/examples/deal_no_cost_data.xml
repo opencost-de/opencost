@@ -43,7 +43,7 @@
           <opencost:type>ESAC</opencost:type>
           <opencost:value>wiley2019deal</opencost:value>
         </opencost:primary_identifier>
-        <opencost:invoice_id>01js2sh04_wiley2019deal_2021</opencost:invoice_id>
+        <opencost:group_id>01js2sh04_wiley2019deal_2021</opencost:group_id>
       </opencost:part_of_contract>
     </opencost:cost_data>
   </opencost:publication>
