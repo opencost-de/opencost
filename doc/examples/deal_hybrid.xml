@@ -2,32 +2,58 @@
 <opencost:data xmlns:opencost="https://opencost.de">
   <opencost:publication>
     <opencost:institution>
-      <opencost:institution_name type="short">UBR</opencost:institution_name>
-      <opencost:institution_id type="ror">https://ror.org/01eezs655</opencost:institution_id>
+      <opencost:name>
+        <opencost:value>UBR</opencost:value>
+        <opencost:type>short</opencost:type>
+      </opencost:name>
+      <opencost:id>
+        <opencost:value>https://ror.org/01eezs655</opencost:value>
+        <opencost:type>ror</opencost:type>
+      </opencost:id>
     </opencost:institution>
     <opencost:primary_identifier>
       <opencost:doi>10.1002/ehf2.12409</opencost:doi>
     </opencost:primary_identifier>
     <opencost:secondary_identifiers>
-      <opencost:id type="doi">10.1002/ehf2.12409</opencost:id>
-      <opencost:id type="pmid">35689058</opencost:id>
+      <opencost:id>
+        <opencost:type>doi</opencost:type>
+        <opencost:value>10.1002/ehf2.12409</opencost:value>
+      </opencost:id>
+      <opencost:id>
+        <opencost:value>35689058</opencost:value>
+        <opencost:type>pmid</opencost:type>
+      </opencost:id>
     </opencost:secondary_identifiers>
-    <opencost:type>journal article</opencost:type>
+    <opencost:publication_type>journal article</opencost:publication_type>
     <opencost:cost_data>
       <opencost:part_of_contract>
-        <opencost:primary_identifier type="ESAC">wiley2019deal</opencost:primary_identifier>
-        <opencost:invoice_id>01eezs655_wiley2019deal_2021</opencost:invoice_id>
+        <opencost:primary_identifier>
+          <opencost:type>ESAC</opencost:type>
+          <opencost:value>wiley2019deal</opencost:value>
+        </opencost:primary_identifier>
+        <opencost:group_id>01eezs655_wiley2019deal_2021</opencost:group_id>
       </opencost:part_of_contract>
       <opencost:invoice>
-        <opencost:amount_invoice currency="EUR">0</opencost:amount_invoice>
+        <opencost:amount_invoice>
+          <opencost:currency>EUR</opencost:currency>
+          <opencost:amount>0.0</opencost:amount>
+        </opencost:amount_invoice>
         <opencost:amounts_paid>
-          <opencost:amount_paid currency="EUR" type="hybrid-oa">0</opencost:amount_paid>
-          <opencost:amount_paid currency="EUR" type="page charge">450.20</opencost:amount_paid>
+          <opencost:amount_paid>
+            <opencost:currency>EUR</opencost:currency>
+            <opencost:amount>0</opencost:amount>
+            <opencost:cost_type>hybrid-oa</opencost:cost_type>
+          </opencost:amount_paid>
+          <opencost:amount_paid>
+            <opencost:currency>EUR</opencost:currency>
+            <opencost:amount>450.20</opencost:amount>
+            <opencost:cost_type>page charge</opencost:cost_type>
+          </opencost:amount_paid>
         </opencost:amounts_paid>
         <opencost:creditor>MPDL Services GmbH</opencost:creditor>
         <opencost:dates>
-          <opencost:date_paid>2021-12-01</opencost:date_paid>
-          <opencost:date_invoice>2021-12-01</opencost:date_invoice>
+          <opencost:paid>2021-12-01</opencost:paid>
+          <opencost:invoice>2021-12-01</opencost:invoice>
         </opencost:dates>
       </opencost:invoice>
     </opencost:cost_data>

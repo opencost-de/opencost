@@ -1,13 +1,20 @@
 #!/bin/bash
-
-host="http://l00lnxwagner.desy.de/record/"
+echo "/----------------------------------------------------\\"
+echo "|               DEVELOPMENT TOOL                     |"
+echo "|                                                    |"
+echo "| This script fechtes data from a development system |"
+echo "| that is not genreally available on the Internet.   |"
+echo "\\----------------------------------------------------/"
+host="http://l00lnxwagner.desy.de:9000/record/"
 format="?of=ocost"
-schema="../../opencost_article.xsd"
+schema="../../opencost.xsd"
 validate="xmllint --noout --schema $schema"
-recs2fetch="453035 473418 301439 479017 491414"
+recs2fetch="453035 473418 301439 479017 491414 475435 491266"
+# 436013
 
 for recid in $recs2fetch
 do
+    echo $recid
     curl -s $host/$recid$format -o $recid.xml
     $validate $recid.xml
 done
@@ -16,6 +23,7 @@ done
 xmllint --format 453035.xml > closed_access.xml
 
 # validate deal_gold.xml
+echo TODO 473418: hook up with contract!
 xmllint --format 473418.xml > deal_gold.xml
 
 # validate gold_oa.xml
@@ -24,11 +32,17 @@ xmllint --format 301439.xml > gold_oa.xml
 # validate multiple_bills.xml
 xmllint --format 479017.xml > multiple_bills.xml
 
+# validate multiple_bills.xml
+xmllint --format 475435.xml > external_cost_splitting.xml
 
 # # validate deal_hybrid.xml
+# echo TODO 436013: hook up with contract!
 # xmllint --schema $schema --format 436013.xml > deal_hybrid.xml
 
-# for recid in $recs2fetch
-# do
-# 	rm $recid.xml
-# done
+# validate a deal contract
+xmllint --schema $schema --format 491266.xml > deal_contract.xml
+
+for recid in $recs2fetch
+do
+	rm $recid.xml
+done
