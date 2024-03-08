@@ -2,10 +2,11 @@
 echo "/----------------------------------------------------\\"
 echo "|               DEVELOPMENT TOOL                     |"
 echo "|                                                    |"
-echo "| This script fechtes data from a development system |"
-echo "| that is not genreally available on the Internet.   |"
+echo "| This script fetches data from a development system |"
+echo "| that is not generally available on the Internet.   |"
 echo "\\----------------------------------------------------/"
 host="http://l00lnxwagner.desy.de:9000/record/"
+# host="https://bib-pubdb1.desy.de/record/"
 format="?of=ocost"
 schema="../../opencost.xsd"
 validate="xmllint --noout --schema $schema"
@@ -14,7 +15,7 @@ recs2fetch="453035 473418 301439 479017 491414 475435 491266"
 
 for recid in $recs2fetch
 do
-    echo $recid
+    # echo $host/$recid$format
     curl -s $host/$recid$format -o $recid.xml
     $validate $recid.xml
 done
