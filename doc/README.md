@@ -43,17 +43,16 @@ further examples.
 
 In XML we use the namespace `opencost`. The repository also hosts some complete [examples](https://github.com/opencost-de/opencost/tree/main/doc/examples).
 
-## Elements of the Metadata Schema  
+## Metadata Schema: Overview
 
-Container and child elements are to be distinguished:  
-Container elements only wrap other child elements and do not directly contain data.   
-Child elements hold text data.
-Empty elements are not allowed: Whenever an element is indicated to be required, it has to contain either another element (container) or text value (child).
-
-## Structure of the Metadata Schema  
-
-Structurally, this is an attribute-less metadata schema.
-Please also note that child elements may have to be displayed in a type-value relation if indicated accordingly.
+- All XML elements can be either classified as container elements or text elements. Container elements only wrap other elements and do not directly contain data. Text elements hold the actual data.
+- Empty elements are not allowed: Whenever an element is indicated to be required, it has to contain either another element or text.
+- The schema does not make use of XML attributes, type/value element combinations are used instead. This is a deliberate decision to make the schema easily exportable to other formats like JSON.
+- There are two main entities defined in the schema: `publication`, representing a journal article and its associated (cost) metadata, and `contract`, containing data related to a contract like a transformative agreement. The top element in the schema is `opencost:data`, which may contain an arbitrary combination of `publication` and `contract` elements.
+- The two main entities are decribed below, both in a tree-like overview and a more detailed table. Table entries are linked to tree elements via an identification number.
+- In the table, the `Required` column describes if an element is mandatory. `No` indicates that the element is optional, `Yes` marks required elements. Note however that the `Yes` status only relates to an element's direct parent: If the higher-level element does not exist for whatever reason, the child can also be left out even if marked as required. The third option is `choice`: This indicates that the element can be omitted if another element on the same level is given instead. Have a look at the `Description/Remarks` column to find out which elements form a `choice` relation.
+- The `Multiple` column indicates if an element may occur more than once.
+- `publication` elements may be linked to `contract` elements to model relations like an article being paid for centrally under a transformative agreement. This is done semantically by adding `part_of_contract` to a `publication` element's `cost_data` block and defining a `group_id` within. The `group_id` is then repeated within a `contract` element's `invoice_group`, effectively linking a publication to a set of invoices. The `group_id` may be chosen freely, however we recommend to use a unique identifier which is unlikely to reappear for other data providers within large collections. A possible approach is to use a combination of the institution's ROR ID, the contract primary identifier and a year.
 
 ## Data schema for individual articles (`opencost:publication`)
 
@@ -280,12 +279,6 @@ contract [1]
     |
 ```
 
-<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-<!-- markdownlint-disable MD003 MD033 MD034 -->
-
-
-
-
 | No.         | Field name              | Values                                                                                                                                     | Data Type   | Multiple | Required | Description/Remarks                                                                                                                                                                                                                                                                                                                                                         |
 |:------------|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|-------------|----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1           | `contract`              |                                                                                                                                            |             | Yes      | Yes      | Top-level element, corresponds to a contract (e. g. transformative agreements and memberships) for which costs are to be recorded.                                                                                                                                                                                                                                          |
@@ -337,7 +330,3 @@ To validate your own outputs against the schema you may use:
 ```bash
 $ xmllint --schema opencost.xsd myfile.xml
 ```
-
-<!-- vim: spell spelllang=en_gb bomb tw=0
--->
-
