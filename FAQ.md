@@ -22,8 +22,7 @@ See issue [#14](https://github.com/opencost-de/opencost/issues/14).
 
 4. **Is it intended to additionally generate a JSON representation of the data?**
 
-We are first developing the XML schema. Background is the OAI interface and the fact that the project partners use repositories, which in connection with OAI-PMH have
-mostly established xml as exchange format. On the other hand, we do not want to complicate the discussion by putting two schemas up for disposition. In a further step, we want to convert the XML into a JSON format.  
+The community repeatedly asked whether the openCost schema could also be displayed in JSON format as an alternative. Previously, the use of XML attributes in the definition of the original openCost proposal stood in the way of this request, as attributes cannot be clearly mapped to JSON structures. The openCost schema has now been remodeled in an attribute-free version. Instead of XML attributes, type/value element combinations are used now. After weighing up all the pros and cons, the project team deliberately opted for this version to enable simple translation into other formats. 
 
 See issue [#41](https://github.com/opencost-de/opencost/issues/41).  
 
