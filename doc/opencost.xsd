@@ -5,6 +5,8 @@ targetNamespace="https://opencost.de"
 xmlns="https://opencost.de"
 elementFormDefault="qualified">
 
+<xs:import namespace="http://datacite.org/schema/kernel-4" schemaLocation="http://schema.datacite.org/meta/kernel-4/metadata.xsd"/>
+
 <xs:element name="data">
   <xs:complexType>
     <xs:choice maxOccurs="unbounded">
