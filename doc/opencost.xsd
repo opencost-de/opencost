@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:datacite="http://datacite.org/schema/kernel-4"
 targetNamespace="https://opencost.de"
 xmlns="https://opencost.de"
 elementFormDefault="qualified">
@@ -18,6 +20,7 @@ elementFormDefault="qualified">
 
 <xs:complexType name="publication_type">
   <xs:all>
+    <xs:element ref="datacite:resource" minOccurs="0" />
     <xs:element name="primary_identifier" type="publication_primary_identifier" />
     <xs:element name="secondary_identifiers" type="publication_secondary_identifiers" minOccurs="0" />
     <xs:element name="institution" type="institution_type" />
