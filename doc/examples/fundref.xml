@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<fr:program name="fundref" xmlns:fr="http://www.crossref.org/fundref.xsd">
+  <fr:assertion name="fundgroup">
+    <fr:assertion name="funder_name">National Science Foundation
+      <fr:assertion name="funder_identifier">https://doi.org/10.13039/100000001</fr:assertion>
+    </fr:assertion>
+    <fr:assertion name="award_number">CBET-106</fr:assertion>
+    <fr:assertion name="award_number">CBET-7259</fr:assertion>
+  </fr:assertion>
+  <fr:assertion name="fundgroup">
+    <fr:assertion name="funder_name">Basic Energy Sciences, Office of Science, U.S. Department of Energy
+      <fr:assertion name="funder_identifier">https://doi.org/10.13039/100006151</fr:assertion>
+    </fr:assertion>
+    <fr:assertion name="award_number">1245-ABDS</fr:assertion>
+  </fr:assertion>
+</fr:program>
