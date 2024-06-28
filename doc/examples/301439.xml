@@ -1,51 +1,35 @@
 <?xml version="1.0"?>
 <opencost:data xmlns:opencost="https://opencost.de" xmlns:datacite="http://datacite.org/schema/kernel-4">
   <opencost:publication>
-    <datacite:resource>
-      <!--required datacite fields-->
-      <datacite:identifier identifierType="">foo</datacite:identifier>
-      <datacite:creators>
-        <datacite:creator>
-          <datacite:creatorName></datacite:creatorName>
-        </datacite:creator>
-      </datacite:creators>
-      <datacite:titles>
-        <datacite:title></datacite:title>
-      </datacite:titles>
-      <datacite:publisher>foo</datacite:publisher>
-      <datacite:publicationYear>2022</datacite:publicationYear>
-      <datacite:resourceType resourceTypeGeneral="JournalArticle"></datacite:resourceType>
-      <!---->
-      <datacite:fundingReferences>
-        <datacite:fundingReference>
-          <datacite:awardTitle>6211 - Extreme States of Matter: From Cold Ions to Hot Plasmas (POF3-621)</datacite:awardTitle>
-          <datacite:funderIdentifier funderIdentifierType="ROR">https://ror.org/0281dp749</datacite:funderIdentifier>
-          <datacite:funderName>Helmholtz Association of German Research Centres</datacite:funderName>
-          <datacite:awardNumber>POF3-621</datacite:awardNumber>
-        </datacite:fundingReference>
-        <datacite:fundingReference>
-          <datacite:awardTitle>AXSIS - Frontiers in Attosecond X-ray Science: Imaging and Spectroscopy (609920)</datacite:awardTitle>
-          <datacite:funderIdentifier funderIdentifierType="ROR">https://ror.org/019w4f821</datacite:funderIdentifier>
-          <datacite:funderName>European Union</datacite:funderName>
-          <datacite:awardNumber>609920</datacite:awardNumber>
-        </datacite:fundingReference>
-        <datacite:fundingReference>
-          <datacite:awardTitle>CUI - Hamburger Zentrum f&#xFC;r ultraschnelle Beobachtung (194651731)</datacite:awardTitle>
-          <datacite:funderIdentifier funderIdentifierType="ROR">https://ror.org/018mejw64</datacite:funderIdentifier>
-          <datacite:funderName>Deutsche Forschungsgemeinschaft</datacite:funderName>
-          <datacite:awardNumber awardURI="https://gepris.dfg.de/gepris/projekt/194651731">194651731</datacite:awardNumber>
-        </datacite:fundingReference>
-        <datacite:fundingReference>
-          <datacite:awardTitle>ACHIP - Laser Accelerators on a Chip (ACHIP_2015-10-01)</datacite:awardTitle>
-          <datacite:funderIdentifier funderIdentifierType="ROR">https://ror.org/0281dp749</datacite:funderIdentifier>
-          <datacite:funderName>Helmholtz Association of German Research Centres</datacite:funderName>
-          <datacite:awardNumber>ACHIP_2015-10-01</datacite:awardNumber>
-        </datacite:fundingReference>
-      </datacite:fundingReferences>
-      <datacite:subjects>
-        <datacite:subject subjectScheme="dfg" xml:lang="de">Naturwissenschaften</datacite:subject>
-      </datacite:subjects>
-    </datacite:resource>
+    <opencost:datacite_fundingReferences>
+      <datacite:fundingReference>
+        <datacite:awardTitle>6211 - Extreme States of Matter: From Cold Ions to Hot Plasmas (POF3-621)</datacite:awardTitle>
+        <datacite:funderIdentifier funderIdentifierType="ROR">https://ror.org/0281dp749</datacite:funderIdentifier>
+        <datacite:funderName>Helmholtz Association of German Research Centres</datacite:funderName>
+        <datacite:awardNumber>POF3-621</datacite:awardNumber>
+      </datacite:fundingReference>
+      <datacite:fundingReference>
+        <datacite:awardTitle>AXSIS - Frontiers in Attosecond X-ray Science: Imaging and Spectroscopy (609920)</datacite:awardTitle>
+        <datacite:funderIdentifier funderIdentifierType="ROR">https://ror.org/019w4f821</datacite:funderIdentifier>
+        <datacite:funderName>European Union</datacite:funderName>
+        <datacite:awardNumber>609920</datacite:awardNumber>
+      </datacite:fundingReference>
+      <datacite:fundingReference>
+        <datacite:awardTitle>CUI - Hamburger Zentrum f&#xFC;r ultraschnelle Beobachtung (194651731)</datacite:awardTitle>
+        <datacite:funderIdentifier funderIdentifierType="ROR">https://ror.org/018mejw64</datacite:funderIdentifier>
+        <datacite:funderName>Deutsche Forschungsgemeinschaft</datacite:funderName>
+        <datacite:awardNumber awardURI="https://gepris.dfg.de/gepris/projekt/194651731">194651731</datacite:awardNumber>
+      </datacite:fundingReference>
+      <datacite:fundingReference>
+        <datacite:awardTitle>ACHIP - Laser Accelerators on a Chip (ACHIP_2015-10-01)</datacite:awardTitle>
+        <datacite:funderIdentifier funderIdentifierType="ROR">https://ror.org/0281dp749</datacite:funderIdentifier>
+        <datacite:funderName>Helmholtz Association of German Research Centres</datacite:funderName>
+        <datacite:awardNumber>ACHIP_2015-10-01</datacite:awardNumber>
+      </datacite:fundingReference>
+    </opencost:datacite_fundingReferences>
+    <opencost:datacite_subjects>
+      <datacite:subject subjectScheme="dfg" xml:lang="de">Naturwissenschaften</datacite:subject>
+    </opencost:datacite_subjects>
     <opencost:institution>
       <opencost:id>
         <opencost:value>https://ror.org/01js2sh04</opencost:value>
