@@ -1,4 +1,4 @@
-﻿# openCost Metadata Schemes for Publication Cost Exchange
+﻿# openCost Metadata Schemas for Publication Cost Exchange
 
 Scholarly publications are very well described by standardized metadata.
 Existing frameworks focus on 
@@ -37,7 +37,7 @@ For data exchange openCost proposes the well adopted
 [OAI-PMH protocol](https://www.openarchives.org/pmh/) which leads us to
 initially propose an XML serialization of our format.
 
-Here we  introduce our meta data schemes for further discussion. You can compare
+Here we introduce our meta data schemas for further discussion. You can compare
 the schema to your payment, ask about any doubts, and are invited to upload
 further examples.
 
