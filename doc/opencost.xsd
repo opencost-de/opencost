@@ -291,6 +291,7 @@ elementFormDefault="qualified">
     <xs:element name="currency" type="currency" />
     <xs:element name="amount" type="xs:decimal" />
     <xs:element name="cost_type" type="publication_cost_type" />
+    <xs:element name="vat" type="xs:decimal" minOccurs="0" />
   </xs:all>
 </xs:complexType>
 
@@ -307,6 +308,7 @@ elementFormDefault="qualified">
     <xs:element name="currency" type="currency" />
     <xs:element name="amount" type="xs:decimal" />
     <xs:element name="cost_type" type="contract_cost_type" />
+    <xs:element name="vat" type="xs:decimal" minOccurs="0" />
   </xs:all>
 </xs:complexType>
 

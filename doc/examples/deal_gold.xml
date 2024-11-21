@@ -48,11 +48,7 @@
             <opencost:amount>1681.82</opencost:amount>
             <opencost:currency>EUR</opencost:currency>
             <opencost:cost_type>gold-oa</opencost:cost_type>
-          </opencost:amount_paid>
-          <opencost:amount_paid>
-            <opencost:amount>15.83</opencost:amount>
-            <opencost:currency>EUR</opencost:currency>
-            <opencost:cost_type>vat</opencost:cost_type>
+            <opencost:vat>15.83</opencost:vat>
           </opencost:amount_paid>
         </opencost:amounts_paid>
         <opencost:creditor>Macmillan Publishers Limited, part of Springer Nature</opencost:creditor>
