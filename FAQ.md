@@ -4,7 +4,7 @@
 
 As we want to involve the community in our work as early as possible, we have decided to publish our project results successively in this GitHub repository and regularly obtain feedback. We therefore invite all interested parties to participate in the development of the metadata schema and look forward to a constructive discussion. You can open an GitHub issue at any time and contribute to the discussion with questions, comments or make suggestions for improving our scheme. You are also welcome to leave a comment or remark under other issues and thus participate in the discussion.
 
-Alternatively, you can also send us feedback by e-mail or via our mailing list. We will then convert this into GitHub issues for you. We also regularly organize online discussions via Zoom to present changes or innovations to the schema to the community and then put them up for discussion. We will inform you about the dates via our website and the openCost mailing list (opencost.info@mailman. uni-regensburg.de).
+Alternatively, you can also send us feedback by e-mail or via our mailing list. We will then convert this into GitHub issues for you. We also regularly organize online discussions via Zoom to present changes or innovations to the schema to the community and then put them up for discussion. We will inform you about the dates via our website and the openCost mailing list (ur-ub-opencost.info@listserv.dfn.de).
 
 2. **What are the requirements for implementing openCost in my institution?**
 
