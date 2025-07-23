@@ -34,6 +34,6 @@ CPC – Chapter Processing Charge
 DPC – Data Processing Charge
 …
 
-(!) Within the openCost metadata schema, the publication type of the published object can be classified using the COAR vocabulary (https://vocabularies.coar-repositories.org/resource_types/). 
+(!) Within the openCost metadata schema, the publication type of the published object can be classified using the [COAR vocabulary](https://vocabularies.coar-repositories.org/resource_types/). 
 
-✎ To add further publication types and circulating terms, please leave us an ISSUE at https://github.com/opencost-de/opencost/issues. 
+✎ To add further publication types and circulating terms, please leave us an [ISSUE](https://github.com/opencost-de/opencost/issues). 
