@@ -1,7 +1,5 @@
-<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-<!-- markdownlint-disable MD003 MD033 MD034 -->
 
-Glossary of cost types
+# Glossary of cost types
 ======================
 | (openCost) cost types 		                                                                                                                          | Definition 		                                                                                                                                                                                                                | Potential terms on the invoice indicating the cost type keyword to be used 		                                                                                                                                            |
 |-------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -29,5 +27,3 @@ Glossary of cost types
 | translation charge 		                                                                                                                             | Charges for the translation of a publication 		                                                                                                                                                                              | translations charge, translation fee, Übersetzungsgebühr, Übersetzer:in, … 		                                                                                                                                            |
 | unknown 		                                                                                                                                        | Undefined costs whose allocation is unknown, e.g. unawareness due to data transfer by third parties and invoice reference no longer given  No target criterion and to be distinguished from the field “other”! 		           |  		                                                                                                                                                                                                                      |
 
-<!-- vim: spell spelllang=en_gb bomb
--->
