@@ -299,6 +299,8 @@ elementFormDefault="qualified">
   <xs:restriction base="xs:string">
     <xs:enumeration value="publish" />
     <xs:enumeration value="read" />
+    <xs:enumeration value="publish and read" />
+    <xs:enumeration value="service fee" />
     <xs:enumeration value="vat" />
   </xs:restriction>
 </xs:simpleType>
