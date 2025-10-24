@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<datacite:resource xmlns:datacite="http://datacite.org/schema/kernel-4">
+  <datacite:fundingReferences></datacite:fundingReferences>
+  <datacite:identifier identifierType="test">Nur ein Test</datacite:identifier>
+  <datacite:creators>
+    <datacite:creator>
+      <datacite:creatorName></datacite:creatorName>
+    </datacite:creator>
+  </datacite:creators>
+  <datacite:titles>
+    <datacite:title></datacite:title>
+  </datacite:titles>
+  <datacite:publisher>Testpublisher</datacite:publisher>
+  <datacite:publicationYear>2024</datacite:publicationYear>
+  <datacite:resourceType resourceTypeGeneral="JournalArticle"></datacite:resourceType>
+</datacite:resource>
