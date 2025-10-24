@@ -16,17 +16,17 @@
   2024-01-22 v4.5: Addition of new subproperties for publisher: "publisherIdentifier", "publisherIdentifierScheme", and "schemeURI"; addition of new resourceTypeGeneral values "Instrument" and "StudyRegistration"; addition of new relationType values "Collects" and "IsCollectedBy".
   2024-12-05 v4.6: Addition of new resourceTypeGeneral values "Award" and "Project"; addiition of new relatedIdentifierType values "CSTR" and "RRID"; addition of new contributorType "Translator"; addition of new relationTypes "HasTranslation" and "IsTranslationOf"; addition of new dateType "Coverage".-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" targetNamespace="http://datacite.org/schema/kernel-4" elementFormDefault="qualified" xml:lang="EN">
-  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="include/xml.xsd" />
-  <xs:include schemaLocation="include/datacite-titleType-v4.xsd" />
-  <xs:include schemaLocation="include/datacite-contributorType-v4.xsd" />
-  <xs:include schemaLocation="include/datacite-dateType-v4.xsd" />
-  <xs:include schemaLocation="include/datacite-resourceType-v4.xsd" />
-  <xs:include schemaLocation="include/datacite-relationType-v4.xsd" />
-  <xs:include schemaLocation="include/datacite-relatedIdentifierType-v4.xsd" />
-  <xs:include schemaLocation="include/datacite-funderIdentifierType-v4.xsd" />
-  <xs:include schemaLocation="include/datacite-descriptionType-v4.xsd" />
-  <xs:include schemaLocation="include/datacite-nameType-v4.xsd" />
-  <xs:include schemaLocation="include/datacite-numberType-v4.xsd" />
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://schema.datacite.org/meta/kernel-4/include/xml.xsd" />
+  <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-titleType-v4.xsd" />
+  <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-contributorType-v4.xsd" />
+  <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-dateType-v4.xsd" />
+  <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-resourceType-v4.xsd" />
+  <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-relationType-v4.xsd" />
+  <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-relatedIdentifierType-v4.xsd" />
+  <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-funderIdentifierType-v4.xsd" />
+  <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-descriptionType-v4.xsd" />
+  <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-nameType-v4.xsd" />
+  <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-numberType-v4.xsd" />
   <xs:element name="resource">
     <xs:annotation>
       <xs:documentation>
