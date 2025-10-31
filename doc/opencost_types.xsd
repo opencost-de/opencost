@@ -5,6 +5,13 @@ targetNamespace="https://opencost.de"
 xmlns="https://opencost.de"
 elementFormDefault="qualified">
 
+<xs:complexType name="data_type">
+  <xs:choice maxOccurs="unbounded">
+    <xs:element name="publication" type="publication_type" maxOccurs="unbounded" />
+    <xs:element name="contract" type="contract_type" maxOccurs="unbounded" />
+  </xs:choice>
+</xs:complexType>
+
 <xs:complexType name="publication_type">
   <xs:all>
     <xs:element name="primary_identifier" type="publication_primary_identifier" />

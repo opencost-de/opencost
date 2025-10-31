@@ -2,18 +2,11 @@
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 targetNamespace="https://opencost.de"
-xmlns="https://opencost.de"
+xmlns:opencost="https://opencost.de"
 elementFormDefault="qualified">
 
 <xs:include schemaLocation="opencost_types.xsd" />
 
-<xs:element name="data" >
-  <xs:complexType>
-    <xs:choice maxOccurs="unbounded">
-      <xs:element name="publication" type="publication_type" maxOccurs="unbounded" />
-      <xs:element name="contract" type="contract_type" maxOccurs="unbounded" />
-    </xs:choice>
-  </xs:complexType>
-</xs:element>
+<xs:element name="data" type="opencost:data_type" />
 
 </xs:schema>
