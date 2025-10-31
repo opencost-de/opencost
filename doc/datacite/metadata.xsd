@@ -17,7 +17,7 @@
   2024-12-05 v4.6: Addition of new resourceTypeGeneral values "Award" and "Project"; addiition of new relatedIdentifierType values "CSTR" and "RRID"; addition of new contributorType "Translator"; addition of new relationTypes "HasTranslation" and "IsTranslationOf"; addition of new dateType "Coverage".-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opencost="https://opencost.de" xmlns="http://datacite.org/schema/kernel-4" targetNamespace="http://datacite.org/schema/kernel-4" elementFormDefault="qualified" xml:lang="EN">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://schema.datacite.org/meta/kernel-4/include/xml.xsd" />
-  <xs:import namespace="https://opencost.de" schemaLocation="opencost_types.xsd" />
+  <xs:import namespace="https://opencost.de" schemaLocation="../opencost_types.xsd" />
   <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-titleType-v4.xsd" />
   <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-contributorType-v4.xsd" />
   <xs:include schemaLocation="http://schema.datacite.org/meta/kernel-4/include/datacite-dateType-v4.xsd" />
