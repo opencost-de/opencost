@@ -45,6 +45,7 @@ In XML we use the namespace `opencost`. The repository also hosts some complete 
 
 ## Metadata Schema: Overview
 
+- The Schema is formally specified using XSD ([XML Schema Definition](https://en.wikipedia.org/wiki/XML_Schema_(W3C))), an XML Schema language. The implementation is split into two files which are inderdependent: `opencost_types.xsd` contains all element type definitions, while `opencost.xsd` specifies only the top-level element (`data`). The latter can be used by any XML validator to test if a given XML document conforms to the openCost schema (see below for some example calls to `xmllint`)
 - All XML elements can be either classified as container elements or text elements. Container elements only wrap other elements and do not directly contain data. Text elements hold the actual data.
 - Empty elements are not allowed: Whenever an element is indicated to be required, it has to contain either another element or text.
 - The schema does not make use of XML attributes, type/value element combinations are used instead. This is a deliberate decision to make the schema easily exportable to other formats like JSON.
@@ -54,6 +55,16 @@ In XML we use the namespace `opencost`. The repository also hosts some complete 
 - In the table, the `Required` column describes if an element is mandatory. `No` indicates that the element is optional, `Yes` marks required elements. Note however that the `Yes` status only relates to an element's direct parent: If the higher-level element does not exist for whatever reason, the child can also be left out even if marked as required. The third option is `choice`: This indicates that the element can be omitted if another element on the same level is given instead. Have a look at the `Description/Remarks` column to find out which elements form a `choice` relation.
 - The `Repeatable` column indicates if an element may occur more than once.
 - `publication` elements may be linked to `contract` elements to model relations like an article being paid for centrally under a non-APC payment model. This is done semantically by adding `part_of_contract` to a `publication` element's `cost_data` block and defining a `group_id` within. The `group_id` is then repeated within a `contract` element's `invoice_group`, effectively linking a publication to a set of invoices. The `group_id` may be chosen freely, however we recommend to use a unique identifier which is unlikely to reappear for other data providers within large collections. A possible approach is to use a combination of the institution's ROR ID, the contract primary identifier and a year.
+
+## DataCite inclusion (experimental)
+
+The `datacite` directory contains a slightly modified variant of the [DataCite Metadata Schema 4.6](https://github.com/datacite/schema). This version introduces a new element `publicationCostData` as child of `ressource`, which is of the openCost type `publication`. The idea is to reuse certain DataCite elements which are also relevant to openCost use cases (like `fundingReferences` and `subjects`), while at the same time confering the possibility to enrich DataCite XML documents with information on publication cost data.
+
+The subdirectory `datacite/examples` contains an example document with integrated cost data. Its validity can be checked like this:
+
+```bash
+$ xmllint --noout --schema datacite/metadata.xsd datacite/examples/*.xml
+```
 
 ## Data schema for individual articles (`opencost:publication`)
 
