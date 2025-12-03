@@ -304,7 +304,7 @@ elementFormDefault="qualified">
     <xs:element name="payment_status"                    type="payment_status_type" />
     <xs:element name="payment_method"      minOccurs="0" type="payment_method_type" />
     <!-- FIXME payment model may require isPartOfContract entries -->
-    <xs:element name="payment_model"                     type="payment_model_type" />
+    <xs:element name="payment_model"                     type="publication_payment_model_type" />
 
     <!-- TODO should `orignal_` be `invoice_`` -->
     <xs:element name="original_currency"   minOccurs="0" type="currency" />
@@ -346,10 +346,23 @@ elementFormDefault="qualified">
   </xs:restriction>
 </xs:simpleType>
 
-<xs:simpleType name="payment_model_type">
+<xs:simpleType name="publication_payment_model_type">
   <xs:restriction base="xs:string">
     <xs:enumeration value="article-based" />
     <xs:enumeration value="contract-based" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="contract_payment_model_type">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="deposit" />
+    <xs:enumeration value="offsetting" />
+    <xs:enumeration value="token" />
+    <!-- TODO precise definition, orthogonality -->
+    <xs:enumeration value="flat rate" />
+    <xs:enumeration value="lump sum" />
+    <xs:enumeration value="advance payment" />
+    <!-- TODO cost types for closed access -->
   </xs:restriction>
 </xs:simpleType>
 
@@ -405,6 +418,21 @@ elementFormDefault="qualified">
     <xs:element name="amount" type="xs:decimal" />
     <xs:element name="cost_type" type="contract_cost_type" />
     <xs:element name="vat" type="xs:decimal" minOccurs="0" />
+
+    <xs:element name="payment_status"                    type="payment_status_type" />
+    <xs:element name="payment_method"      minOccurs="0" type="payment_method_type" />
+    <xs:element name="payment_model"                     type="contract_payment_model_type" />
+
+    <!-- TODO should `orignal_` be `invoice_`` -->
+    <xs:element name="original_currency"   minOccurs="0" type="currency" />
+    <xs:element name="original_amount"     minOccurs="0" type="xs:decimal" />
+
+    <xs:element name="gl_account"                        type="xs:string" />
+    <xs:element name="paying_unit"                       type="xs:string" />
+    <xs:element name="cost_centre"                       type="xs:string" />
+    <xs:element name="transfer_reference"  minOccurs="0" type="xs:string" />
+    <xs:element name="comment"             minOccurs="0" type="xs:string" />
+    <xs:element name="processing_date"                   type="date_format" />
   </xs:all>
 </xs:complexType>
 
