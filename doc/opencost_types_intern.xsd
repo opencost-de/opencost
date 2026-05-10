@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://opencost.de"
+xmlns="https://opencost.de"
+elementFormDefault="qualified">
+
+<xs:redefine schemaLocation="opencost_types.xsd">
+
+    <xs:annotation>
+      <xs:appinfo>Generic openCost internal storage format</xs:appinfo>
+      <xs:documentation xml:lang="en">
+        The purpose of this format is to give a generic description
+        which data elements should be stored to caputure publication
+        costs beyond the fields required to fill the openCost exchange
+        format.
+
+        Therefore, this format is an _extension_ of the openCost exchange
+        format and derives itself from openCost by adding new fields
+        and extended definitions. However, it shares most fields and
+        especially all normalized values with openCost.
+
+        Technical note: XML schema can not _extend_ `xs:all` elements
+        that are commonly used in openCost. The work around consists in
+        using `xs:restrict` for types that need to be extended and repeat
+        all entries from the original element.
+      </xs:documentation>
+    </xs:annotation>
+
+    <xs:complexType name="publication_type">
+        <xs:complexContent>
+            <xs:restriction base="publication_type">
+                <xs:all>
+                    <xs:element name="primary_identifier" type="publication_primary_identifier" />
+                    <xs:element name="secondary_identifiers" type="publication_secondary_identifiers" minOccurs="0" />
+                    <xs:element name="institution" type="institution_type" />
+                    <xs:element name="publication_type" type="coar_publication_type" />
+                    <xs:element name="external_costsplitting" type="xs:boolean" minOccurs="0" />
+                    <xs:element name="cost_data" type="publication_cost_data_type" />
+
+                    <!-- TODO check mandatory / optional -->
+                    <xs:element name="manuscript_id"     minOccurs="0" type="xs:string" />
+                    <!-- FIXME naming things -->
+                    <xs:element name="categories"        minOccurs="0" type="category_type" />
+                    <xs:element name="approval"          minOccurs="0" type="xs:boolean" />
+                    <xs:element name="eligible"          minOccurs="0" type="eligible_type" />
+                </xs:all>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="publication_amount_paid_type">
+        <xs:complexContent>
+            <xs:restriction base="publication_amount_paid_type">
+                <xs:all>
+                    <xs:element name="currency" type="currency" />
+                    <xs:element name="amount" type="xs:decimal" />
+                    <xs:element name="cost_type" type="publication_cost_type" />
+                    <xs:element name="vat" type="xs:decimal" minOccurs="0" />
+
+                    <!-- TODO check mandatory / optional -->
+                    <xs:element name="payment_status"                    type="payment_status_type" />
+                    <xs:element name="payment_method"      minOccurs="0" type="payment_method_type" />
+                    <!-- FIXME payment model may require isPartOfContract entries -->
+                    <xs:element name="payment_model"                     type="publication_payment_model_type" />
+
+                    <!-- TODO should `orignal_` be `invoice_`` -->
+                    <xs:element name="original_currency"   minOccurs="0" type="currency" />
+                    <xs:element name="original_amount"     minOccurs="0" type="xs:decimal" />
+
+                    <xs:element name="gl_account"                        type="xs:string" />
+                    <xs:element name="paying_unit"                       type="xs:string" />
+                    <xs:element name="cost_centre"                       type="xs:string" />
+                    <xs:element name="transfer_reference"  minOccurs="0" type="xs:string" />
+                    <xs:element name="comment"             minOccurs="0" type="xs:string" />
+                    <xs:element name="processing_date"                   type="date_format" />
+                </xs:all>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="contract_amount_paid_type">
+        <xs:complexContent>
+            <xs:restriction base="contract_amount_paid_type">
+                <xs:all>
+                    <xs:element name="currency" type="currency" />
+                    <xs:element name="amount" type="xs:decimal" />
+                    <xs:element name="cost_type" type="contract_cost_type" />
+                    <xs:element name="vat" type="xs:decimal" minOccurs="0" />
+
+                    <xs:element name="payment_status"                    type="payment_status_type" />
+                    <xs:element name="payment_method"      minOccurs="0" type="payment_method_type" />
+                    <xs:element name="payment_model"                     type="contract_payment_model_type" />
+
+                    <!-- TODO should `orignal_` be `invoice_`` -->
+                    <xs:element name="original_currency"   minOccurs="0" type="currency" />
+                    <xs:element name="original_amount"     minOccurs="0" type="xs:decimal" />
+
+                    <xs:element name="gl_account"                        type="xs:string" />
+                    <xs:element name="paying_unit"                       type="xs:string" />
+                    <xs:element name="cost_centre"                       type="xs:string" />
+                    <xs:element name="transfer_reference"  minOccurs="0" type="xs:string" />
+                    <xs:element name="comment"             minOccurs="0" type="xs:string" />
+                    <xs:element name="processing_date"                   type="date_format" />
+                </xs:all>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:redefine>
+
+<xs:simpleType name="payment_status_type">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="payment instructed" />
+    <xs:enumeration value="payment completed" />
+    <xs:enumeration value="in progress" />
+    <xs:enumeration value="processing completed" />
+    <xs:enumeration value="cancelled" />
+    <xs:enumeration value="invoice requested" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="payment_method_type">
+  <xs:restriction base="xs:string">
+    <!-- TODO how to distinguish several credit cards if more than
+              one is availalbe? -->
+    <xs:enumeration value="credit card" />
+    <xs:enumeration value="debit card" />
+    <xs:enumeration value="payment on account" />
+    <xs:enumeration value="direct debit" />
+    <xs:enumeration value="prepayment" />
+    <xs:enumeration value="prepaid card" />
+    <xs:enumeration value="voucher" />
+    <xs:enumeration value="bank transfer" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="publication_payment_model_type">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="article-based" />
+    <xs:enumeration value="contract-based" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="contract_payment_model_type">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="deposit" />
+    <xs:enumeration value="offsetting" />
+    <xs:enumeration value="token" />
+    <!-- TODO precise definition, orthogonality -->
+    <xs:enumeration value="flat rate" />
+    <xs:enumeration value="lump sum" />
+    <xs:enumeration value="advance payment" />
+    <!-- TODO cost types for closed access -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="category_type">
+  <xs:sequence>
+    <xs:element name="category" minOccurs="1" maxOccurs="unbounded" type="category_id_type" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="category_id_type">
+  <xs:all>
+    <xs:element name="value" type="non_empty_string" />
+    <xs:element name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ezb" />
+          <xs:enumeration value="local" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+  </xs:all>
+</xs:complexType>
+
+<xs:complexType name="eligible_type">
+  <xs:sequence>
+    <xs:element name="fund" minOccurs="1" maxOccurs="unbounded" type="eligible_id_type" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="eligible_id_type">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="None" />
+    <xs:enumeration value="Bibliotheksetat" />
+    <xs:enumeration value="Publikationsfond" />
+    <xs:enumeration value="Open Access Publikationskosten" />
+    <xs:enumeration value="EU Grant" />
+  </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://opencost.de"
+xmlns:opencost="https://opencost.de"
+elementFormDefault="qualified">
+
+<xs:include schemaLocation="opencost_types_intern.xsd" />
+
+<xs:element name="data" type="opencost:data_type" />
+
+</xs:schema>
