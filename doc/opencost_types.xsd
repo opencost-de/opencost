@@ -166,6 +166,7 @@ elementFormDefault="qualified">
       <xs:simpleType>
         <xs:restriction base="xs:string">
           <xs:enumeration value="ESAC" />
+          <xs:enumeration value="opencostid" />
         </xs:restriction>
       </xs:simpleType>
     </xs:element>
@@ -187,6 +188,8 @@ elementFormDefault="qualified">
           <xs:enumeration value="oai" />
           <xs:enumeration value="ezb" />
           <xs:enumeration value="local" />
+          <xs:enumeration value="ESAC" />
+          <xs:enumeration value="opencostid" />
         </xs:restriction>
       </xs:simpleType>
     </xs:element>

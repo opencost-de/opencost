@@ -40,8 +40,8 @@
     <opencost:cost_data>
       <opencost:part_of_contract>
         <opencost:primary_identifier>
-          <opencost:type>ESAC</opencost:type>
-          <opencost:value>wiley2019deal</opencost:value>
+          <opencost:type>opencostid</opencost:type>
+          <opencost:value>oc-wiley2019deal-1</opencost:value>
         </opencost:primary_identifier>
         <opencost:group_id>01js2sh04_wiley2019deal_2021</opencost:group_id>
       </opencost:part_of_contract>
