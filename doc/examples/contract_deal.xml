@@ -31,7 +31,7 @@
         <opencost:group_id>01eezs655_wiley2019deal_2020</opencost:group_id>
         <opencost:invoices_period>
           <opencost:from>2020-01-01</opencost:from>
-          <opencost:to>2020-06-31</opencost:to>
+          <opencost:to>2020-06-30</opencost:to>
         </opencost:invoices_period>
         <opencost:invoice>
           <opencost:amount_invoice>
