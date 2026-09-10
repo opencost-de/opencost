@@ -20,6 +20,12 @@
       <opencost:type>opencostid</opencost:type>
       <opencost:value>oc-wiley2019deal-1</opencost:value>
     </opencost:primary_identifier>
+    <opencost:secondary_identifiers>
+      <opencost:id>
+        <opencost:type>ESAC</opencost:type>
+        <opencost:value>wiley2019deal</opencost:value>
+      </opencost:id>
+    </opencost:secondary_identifiers>
     <opencost:cost_data>
       <opencost:invoice_group>
         <opencost:group_id>01eezs655_wiley2019deal_2020</opencost:group_id>
