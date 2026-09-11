@@ -80,14 +80,14 @@ elementFormDefault="qualified">
     <xs:element name="invoice_number" type="non_empty_string" minOccurs="0" />
     <xs:element name="creditor" type="non_empty_string" minOccurs="0" />
     <xs:element name="dates" type="dates" />
-    <xs:element name="amounts_paid">
-      <xs:complexType>
-        <xs:sequence>
-          <xs:element name="amount_paid" minOccurs="1" maxOccurs="unbounded" type="contract_amount_paid_type" />
-        </xs:sequence>
-      </xs:complexType>
-    </xs:element>
+    <xs:element name="amounts_paid" type="contract_amounts_paid_type" />
   </xs:all>
+</xs:complexType>
+
+<xs:complexType name="contract_amounts_paid_type">
+  <xs:sequence>
+    <xs:element name="amount_paid" minOccurs="1" maxOccurs="unbounded" type="contract_amount_paid_type" />
+  </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="part_of_contract_type">
@@ -117,16 +117,16 @@ elementFormDefault="qualified">
   <xs:all>
     <xs:element name="amount_invoice" minOccurs="0" type="amount_invoice" />
     <xs:element name="invoice_number" type="non_empty_string" minOccurs="0"/>
-    <xs:element name="amounts_paid">
-      <xs:complexType>
-        <xs:sequence>
-          <xs:element name="amount_paid" minOccurs="1" maxOccurs="unbounded" type="publication_amount_paid_type" />
-        </xs:sequence>
-      </xs:complexType>
-    </xs:element>
+    <xs:element name="amounts_paid" type="publication_amounts_paid_type"/>
     <xs:element name="dates" type="dates"/>
     <xs:element name="creditor" type="non_empty_string" minOccurs="0"/>
   </xs:all>
+</xs:complexType>
+
+<xs:complexType name="publication_amounts_paid_type">
+  <xs:sequence>
+    <xs:element name="amount_paid" minOccurs="1" maxOccurs="unbounded" type="publication_amount_paid_type" />
+  </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="publication_primary_identifier">
@@ -162,16 +162,16 @@ elementFormDefault="qualified">
 <xs:complexType name="contract_primary_identifier_type">
   <xs:all>
     <xs:element name="value" type="non_empty_string" />
-    <xs:element name="type">
-      <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="ESAC" />
-          <xs:enumeration value="opencostid" />
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:element>
+    <xs:element name="type" type="contract_primary_identifier_vocab" />
   </xs:all>
 </xs:complexType>
+
+<xs:simpleType name="contract_primary_identifier_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="ESAC" />
+    <xs:enumeration value="opencostid" />
+  </xs:restriction>
+</xs:simpleType>
 
 <xs:complexType name="contract_secondary_identifiers_type">
   <xs:sequence>
@@ -182,40 +182,40 @@ elementFormDefault="qualified">
 <xs:complexType name="contract_secondary_id_type">
   <xs:all>
     <xs:element name="value" type="non_empty_string" />
-    <xs:element name="type">
-      <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="oai" />
-          <xs:enumeration value="ezb" />
-          <xs:enumeration value="local" />
-          <xs:enumeration value="ESAC" />
-          <xs:enumeration value="opencostid" />
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:element>
+    <xs:element name="type" type="contract_secondary_id_vocab" />
   </xs:all>
 </xs:complexType>
+
+<xs:simpleType name="contract_secondary_id_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="oai" />
+    <xs:enumeration value="ezb" />
+    <xs:enumeration value="local" />
+    <xs:enumeration value="ESAC" />
+    <xs:enumeration value="opencostid" />
+  </xs:restriction>
+</xs:simpleType>
 
 <xs:complexType name="publication_secondary_id_type">
   <xs:all>
     <xs:element name="value" type="non_empty_string" />
-    <xs:element name="type">
-      <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="doi" />
-          <xs:enumeration value="handle" />
-          <xs:enumeration value="urn" />
-          <xs:enumeration value="isbn" />
-          <xs:enumeration value="pmid" />
-          <xs:enumeration value="pmc" />
-          <xs:enumeration value="arxiv" />
-          <xs:enumeration value="oai" />
-          <xs:enumeration value="local" />
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:element>
+    <xs:element name="type" type="publication_secondary_id_vocab" />
   </xs:all>
 </xs:complexType>
+
+<xs:simpleType name="publication_secondary_id_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="doi" />
+    <xs:enumeration value="handle" />
+    <xs:enumeration value="urn" />
+    <xs:enumeration value="isbn" />
+    <xs:enumeration value="pmid" />
+    <xs:enumeration value="pmc" />
+    <xs:enumeration value="arxiv" />
+    <xs:enumeration value="oai" />
+    <xs:enumeration value="local" />
+  </xs:restriction>
+</xs:simpleType>
 
 <xs:complexType name="bibliographic_information">
   <xs:all>
@@ -228,29 +228,21 @@ elementFormDefault="qualified">
 <xs:complexType name="institution_name">
   <xs:all>
     <xs:element name="value" type="non_empty_string" />
-    <xs:element name="type">
-      <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="full" />
-          <xs:enumeration value="short" />
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:element>
+    <xs:element name="type" type="institution_name_type" />
   </xs:all>
 </xs:complexType>
+
+<xs:simpleType name="institution_name_type">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="full" />
+    <xs:enumeration value="short" />
+  </xs:restriction>
+</xs:simpleType>
 
 <xs:complexType name="institution_id">
   <xs:all>
     <xs:element name="value" type="non_empty_string" />
-    <xs:element name="type">
-      <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="ror" />
-          <xs:enumeration value="isni" />
-          <xs:enumeration value="ringold" />
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:element>
+    <xs:element name="type" type="institution_id_type" />
   </xs:all>
 </xs:complexType>
 
@@ -269,6 +261,14 @@ elementFormDefault="qualified">
     <xs:element name="amount" type="xs:decimal" />
   </xs:all>
 </xs:complexType>
+
+<xs:simpleType name="institution_id_type">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="ror" />
+    <xs:enumeration value="isni" />
+    <xs:enumeration value="ringold" />
+  </xs:restriction>
+</xs:simpleType>
 
 <xs:simpleType name="publication_cost_type">
   <xs:restriction base="xs:string">
