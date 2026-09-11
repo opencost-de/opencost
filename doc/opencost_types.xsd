@@ -17,7 +17,7 @@ elementFormDefault="qualified">
     <xs:element name="primary_identifier" type="publication_primary_identifier" />
     <xs:element name="secondary_identifiers" type="publication_secondary_identifiers" minOccurs="0" />
     <xs:element name="institution" type="institution_type" />
-    <xs:element name="publication_type" type="coar_publication_type" />
+    <xs:element name="publication_type" type="coar_publication_type_vocab" />
     <xs:element name="external_costsplitting" type="xs:boolean" minOccurs="0" />
     <xs:element name="cost_data" type="publication_cost_data_type" />
   </xs:all>
@@ -142,16 +142,6 @@ elementFormDefault="qualified">
   </xs:sequence>
 </xs:complexType>
 
-<xs:simpleType name="relevant_publication_date_type">
-  <xs:restriction base="xs:string">
-    <xs:enumeration value="submission" />
-    <xs:enumeration value="acceptance" />
-    <xs:enumeration value="publication" />
-    <xs:enumeration value="publication print" />
-    <xs:enumeration value="publication online" />
-  </xs:restriction>
-</xs:simpleType>
-
 <xs:complexType name="contract_invoice_period_type">
   <xs:all>
     <xs:element name="from" type="date_format"/>
@@ -166,13 +156,6 @@ elementFormDefault="qualified">
   </xs:all>
 </xs:complexType>
 
-<xs:simpleType name="contract_primary_identifier_vocab">
-  <xs:restriction base="xs:string">
-    <xs:enumeration value="ESAC" />
-    <xs:enumeration value="opencostid" />
-  </xs:restriction>
-</xs:simpleType>
-
 <xs:complexType name="contract_secondary_identifiers_type">
   <xs:sequence>
     <xs:element name="id" minOccurs="1" maxOccurs="unbounded" type="contract_secondary_id_type" />
@@ -186,36 +169,12 @@ elementFormDefault="qualified">
   </xs:all>
 </xs:complexType>
 
-<xs:simpleType name="contract_secondary_id_vocab">
-  <xs:restriction base="xs:string">
-    <xs:enumeration value="oai" />
-    <xs:enumeration value="ezb" />
-    <xs:enumeration value="local" />
-    <xs:enumeration value="ESAC" />
-    <xs:enumeration value="opencostid" />
-  </xs:restriction>
-</xs:simpleType>
-
 <xs:complexType name="publication_secondary_id_type">
   <xs:all>
     <xs:element name="value" type="non_empty_string" />
     <xs:element name="type" type="publication_secondary_id_vocab" />
   </xs:all>
 </xs:complexType>
-
-<xs:simpleType name="publication_secondary_id_vocab">
-  <xs:restriction base="xs:string">
-    <xs:enumeration value="doi" />
-    <xs:enumeration value="handle" />
-    <xs:enumeration value="urn" />
-    <xs:enumeration value="isbn" />
-    <xs:enumeration value="pmid" />
-    <xs:enumeration value="pmc" />
-    <xs:enumeration value="arxiv" />
-    <xs:enumeration value="oai" />
-    <xs:enumeration value="local" />
-  </xs:restriction>
-</xs:simpleType>
 
 <xs:complexType name="bibliographic_information">
   <xs:all>
@@ -228,21 +187,14 @@ elementFormDefault="qualified">
 <xs:complexType name="institution_name">
   <xs:all>
     <xs:element name="value" type="non_empty_string" />
-    <xs:element name="type" type="institution_name_type" />
+    <xs:element name="type" type="institution_name_type_vocab" />
   </xs:all>
 </xs:complexType>
-
-<xs:simpleType name="institution_name_type">
-  <xs:restriction base="xs:string">
-    <xs:enumeration value="full" />
-    <xs:enumeration value="short" />
-  </xs:restriction>
-</xs:simpleType>
 
 <xs:complexType name="institution_id">
   <xs:all>
     <xs:element name="value" type="non_empty_string" />
-    <xs:element name="type" type="institution_id_type" />
+    <xs:element name="type" type="institution_id_type_vocab" />
   </xs:all>
 </xs:complexType>
 
@@ -262,64 +214,23 @@ elementFormDefault="qualified">
   </xs:all>
 </xs:complexType>
 
-<xs:simpleType name="institution_id_type">
-  <xs:restriction base="xs:string">
-    <xs:enumeration value="ror" />
-    <xs:enumeration value="isni" />
-    <xs:enumeration value="ringold" />
-  </xs:restriction>
-</xs:simpleType>
-
-<xs:simpleType name="publication_cost_type">
-  <xs:restriction base="xs:string">
-    <xs:enumeration value="gold-oa" />
-    <xs:enumeration value="vat" />
-    <xs:enumeration value="colour charge" />
-    <xs:enumeration value="cover charge" />
-    <xs:enumeration value="hybrid-oa" />
-    <xs:enumeration value="other" />
-    <xs:enumeration value="page charge" />
-    <xs:enumeration value="permission" />
-    <xs:enumeration value="publication charge" />
-    <xs:enumeration value="reprint" />
-    <xs:enumeration value="submission fee" />
-    <xs:enumeration value="payment fee" />
-  </xs:restriction>
-</xs:simpleType>
-
 <xs:complexType name="publication_amount_paid_type">
   <xs:all>
     <xs:element name="currency" type="currency" />
     <xs:element name="amount" type="xs:decimal" />
-    <xs:element name="cost_type" type="publication_cost_type" />
+    <xs:element name="cost_type" type="publication_cost_type_vocab" />
     <xs:element name="vat" type="xs:decimal" minOccurs="0" />
   </xs:all>
 </xs:complexType>
-
-<xs:simpleType name="contract_cost_type">
-  <xs:restriction base="xs:string">
-    <xs:enumeration value="publish" />
-    <xs:enumeration value="read" />
-    <xs:enumeration value="publish and read" />
-    <xs:enumeration value="service fee" />
-    <xs:enumeration value="vat" />
-  </xs:restriction>
-</xs:simpleType>
 
 <xs:complexType name="contract_amount_paid_type">
   <xs:all>
     <xs:element name="currency" type="currency" />
     <xs:element name="amount" type="xs:decimal" />
-    <xs:element name="cost_type" type="contract_cost_type" />
+    <xs:element name="cost_type" type="contract_cost_type_vocab" />
     <xs:element name="vat" type="xs:decimal" minOccurs="0" />
   </xs:all>
 </xs:complexType>
-
-<xs:simpleType name="currency">
-  <xs:restriction base="xs:string">
-    <xs:pattern value="[A-Z]{3}"/>
-  </xs:restriction>
-</xs:simpleType>
 
 <xs:complexType name="dates">
   <xs:choice>
@@ -346,7 +257,96 @@ elementFormDefault="qualified">
   </xs:restriction>
 </xs:simpleType>
 
-<xs:simpleType name="coar_publication_type">
+<xs:simpleType name="currency">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="[A-Z]{3}"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="contract_secondary_id_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="oai" />
+    <xs:enumeration value="ezb" />
+    <xs:enumeration value="local" />
+    <xs:enumeration value="ESAC" />
+    <xs:enumeration value="opencostid" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="contract_primary_identifier_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="ESAC" />
+    <xs:enumeration value="opencostid" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="institution_name_type_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="full" />
+    <xs:enumeration value="short" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="relevant_publication_date_type_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="submission" />
+    <xs:enumeration value="acceptance" />
+    <xs:enumeration value="publication" />
+    <xs:enumeration value="publication print" />
+    <xs:enumeration value="publication online" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="institution_id_type_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="ror" />
+    <xs:enumeration value="isni" />
+    <xs:enumeration value="ringold" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="publication_cost_type_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="gold-oa" />
+    <xs:enumeration value="vat" />
+    <xs:enumeration value="colour charge" />
+    <xs:enumeration value="cover charge" />
+    <xs:enumeration value="hybrid-oa" />
+    <xs:enumeration value="other" />
+    <xs:enumeration value="page charge" />
+    <xs:enumeration value="permission" />
+    <xs:enumeration value="publication charge" />
+    <xs:enumeration value="reprint" />
+    <xs:enumeration value="submission fee" />
+    <xs:enumeration value="payment fee" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="contract_cost_type_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="publish" />
+    <xs:enumeration value="read" />
+    <xs:enumeration value="publish and read" />
+    <xs:enumeration value="service fee" />
+    <xs:enumeration value="vat" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="publication_secondary_id_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="doi" />
+    <xs:enumeration value="handle" />
+    <xs:enumeration value="urn" />
+    <xs:enumeration value="isbn" />
+    <xs:enumeration value="pmid" />
+    <xs:enumeration value="pmc" />
+    <xs:enumeration value="arxiv" />
+    <xs:enumeration value="oai" />
+    <xs:enumeration value="local" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="coar_publication_type_vocab">
   <xs:restriction base="xs:string">
     <xs:enumeration value="http://purl.org/coar/resource_type/F8RT-TJK0" />
     <xs:enumeration value="https://purl.org/coar/resource_type/F8RT-TJK0" />
