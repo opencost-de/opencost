@@ -7,8 +7,8 @@ elementFormDefault="qualified">
 
 <xs:complexType name="data_type">
   <xs:choice maxOccurs="unbounded">
-    <xs:element name="publication" type="publication_type" maxOccurs="unbounded" />
-    <xs:element name="contract" type="contract_type" maxOccurs="unbounded" />
+    <xs:element name="publication" type="publication_type" />
+    <xs:element name="contract" type="contract_type" />
   </xs:choice>
 </xs:complexType>
 
@@ -130,10 +130,10 @@ elementFormDefault="qualified">
 </xs:complexType>
 
 <xs:complexType name="publication_primary_identifier">
-    <xs:choice>
-        <xs:element name="doi" type="non_empty_string" />
-        <xs:element name="bibliographic_information" type="bibliographic_information" />
-    </xs:choice>
+  <xs:choice>
+    <xs:element name="doi" type="non_empty_string" />
+    <xs:element name="bibliographic_information" type="bibliographic_information" />
+  </xs:choice>
 </xs:complexType>
 
 <xs:complexType name="publication_secondary_identifiers">
@@ -199,12 +199,10 @@ elementFormDefault="qualified">
 </xs:complexType>
 
 <xs:complexType name="institution_type">
-  <xs:sequence>
-    <xs:choice minOccurs="1" maxOccurs="unbounded">
-      <xs:element name="name" type="institution_name" />
-      <xs:element name="id" type="institution_id" />
-    </xs:choice>
-  </xs:sequence>
+  <xs:choice minOccurs="1" maxOccurs="unbounded">
+    <xs:element name="name" type="institution_name" />
+    <xs:element name="id" type="institution_id" />
+  </xs:choice>
 </xs:complexType>
 
 <xs:complexType name="amount_invoice">
