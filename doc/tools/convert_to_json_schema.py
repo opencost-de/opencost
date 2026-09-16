@@ -47,9 +47,12 @@ json_schema = OrderedDict({
 # XSD types converted to JSON structures
 
 CONVERTED_TYPES = {
-    "xs:boolean": OrderedDict({
-        "enum": ["1", "0", True, False]
-    }),
+    "xs:boolean": OrderedDict(
+        {"enum": ["1", "0", True, False]}
+    ),
+    "xs:decimal": OrderedDict(
+        {"type": "number"}
+    ),
 }
 XSD_COMPLEX_TYPES = {}
 XSD_SIMPLE_TYPES = {}
@@ -67,6 +70,69 @@ def convert_element(elem, tle=False):
             ret[elem_name] = type_structure
         else:
             ret = type_structure
+    return ret
+    
+def convert_sequence_indicator(seq_elem):
+    ret = OrderedDict({
+        "type": "object",
+        "additionalProperties": False,
+        "properties": {}
+    })
+    sequence_skippable = False
+    if seq_elem.attrib.get("minOccurs") == "0":
+        sequence_skippable = True
+    elements = seq_elem.findall("xs:element", namespaces)
+    if len(elements) > 0:
+        required_list = []
+        for element in elements:
+            name = element.attrib["name"]
+            minOccurs = element.attrib.get("minOccurs", "1")
+            maxOccurs = element.attrib.get("maxOccurs", "1")
+            maxOccursNumber = 1
+            if maxOccurs.isdecimal():
+                maxOccursNumber = int(maxOccurs)
+            if maxOccurs == "unbounded" or maxOccursNumber > 1:
+                ret["properties"][name] = OrderedDict({
+                    "type": "array",
+                    "minItems": 1,
+                    "contains": convert_element(element)
+                })
+            else:
+                ret["properties"][name] = convert_element(element)
+            if minOccurs == "0" or sequence_skippable:
+                pass
+            else:
+                required_list.append(OrderedDict({"required": [name]}))
+        if len(required_list) > 0:
+            ret["allOf"] = required_list
+    sub_sequences = seq_elem.findall("xs:sequence", namespaces)
+    if len(sub_sequences) > 0:
+        for sequence in sub_sequences:
+            seq_structure = convert_sequence_indicator(sequence)
+            for name, elem_structure in seq_structure["properties"].items():
+                ret["properties"][name] = elem_structure
+            if "allOf" in seq_structure:
+                if "allOf" in ret:
+                    ret["allOf"] += seq_structure["allOf"]
+                else:
+                    ret["allOf"] = [seq_structure["allOf"]]
+    sub_choices = seq_elem.findall("xs:choice", namespaces)
+    if len(sub_choices) > 0:
+        for choice in sub_choices:
+            choice_structure = convert_choice_indicator(choice)
+            for name, elem_structure in choice_structure["properties"].items():
+                ret["properties"][name] = elem_structure
+            if "allOf" in choice_structure:
+                if "allOf" in ret:
+                    ret["allOf"] += choice_structure["allOf"]
+                else:
+                    ret["allOf"] = [choice_structure["allOf"]]
+            elif "anyOf" in choice_structure:
+                anyOf = OrderedDict({"anyOf": choice_structure["anyOf"]})
+                if "allOf" in ret:
+                    ret["allOf"] += anyOf
+                else:
+                    ret["allOf"] = [anyOf]
     return ret
 
 def convert_all_indicator(all_elem):
@@ -95,36 +161,49 @@ def convert_choice_indicator(choice_elem):
         "type": "object",
         "additionalProperties": False,
         "properties": OrderedDict(),
-        "oneOf": []
     })
     maxOccurs = choice_elem.attrib.get("maxOccurs", "1")
     maxOccursNumber = 1
     if maxOccurs.isdecimal():
         maxOccursNumber = int(maxOccurs)
     elements = choice_elem.findall("xs:element", namespaces)
-    if maxOccurs == "unbounded" or maxOccursNumber > 1:
-        for element in elements:
-            name = element.attrib["name"]
-            ret["properties"][name] = OrderedDict({
-                "type": "array",
-                "minItems": 1,
-                "contains": convert_element(element)
-            })
-            ret["oneOf"].append(OrderedDict({"required": [name]}))
-    else:
-        for element in elements:
-            name = element.attrib["name"]
-            ret["properties"][name] = convert_element(element)
-            ret["oneOf"].append(OrderedDict({"required": [name]}))
+    sequences = choice_elem.findall("xs:sequence", namespaces)
+    if len(elements) > 0:
+        ret["oneOf"] = []
+        if maxOccurs == "unbounded" or maxOccursNumber > 1:
+            for element in elements:
+                name = element.attrib["name"]
+                ret["properties"][name] = OrderedDict({
+                    "type": "array",
+                    "minItems": 1,
+                    "contains": convert_element(element)
+                })
+                ret["oneOf"].append(OrderedDict({"required": [name]}))
+        else:
+            for element in elements:
+                name = element.attrib["name"]
+                ret["properties"][name] = convert_element(element)
+                ret["oneOf"].append(OrderedDict({"required": [name]}))
+    elif len(sequences) > 0:
+        ret["anyOf"] = []
+        for sequence in sequences:
+            seq_structure = convert_sequence_indicator(sequence)
+            for name, elem_structure in seq_structure["properties"].items():
+                ret["properties"][name] = elem_structure
+            if "allOf" in seq_structure:
+                ret["anyOf"].append(OrderedDict({"allOf": seq_structure["allOf"]}))
     return ret
 
 def convert_complex_type(complex_element):
     choice_elem = complex_element.find("xs:choice", namespaces)
     all_elem = complex_element.find("xs:all", namespaces)
+    seq_elem = complex_element.find("xs:sequence", namespaces)
     if choice_elem is not None:
         return convert_choice_indicator(choice_elem)
     elif all_elem is not None:
         return convert_all_indicator(all_elem)
+    elif seq_elem is not None:
+        return convert_sequence_indicator(seq_elem)
     return {}
 
 def convert_simple_type(simple_element):
