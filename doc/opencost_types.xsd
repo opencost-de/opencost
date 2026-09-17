@@ -299,7 +299,7 @@ elementFormDefault="qualified">
   <xs:restriction base="xs:string">
     <xs:enumeration value="ror" />
     <xs:enumeration value="isni" />
-    <xs:enumeration value="ringold" />
+    <xs:enumeration value="ringgold" />
   </xs:restriction>
 </xs:simpleType>
 
