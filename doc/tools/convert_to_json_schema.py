@@ -61,7 +61,6 @@ def convert_element(elem, tle=False):
     ret = OrderedDict()
     elem_type = elem.attrib.get("type")
     elem_name = elem.attrib.get("name")
-    print(elem_type)
     if elem_type is not None:
         if elem_type not in CONVERTED_TYPES:
             CONVERTED_TYPES[elem_type] = convert_complex_type(XSD_COMPLEX_TYPES[elem_type])
@@ -257,12 +256,8 @@ for xsd_file in args.xsd_files:
 for type_name, simp_type_elem in XSD_SIMPLE_TYPES.items():
     CONVERTED_TYPES[type_name] = convert_simple_type(simp_type_elem)
 
-print(json.dumps(CONVERTED_TYPES, indent=2))
-#print(XSD_COMPLEX_TYPES['data_type'].tag)
-#print(XSD_COMPLEX_TYPES['data_type'].tag == "xs:complexType")
-#print(json.dumps(convert_complex_type(XSD_COMPLEX_TYPES['data_type']), indent=2))
 json_schema["properties"] = convert_element(top_level_element, tle=True)
 json_schema["required"] = [top_level_element.attrib["name"]]
-print(json.dumps(json_schema, indent=2))
+
 with open("json_schema_out.json", "w") as out:
         out.write(json.dumps(json_schema, indent=2))
