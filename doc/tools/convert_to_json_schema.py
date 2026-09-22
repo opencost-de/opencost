@@ -54,6 +54,11 @@ CONVERTED_TYPES = {
         {"type": "number"}
     ),
 }
+
+RESTRICTION_BASE_TYPES = {
+    "xs:string": "string"
+}
+
 XSD_COMPLEX_TYPES = {}
 XSD_SIMPLE_TYPES = {}
 
@@ -217,6 +222,9 @@ def convert_simple_type(simple_element):
     res_elem = simple_element.find("xs:restriction", namespaces)
     if res_elem is None:
         raise UnsupportedXSDStructure(simple_element, "xs:simpleType", ["xs:restriction"])
+    type_restriction = RESTRICTION_BASE_TYPES.get(res_elem.attrib.get("base", ""), None)
+    if type_restriction is not None:
+        ret["type"] = type_restriction
     enums = res_elem.findall("xs:enumeration", namespaces)
     pattern = res_elem.find("xs:pattern", namespaces)
     minlength = res_elem.find("xs:minLength", namespaces)
