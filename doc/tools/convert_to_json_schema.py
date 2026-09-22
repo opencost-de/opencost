@@ -119,6 +119,7 @@ def convert_sequence_indicator(seq_elem):
     if len(sub_choices) > 0:
         for choice in sub_choices:
             choice_structure = convert_choice_indicator(choice)
+            #print(json.dumps(choice_structure, indent=2))
             for name, elem_structure in choice_structure["properties"].items():
                 ret["properties"][name] = elem_structure
             if "allOf" in choice_structure:
@@ -184,13 +185,19 @@ def convert_choice_indicator(choice_elem):
                 ret["properties"][name] = convert_element(element)
                 ret["oneOf"].append(OrderedDict({"required": [name]}))
     elif len(sequences) > 0:
-        ret["anyOf"] = []
+        allOfs = []
         for sequence in sequences:
             seq_structure = convert_sequence_indicator(sequence)
             for name, elem_structure in seq_structure["properties"].items():
                 ret["properties"][name] = elem_structure
             if "allOf" in seq_structure:
-                ret["anyOf"].append(OrderedDict({"allOf": seq_structure["allOf"]}))
+                allOfs.append(seq_structure["allOf"])
+        if len(allOfs) > 0:
+            # If all allOfs dicts are identical, we can merge them into a single structure
+            if allOfs.count(allOfs[0]) == len(allOfs):
+                ret["allOf"] = allOfs[0]
+            else:
+                ret["anyOf"] = [elem[0] for elem in allOfs]
     return ret
 
 def convert_complex_type(complex_element):
