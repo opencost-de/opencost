@@ -186,8 +186,8 @@ def convert_choice_indicator(choice_elem):
     elements = choice_elem.findall("xs:element", namespaces)
     sequences = choice_elem.findall("xs:sequence", namespaces)
     if len(elements) > 0:
-        ret["oneOf"] = []
         if max_occurs == "unbounded" or max_occurs_number > 1:
+            ret["anyOf"] = []
             for element in elements:
                 name = element.attrib["name"]
                 ret["properties"][name] = OrderedDict({
@@ -195,8 +195,9 @@ def convert_choice_indicator(choice_elem):
                     "minItems": 1,
                     "contains": convert_element(element)
                 })
-                ret["oneOf"].append(OrderedDict({"required": [name]}))
+                ret["anyOf"].append(OrderedDict({"required": [name]}))
         else:
+            ret["oneOf"] = []
             for element in elements:
                 name = element.attrib["name"]
                 ret["properties"][name] = convert_element(element)
