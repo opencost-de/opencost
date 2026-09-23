@@ -56,6 +56,7 @@ In XML we use the namespace `opencost`. The repository also hosts some complete 
 - The `Repeatable` column indicates if an element may occur more than once.
 - `publication` elements may be linked to `contract` elements to model relations like an article being paid for centrally under a non-APC payment model. This is done semantically by adding `part_of_contract` to a `publication` element's `cost_data` block and defining a `group_id` within. The `group_id` is then repeated within a `contract` element's `invoice_group`, effectively linking a publication to a set of invoices. The `group_id` may be chosen freely, however we recommend to use a unique identifier which is unlikely to reappear for other data providers within large collections. A possible approach is to use a combination of the institution's ROR ID, the contract primary identifier and a year.
 - openCost uses [COAR Resource types v3.2](https://vocabularies.coar-repositories.org/resource_types/3.2/). The schema also supports specifying the `publication_type` via the corresponding PURL defined in COAR. The use of COAR PURLs is recommended because as persistent identifiers they provide a language-independent representation of publication types.
+- An alternative JSON implementation of the openCost Schema is also available in the [json](https://github.com/opencost-de/opencost/tree/main/doc/json) subdirectory.
 
 ## DataCite inclusion (experimental)
 
