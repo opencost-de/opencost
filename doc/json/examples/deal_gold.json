@@ -1,0 +1,76 @@
+{
+  "data": {
+    "publication": [
+      {
+        "institution": {
+          "id": [
+            {
+              "value": "https://ror.org/01js2sh04",
+              "type": "ror"
+            }
+          ],
+          "name": [
+            {
+              "value": "desy",
+              "type": "short"
+            }
+          ]
+        },
+        "primary_identifier": {
+          "doi": "10.1038/s41598-022-13507-4"
+        },
+        "publication_type": "journal article",
+        "secondary_identifiers": {
+          "id": [
+            {
+              "value": "PUBDB-2022-00039",
+              "type": "local"
+            },
+            {
+              "value": "oai:bib-pubdb1.desy.de:473418",
+              "type": "oai"
+            },
+            {
+              "value": "10.1038/s41598-022-13507-4",
+              "type": "doi"
+            },
+            {
+              "value": "10.3204/PUBDB-2022-00039",
+              "type": "doi"
+            },
+            {
+              "value": "35689001",
+              "type": "pmid"
+            }
+          ]
+        },
+        "cost_data": {
+          "invoice": [
+            {
+              "amount_invoice": {
+                "currency": "EUR",
+                "amount": 1681.82
+              },
+              "amounts_paid": {
+                "amount_paid": [
+                  {
+                    "amount": 1681.82,
+                    "currency": "EUR",
+                    "cost_type": "gold-oa",
+                    "vat": 15.83
+                  }
+                ]
+              },
+              "creditor": "Macmillan Publishers Limited, part of Springer Nature",
+              "dates": {
+                "paid": "2022-05-31",
+                "invoice": "2022-10-07"
+              },
+              "invoice_number": "SN-2022-00398-b"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
