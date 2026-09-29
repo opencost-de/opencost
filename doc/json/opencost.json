@@ -13,7 +13,7 @@
         "publication": {
           "type": "array",
           "minItems": 1,
-          "contains": {
+          "items": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -81,7 +81,7 @@
                   "id": {
                     "type": "array",
                     "minItems": 1,
-                    "contains": {
+                    "items": {
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
@@ -134,7 +134,7 @@
                   "name": {
                     "type": "array",
                     "minItems": 1,
-                    "contains": {
+                    "items": {
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
@@ -167,7 +167,7 @@
                   "id": {
                     "type": "array",
                     "minItems": 1,
-                    "contains": {
+                    "items": {
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
@@ -538,7 +538,7 @@
                   "invoice": {
                     "type": "array",
                     "minItems": 1,
-                    "contains": {
+                    "items": {
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
@@ -578,7 +578,7 @@
                             "amount_paid": {
                               "type": "array",
                               "minItems": 1,
-                              "contains": {
+                              "items": {
                                 "type": "object",
                                 "additionalProperties": false,
                                 "properties": {
@@ -771,7 +771,7 @@
         "contract": {
           "type": "array",
           "minItems": 1,
-          "contains": {
+          "items": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -786,7 +786,7 @@
                   "name": {
                     "type": "array",
                     "minItems": 1,
-                    "contains": {
+                    "items": {
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
@@ -819,7 +819,7 @@
                   "id": {
                     "type": "array",
                     "minItems": 1,
-                    "contains": {
+                    "items": {
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
@@ -926,7 +926,7 @@
                   "id": {
                     "type": "array",
                     "minItems": 1,
-                    "contains": {
+                    "items": {
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
@@ -975,14 +975,14 @@
                   "invoice_group": {
                     "type": "array",
                     "minItems": 1,
-                    "contains": {
+                    "items": {
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
                         "invoice": {
                           "type": "array",
                           "minItems": 1,
-                          "contains": {
+                          "items": {
                             "type": "object",
                             "additionalProperties": false,
                             "properties": {
@@ -1052,7 +1052,7 @@
                                   "amount_paid": {
                                     "type": "array",
                                     "minItems": 1,
-                                    "contains": {
+                                    "items": {
                                       "type": "object",
                                       "additionalProperties": false,
                                       "properties": {

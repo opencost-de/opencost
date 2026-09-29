@@ -111,7 +111,7 @@ def convert_sequence_indicator(seq_elem):
                 ret["properties"][name] = OrderedDict({
                     "type": "array",
                     "minItems": 1,
-                    "contains": convert_element(element)
+                    "items": convert_element(element)
                 })
             else:
                 ret["properties"][name] = convert_element(element)
@@ -193,7 +193,7 @@ def convert_choice_indicator(choice_elem):
                 ret["properties"][name] = OrderedDict({
                     "type": "array",
                     "minItems": 1,
-                    "contains": convert_element(element)
+                    "items": convert_element(element)
                 })
                 ret["anyOf"].append(OrderedDict({"required": [name]}))
         else:
