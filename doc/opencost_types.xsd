@@ -132,8 +132,16 @@ elementFormDefault="qualified">
 <xs:complexType name="publication_primary_identifier">
   <xs:choice>
     <xs:element name="doi" type="non_empty_string" />
+    <xs:element name="id" type="publication_primary_id_type" />
     <xs:element name="bibliographic_information" type="bibliographic_information" />
   </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="publication_primary_id_type">
+  <xs:all>
+    <xs:element name="value" type="non_empty_string" />
+    <xs:element name="type" type="publication_primary_id_vocab" />
+  </xs:all>
 </xs:complexType>
 
 <xs:complexType name="publication_secondary_identifiers">
@@ -341,6 +349,17 @@ elementFormDefault="qualified">
     <xs:enumeration value="arxiv" />
     <xs:enumeration value="oai" />
     <xs:enumeration value="local" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="publication_primary_id_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="doi" />
+    <xs:enumeration value="handle" />
+    <xs:enumeration value="urn" />
+    <xs:enumeration value="isbn" />
+    <xs:enumeration value="arxiv" />
+    <xs:enumeration value="ark" />
   </xs:restriction>
 </xs:simpleType>
 
