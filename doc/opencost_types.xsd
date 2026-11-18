@@ -16,6 +16,7 @@ elementFormDefault="qualified">
   <xs:all>
     <xs:element name="primary_identifier" type="publication_primary_identifier" />
     <xs:element name="secondary_identifiers" type="publication_secondary_identifiers" minOccurs="0" />
+    <xs:element name="host_item" type="publication_host_item_type" minOccurs="0" />
     <xs:element name="institution" type="institution_type" />
     <xs:element name="publication_type" type="coar_publication_type_vocab" />
     <xs:element name="external_costsplitting" type="xs:boolean" minOccurs="0" />
@@ -147,6 +148,12 @@ elementFormDefault="qualified">
 <xs:complexType name="publication_secondary_identifiers">
   <xs:sequence>
     <xs:element name="id" type="publication_secondary_id_type" maxOccurs="unbounded" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="publication_host_item_type">
+  <xs:sequence>
+    <xs:element name="id" type="publication_primary_id_type" maxOccurs="unbounded" />
   </xs:sequence>
 </xs:complexType>
 
