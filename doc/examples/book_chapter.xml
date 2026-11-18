@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<opencost:data xmlns:opencost="https://opencost.de" xmlns:datacite="https://schema.datacite.org/meta/kernel-4/metadata.xsd">
+  <opencost:publication>
+    <opencost:institution>
+      <opencost:id>
+        <opencost:value>https://ror.org/02yy8x990</opencost:value>
+        <opencost:type>ror</opencost:type>
+      </opencost:id>
+      <opencost:name>
+        <opencost:value>SLU</opencost:value>
+        <opencost:type>short</opencost:type>
+      </opencost:name>
+      <opencost:name>
+        <opencost:value>Swedish University of Agricultural Sciences</opencost:value>
+        <opencost:type>full</opencost:type>
+      </opencost:name>
+    </opencost:institution>
+    <opencost:primary_identifier>
+      <opencost:id>
+        <opencost:value>10.4324/9781003466109-11</opencost:value>
+        <opencost:type>doi</opencost:type>
+      </opencost:id>
+    </opencost:primary_identifier>
+    <opencost:host_item>
+      <opencost:id>
+        <opencost:value>10.4324/9781003466109</opencost:value>
+        <opencost:type>doi</opencost:type>
+      </opencost:id>
+      <opencost:id>
+        <opencost:value>9781003466109</opencost:value>
+        <opencost:type>isbn</opencost:type>
+      </opencost:id>
+    </opencost:host_item>
+    <opencost:publication_type>book part</opencost:publication_type>
+    <opencost:cost_data>
+      <opencost:invoice>
+        <opencost:amounts_paid>
+          <opencost:amount_paid>
+            <opencost:amount>1499.74</opencost:amount>
+            <opencost:currency>EUR</opencost:currency>
+            <opencost:cost_type>gold-oa</opencost:cost_type>
+          </opencost:amount_paid>
+        </opencost:amounts_paid>
+        <opencost:dates>
+          <opencost:paid>2025</opencost:paid>
+        </opencost:dates>
+      </opencost:invoice>
+    </opencost:cost_data>
+  </opencost:publication>
+</opencost:data>
