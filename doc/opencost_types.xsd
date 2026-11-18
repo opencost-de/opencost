@@ -349,6 +349,8 @@ elementFormDefault="qualified">
     <xs:enumeration value="arxiv" />
     <xs:enumeration value="oai" />
     <xs:enumeration value="local" />
+    <xs:enumeration value="ark" />
+    <xs:enumeration value="purl" />
   </xs:restriction>
 </xs:simpleType>
 
