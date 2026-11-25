@@ -195,7 +195,7 @@ elementFormDefault="qualified">
   <xs:all>
     <xs:element name="Title" type="non_empty_string" />
     <xs:element name="Publisher" type="non_empty_string" />
-    <xs:element name="isPartOf" type="non_empty_string" />
+    <xs:element name="isPartOf" type="non_empty_string" minOccurs="0" />
   </xs:all>
 </xs:complexType>
 
