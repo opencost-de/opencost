@@ -16,6 +16,7 @@ elementFormDefault="qualified">
   <xs:all>
     <xs:element name="primary_identifier" type="publication_primary_identifier" />
     <xs:element name="secondary_identifiers" type="publication_secondary_identifiers" minOccurs="0" />
+    <xs:element name="host_item" type="publication_host_item_type" minOccurs="0" />
     <xs:element name="institution" type="institution_type" />
     <xs:element name="publication_type" type="coar_publication_type_vocab" />
     <xs:element name="external_costsplitting" type="xs:boolean" minOccurs="0" />
@@ -132,13 +133,27 @@ elementFormDefault="qualified">
 <xs:complexType name="publication_primary_identifier">
   <xs:choice>
     <xs:element name="doi" type="non_empty_string" />
+    <xs:element name="id" type="publication_primary_id_type" />
     <xs:element name="bibliographic_information" type="bibliographic_information" />
   </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="publication_primary_id_type">
+  <xs:all>
+    <xs:element name="value" type="non_empty_string" />
+    <xs:element name="type" type="publication_primary_id_vocab" />
+  </xs:all>
 </xs:complexType>
 
 <xs:complexType name="publication_secondary_identifiers">
   <xs:sequence>
     <xs:element name="id" type="publication_secondary_id_type" maxOccurs="unbounded" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="publication_host_item_type">
+  <xs:sequence>
+    <xs:element name="id" type="publication_primary_id_type" maxOccurs="unbounded" />
   </xs:sequence>
 </xs:complexType>
 
@@ -180,7 +195,7 @@ elementFormDefault="qualified">
   <xs:all>
     <xs:element name="Title" type="non_empty_string" />
     <xs:element name="Publisher" type="non_empty_string" />
-    <xs:element name="isPartOf" type="non_empty_string" />
+    <xs:element name="isPartOf" type="non_empty_string" minOccurs="0" />
   </xs:all>
 </xs:complexType>
 
@@ -341,6 +356,19 @@ elementFormDefault="qualified">
     <xs:enumeration value="arxiv" />
     <xs:enumeration value="oai" />
     <xs:enumeration value="local" />
+    <xs:enumeration value="ark" />
+    <xs:enumeration value="purl" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="publication_primary_id_vocab">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="doi" />
+    <xs:enumeration value="handle" />
+    <xs:enumeration value="urn" />
+    <xs:enumeration value="isbn" />
+    <xs:enumeration value="arxiv" />
+    <xs:enumeration value="ark" />
   </xs:restriction>
 </xs:simpleType>
 

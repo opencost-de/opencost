@@ -12,7 +12,10 @@
       </opencost:name>
     </opencost:institution>
     <opencost:primary_identifier>
-      <opencost:doi>10.1038/s41598-022-13507-4</opencost:doi>
+      <opencost:id>
+        <opencost:value>10.1038/s41598-022-13507-4</opencost:value>
+        <opencost:type>doi</opencost:type>
+      </opencost:id>
     </opencost:primary_identifier>
     <opencost:publication_type>journal article</opencost:publication_type>
     <opencost:secondary_identifiers>
